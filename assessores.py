@@ -213,11 +213,11 @@ class Comercial:
         remetente = "david.alves@bluemetrix.com.br"
         assunto = f"Acompanhamento diário de operações - {assessor} - {data_dia}"
     
-        # Cria a mensagem
+        # Cria a mensagem com encoding correto
         msg = MIMEMultipart()
-        msg['From'] = remetente
+        msg['From'] = formataddr((str(Header("Bluemetrix Operações", "utf-8")), remetente))
         msg['To'] = destinatario
-        msg['Subject'] = assunto
+        msg['Subject'] = Header(assunto, "utf-8")
     
         # Corpo HTML com assinatura
         mensagem_html = f"""
@@ -231,7 +231,7 @@ class Comercial:
           </body>
         </html>
         """
-        msg.attach(MIMEText(mensagem_html, 'html'))
+        msg.attach(MIMEText(mensagem_html, 'html', 'utf-8'))
     
         # Adiciona a imagem da assinatura
         assinatura_path = os.path.join(os.path.dirname(__file__), "Assinatura David.jpg")
