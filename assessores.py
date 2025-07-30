@@ -117,7 +117,7 @@ class Comercial:
             st.write("Controle sem coluna CONTA!")
         
         # Merge preservando apenas contas movimentadas
-        base = pd.merge(movimentacoes, controle, on='CONTA', how='left', suffixes=('', '_DUP'))
+        base = pd.merge(controle, movimentacoes, on='CONTA', how='left', suffixes=('', '_DUP'))
 
         # Merge preservando todas as contas do controle
         base = pd.merge(movimentacoes, controle, on='CONTA', how='left', suffixes=('', '_DUP'))
