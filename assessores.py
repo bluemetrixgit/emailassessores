@@ -248,9 +248,13 @@ class Comercial:
             msg.attach(attach)
     
         # Envia via SMTP
-        with smtplib.SMTP("smtp.gmail.com", 587, timeout=30) as server:
+       with smtplib.SMTP("smtp.gmail.com", 587, timeout=30) as server:
             server.starttls()
-            server.login("borgess.investimentos@gmail.com", "nqxf jrri izww nshi")
+            Server.login(st.secrets["EMAIL_USER"], st.secrets["EMAIL_PASSWORD"])
+           try:
+                server.login(st.secrets["EMAIL_USER"], st.secrets["EMAIL_PASSWORD"])
+            except Exception as e:
+                st.error(f"Falha no login SMTP: {e}")
+                raise
 
-        
             return True
