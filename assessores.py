@@ -100,11 +100,24 @@ class Comercial:
         
         # Junta ordens + acompanhamento
         movimentacoes = pd.concat([ordens, acompanhamento], ignore_index=True)
-
-        st.write("Movimentações antes do merge:", movimentacoes.head(20))
-        st.write("Contas movimentações:", movimentacoes['CONTA'].unique())
-        st.write("Contas controle:", controle['CONTA'].unique())
-
+        
+        # --- DEBUG VISUAL ---
+        st.markdown("### DEBUG")
+        st.write("Movimentações antes do merge (primeiras 20 linhas):")
+        st.dataframe(movimentacoes.head(20))
+        
+        if 'CONTA' in movimentacoes.columns:
+            st.write("Contas movimentações:", list(movimentacoes['CONTA'].unique()))
+        else:
+            st.write("Movimentações sem coluna CONTA!")
+        
+        if 'CONTA' in controle.columns:
+            st.write("Contas controle:", list(controle['CONTA'].unique()))
+        else:
+            st.write("Controle sem coluna CONTA!")
+        
+        # Merge preservando apenas contas movimentadas
+        base = pd.merge(movimentacoes, controle, on='CONTA', how='left', suffixes=('', '_DUP'))
 
         # Merge preservando todas as contas do controle
         base = pd.merge(movimentacoes, controle, on='CONTA', how='left', suffixes=('', '_DUP'))
