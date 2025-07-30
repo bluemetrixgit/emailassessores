@@ -28,8 +28,17 @@ class Comercial:
 
     def tratando_dados(self, ordens, acompanhamento, controle):
         for df in [ordens, acompanhamento, controle]:
-            df.columns = df.columns.str.upper()
-            df['CONTA'] = df['CONTA'].astype(str).str.replace('.0', '', regex=False).str.zfill(8)
+    df.columns = df.columns.str.upper()
+    if 'CONTA' in df.columns:
+        df['CONTA'] = (
+            df['CONTA']
+            .astype(str)
+            .str.strip()
+            .str.replace('.0', '', regex=False)
+            .str.extract(r'(\d+)')[0]  # pega apenas números
+            .fillna('')
+            .str.zfill(8)
+        )
         if 'OPERACAO' in acompanhamento.columns:
             acompanhamento = acompanhamento.rename(columns={'OPERACAO': 'OPERAÇÃO'})
         if 'DESCRICAO' in acompanhamento.columns:
@@ -45,6 +54,11 @@ class Comercial:
             controle = controle.drop(columns=['SITUAÇÃO'])
         if 'VALOR FINANCEIRO' in ordens.columns:
             ordens['VALOR'] = ordens['VALOR FINANCEIRO']
+
+        st.write("Contas no controle:", controle['CONTA'].unique()[:10])
+        st.write("Contas nas ordens:", ordens['CONTA'].unique()[:10])
+        st.write("Contas nos acompanhamentos:", acompanhamento['CONTA'].unique()[:10])
+
        
     # Função que converte corretamente números no formato BR/US
     def to_float_safe(x):
