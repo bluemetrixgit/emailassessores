@@ -54,21 +54,6 @@ class Comercial:
             controle = controle.drop(columns=['SITUAÇÃO'])
         if 'VALOR FINANCEIRO' in ordens.columns:
             ordens['VALOR'] = ordens['VALOR FINANCEIRO']
-        
-    st.write("Tipos CONTA - Movimentações:", movimentacoes['CONTA'].map(type).unique())
-    st.write("Tipos CONTA - Controle:", controle['CONTA'].map(type).unique())
-    st.write("Exemplo contas movimentações:", list(movimentacoes['CONTA'].head(10)))
-    st.write("Exemplo contas controle:", list(controle['CONTA'].head(10)))
-    st.markdown("### DEBUG - ESTRUTURA")
-    st.write("Ordens colunas:", ordens.columns.tolist())
-    st.write("Acompanhamentos colunas:", acompanhamento.columns.tolist())
-    st.write("Controle colunas:", controle.columns.tolist())
-    st.write("Primeiras linhas ordens:")
-    st.dataframe(ordens.head())
-    st.write("Primeiras linhas acompanhamento:")
-    st.dataframe(acompanhamento.head())
-    st.write("Primeiras linhas controle:")
-    st.dataframe(controle.head())
   
     # Função que converte corretamente números no formato BR/US
     def to_float_safe(x):
@@ -90,7 +75,6 @@ class Comercial:
             if pd.notnull(x) and x != '' else ''
         )
 
-
         colunas_operacionais = ['CONTA', 'DESCRIÇÃO', 'OPERAÇÃO', 'SITUAÇÃO', 'SOLICITADA', 'VALOR']
 
         # Se ordens vier vazio, cria um DataFrame vazio com as colunas corretas
@@ -110,6 +94,21 @@ class Comercial:
         
         # Junta ordens + acompanhamento
         movimentacoes = pd.concat([ordens, acompanhamento], ignore_index=True)
+
+        st.write("Tipos CONTA - Movimentações:", movimentacoes['CONTA'].map(type).unique())
+        st.write("Tipos CONTA - Controle:", controle['CONTA'].map(type).unique())
+        st.write("Exemplo contas movimentações:", list(movimentacoes['CONTA'].head(10)))
+        st.write("Exemplo contas controle:", list(controle['CONTA'].head(10)))
+        st.markdown("### DEBUG - ESTRUTURA")
+        st.write("Ordens colunas:", ordens.columns.tolist())
+        st.write("Acompanhamentos colunas:", acompanhamento.columns.tolist())
+        st.write("Controle colunas:", controle.columns.tolist())
+        st.write("Primeiras linhas ordens:")
+        st.dataframe(ordens.head())
+        st.write("Primeiras linhas acompanhamento:")
+        st.dataframe(acompanhamento.head())
+        st.write("Primeiras linhas controle:")
+        st.dataframe(controle.head())
         
         if 'CONTA' in movimentacoes.columns:
             st.write("Contas movimentações:", list(movimentacoes['CONTA'].unique()))
