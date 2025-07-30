@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import os
 from assessores import Comercial, dia_e_hora
+import chardet
 
 # Diretório base para todos os arquivos
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -12,26 +13,32 @@ st.title("📈 Envio de Operações - Bluemetrix")
 
 comercial = Comercial()
 
-# Função de leitura segura
-# Função de leitura segura
+# Função para detectar encoding antes de ler
+def detectar_encoding(caminho):
+    with open(caminho, 'rb') as f:
+        resultado = chardet.detect(f.read())
+    return resultado['encoding']
+
+# Função segura para carregar CSV
 def ler_csv_seguro(caminho, sep=","):
     try:
-        return pd.read_csv(caminho, encoding='utf-8', sep=sep)
-    except UnicodeDecodeError:
+        encoding_detectado = detectar_encoding(caminho)
+        return pd.read_csv(caminho, encoding=encoding_detectado, sep=sep)
+    except Exception:
         return pd.read_csv(caminho, encoding='latin1', sep=sep)
 
-# Garante que a pasta pdfs existe
+# Garante que a pasta de PDFs existe
 os.makedirs("pdfs", exist_ok=True)
 
-# Caminho base
 BASE_DIR = os.getcwd()
 
-# Carregar arquivos de entrada
+# Lendo arquivos
 ordens = ler_csv_seguro(os.path.join(BASE_DIR, 'ordens.csv'))
 acompanhamentos = ler_csv_seguro(os.path.join(BASE_DIR, 'acompanhamento_de_operacoes.csv'))
 emails = ler_csv_seguro(os.path.join(BASE_DIR, 'emails.csv'))
-controle_excel = pd.ExcelFile(os.path.join(BASE_DIR, 'Controle de Contratos - Atualizado 2025.xlsx'))
 
+# Excel
+controle_excel = pd.ExcelFile(os.path.join(BASE_DIR, 'Controle de Contratos - Atualizado 2025.xlsx'))
 try:
     controle = controle_excel.parse('BTG', header=1)
 except:
