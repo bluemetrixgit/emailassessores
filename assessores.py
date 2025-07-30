@@ -62,6 +62,19 @@ class Comercial:
             except:
                 return 0.0
 
+        # Função que converte corretamente números no formato BR/US
+        def parse_numero(x):
+            x = str(x).strip()
+            if x == '' or x.lower() == 'nan':
+                return 0.0
+            # Caso formato brasileiro (1.000,50)
+            if ',' in x and '.' in x and x.find(',') > x.find('.'):
+                x = x.replace('.', '').replace(',', '.')
+            # Caso brasileiro sem milhar (1000,50)
+            elif ',' in x:
+                x = x.replace(',', '.')
+            return float(x)
+
         if not ordens.empty:
             if 'QT. EXECUTADA' in ordens.columns and 'PREÇO MÉDIO' in ordens.columns:
                 ordens['QT. EXECUTADA'] = ordens['QT. EXECUTADA'].apply(to_float_safe)
