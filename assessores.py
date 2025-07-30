@@ -92,23 +92,23 @@ class Comercial:
                 acompanhamento[col] = None
         acompanhamento = acompanhamento[colunas_operacionais]
         
-        # Junta ordens + acompanhamento
-        movimentacoes = pd.concat([ordens, acompanhamento], ignore_index=True)
+    # Junta ordens + acompanhamento
+    movimentacoes = pd.concat([ordens, acompanhamento], ignore_index=True)
 
-        st.write("Tipos CONTA - Movimentações:", movimentacoes['CONTA'].map(type).unique())
-        st.write("Tipos CONTA - Controle:", controle['CONTA'].map(type).unique())
-        st.write("Exemplo contas movimentações:", list(movimentacoes['CONTA'].head(10)))
-        st.write("Exemplo contas controle:", list(controle['CONTA'].head(10)))
-        st.markdown("### DEBUG - ESTRUTURA")
-        st.write("Ordens colunas:", ordens.columns.tolist())
-        st.write("Acompanhamentos colunas:", acompanhamento.columns.tolist())
-        st.write("Controle colunas:", controle.columns.tolist())
-        st.write("Primeiras linhas ordens:")
-        st.dataframe(ordens.head())
-        st.write("Primeiras linhas acompanhamento:")
-        st.dataframe(acompanhamento.head())
-        st.write("Primeiras linhas controle:")
-        st.dataframe(controle.head())
+    st.write("Tipos CONTA - Movimentações:", movimentacoes['CONTA'].map(type).unique())
+    st.write("Tipos CONTA - Controle:", controle['CONTA'].map(type).unique())
+    st.write("Exemplo contas movimentações:", list(movimentacoes['CONTA'].head(10)))
+    st.write("Exemplo contas controle:", list(controle['CONTA'].head(10)))
+    st.markdown("### DEBUG - ESTRUTURA")
+    st.write("Ordens colunas:", ordens.columns.tolist())
+    st.write("Acompanhamentos colunas:", acompanhamento.columns.tolist())
+    st.write("Controle colunas:", controle.columns.tolist())
+    st.write("Primeiras linhas ordens:")
+    st.dataframe(ordens.head())
+    st.write("Primeiras linhas acompanhamento:")
+    st.dataframe(acompanhamento.head())
+    st.write("Primeiras linhas controle:")
+    st.dataframe(controle.head())
         
         if 'CONTA' in movimentacoes.columns:
             st.write("Contas movimentações:", list(movimentacoes['CONTA'].unique()))
