@@ -56,9 +56,9 @@ class Comercial:
         except:
             return 0.0
         
-    ordens['QT. EXECUTADA'] = ordens['QT. EXECUTADA'].apply(to_float_safe)
-    ordens['PREÇO MÉDIO'] = ordens['PREÇO MÉDIO'].apply(to_float_safe)
-    ordens['VALOR'] = (ordens['QT. EXECUTADA'] * ordens['PREÇO MÉDIO']).round(2)
+        ordens['QT. EXECUTADA'] = ordens['QT. EXECUTADA'].apply(to_float_safe)
+        ordens['PREÇO MÉDIO'] = ordens['PREÇO MÉDIO'].apply(to_float_safe)
+        ordens['VALOR'] = (ordens['QT. EXECUTADA'] * ordens['PREÇO MÉDIO']).round(2)
         
         # Formatar como moeda
         ordens['VALOR'] = ordens['VALOR'].apply(
