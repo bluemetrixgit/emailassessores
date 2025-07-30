@@ -203,7 +203,7 @@ class Comercial:
         msg.attach(MIMEText(mensagem_html, 'html'))
     
         # Adiciona a imagem da assinatura
-        assinatura_path = r"C:\Users\BRUNO.SILVA\Documents\Envio de e-mails assessores\Assinatura David.jpg"
+        assinatura_path = os.path.join(os.path.dirname(__file__), "Assinatura David.jpg")
         with open(assinatura_path, 'rb') as f:
             img = MIMEImage(f.read(), _subtype='jpeg')
             img.add_header('Content-ID', '<assinatura>')
