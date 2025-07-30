@@ -28,17 +28,17 @@ class Comercial:
 
     def tratando_dados(self, ordens, acompanhamento, controle):
         for df in [ordens, acompanhamento, controle]:
-    df.columns = df.columns.str.upper()
-    if 'CONTA' in df.columns:
-        df['CONTA'] = (
-            df['CONTA']
-            .astype(str)
-            .str.strip()
-            .str.replace('.0', '', regex=False)
-            .str.extract(r'(\d+)')[0]  # pega apenas números
-            .fillna('')
-            .str.zfill(8)
-        )
+            df.columns = df.columns.str.upper()
+            if 'CONTA' in df.columns:
+                df['CONTA'] = (
+                    df['CONTA']
+                    .astype(str)
+                    .str.strip()
+                    .str.replace('.0', '', regex=False)
+                    .str.extract(r'(\d+)')[0]  # pega apenas números
+                    .fillna('')
+                    .str.zfill(8)
+                )
         if 'OPERACAO' in acompanhamento.columns:
             acompanhamento = acompanhamento.rename(columns={'OPERACAO': 'OPERAÇÃO'})
         if 'DESCRICAO' in acompanhamento.columns:
