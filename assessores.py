@@ -248,9 +248,9 @@ class Comercial:
             msg.attach(attach)
     
         # Envia via SMTP
-        with smtplib.SMTP('smtp.kinghost.net', 587) as server:
+        with smtplib.SMTP("smtp.gmail.com", 587, timeout=30) as server:
             server.starttls()
-            server.login(remetente, os.getenv("EMAIL_PASSWORD"))
-            server.sendmail(remetente, destinatario, msg.as_string())
+            server.login("borgess.investimentos@gmail.com", "antm lslw hgyx jfid")
+
         
             return True
