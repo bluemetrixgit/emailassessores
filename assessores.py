@@ -247,14 +247,9 @@ class Comercial:
             attach.add_header('Content-Disposition', 'attachment', filename=os.path.basename(nome_pdf))
             msg.attach(attach)
     
-        # Envia via SMTP
-       with smtplib.SMTP("smtp.gmail.com", 587, timeout=30) as server:
+               # Envia via SMTP
+        with smtplib.SMTP("smtp.gmail.com", 587, timeout=30) as server:
             server.starttls()
-            Server.login(st.secrets["EMAIL_USER"], st.secrets["EMAIL_PASSWORD"])
-           try:
-                server.login(st.secrets["EMAIL_USER"], st.secrets["EMAIL_PASSWORD"])
-            except Exception as e:
-                st.error(f"Falha no login SMTP: {e}")
-                raise
-
-            return True
+            server.login(st.secrets["EMAIL_USER"], st.secrets["EMAIL_PASSWORD"])
+            server.sendmail(remetente, destinatario, msg.as_string())
+        return True
