@@ -67,11 +67,6 @@ class Comercial:
         st.write("Primeiras linhas controle:")
         st.dataframe(controle.head())
 
-
-        st.write("Contas no controle:", controle['CONTA'].unique()[:10])
-        st.write("Contas nas ordens:", ordens['CONTA'].unique()[:10])
-        st.write("Contas nos acompanhamentos:", acompanhamento['CONTA'].unique()[:10])
-
        
     # Função que converte corretamente números no formato BR/US
     def to_float_safe(x):
