@@ -55,6 +55,19 @@ class Comercial:
         if 'VALOR FINANCEIRO' in ordens.columns:
             ordens['VALOR'] = ordens['VALOR FINANCEIRO']
 
+
+        st.markdown("### DEBUG - ESTRUTURA")
+        st.write("Ordens colunas:", ordens.columns.tolist())
+        st.write("Acompanhamentos colunas:", acompanhamento.columns.tolist())
+        st.write("Controle colunas:", controle.columns.tolist())
+        st.write("Primeiras linhas ordens:")
+        st.dataframe(ordens.head())
+        st.write("Primeiras linhas acompanhamento:")
+        st.dataframe(acompanhamento.head())
+        st.write("Primeiras linhas controle:")
+        st.dataframe(controle.head())
+
+
         st.write("Contas no controle:", controle['CONTA'].unique()[:10])
         st.write("Contas nas ordens:", ordens['CONTA'].unique()[:10])
         st.write("Contas nos acompanhamentos:", acompanhamento['CONTA'].unique()[:10])
