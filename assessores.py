@@ -12,8 +12,6 @@ from email.mime.text import MIMEText
 from email.mime.application import MIMEApplication
 import os
 from dotenv import load_dotenv
-from email.mime.multipart import MIMEMultipart
-from email.mime.text import MIMEText
 from email.mime.image import MIMEImage
 
 # Carregar .env do mesmo diretório
@@ -35,7 +33,7 @@ class Comercial:
                     .astype(str)
                     .str.strip()
                     .str.replace('.0', '', regex=False)
-                    .str.extract(r'(\d+)')[0]  # pega apenas números
+                    .str.extract(r'(\d+)')[0]
                     .fillna('')
                     .str.zfill(8)
                 )
@@ -54,30 +52,28 @@ class Comercial:
             controle = controle.drop(columns=['SITUAÇÃO'])
         if 'VALOR FINANCEIRO' in ordens.columns:
             ordens['VALOR'] = ordens['VALOR FINANCEIRO']
-  
-    # Função que converte corretamente números no formato BR/US
-    def to_float_safe(x):
-        try:
-            if pd.isnull(x): 
+
+        def to_float_safe(x):
+            try:
+                if pd.isnull(x):
+                    return 0.0
+                x = str(x).strip().replace(".", "").replace(",", ".")
+                return float(x)
+            except:
                 return 0.0
-            x = str(x).strip().replace(".", "").replace(",", ".")  # remove separador de milhar e ajusta decimal
-            return float(x)
-        except:
-            return 0.0
-        
-        ordens['QT. EXECUTADA'] = ordens['QT. EXECUTADA'].apply(to_float_safe)
-        ordens['PREÇO MÉDIO'] = ordens['PREÇO MÉDIO'].apply(to_float_safe)
-        ordens['VALOR'] = (ordens['QT. EXECUTADA'] * ordens['PREÇO MÉDIO']).round(2)
-        
-        # Formatar como moeda
-        ordens['VALOR'] = ordens['VALOR'].apply(
-            lambda x: f"R$ {x:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".")
-            if pd.notnull(x) and x != '' else ''
-        )
+
+        if not ordens.empty:
+            if 'QT. EXECUTADA' in ordens.columns and 'PREÇO MÉDIO' in ordens.columns:
+                ordens['QT. EXECUTADA'] = ordens['QT. EXECUTADA'].apply(to_float_safe)
+                ordens['PREÇO MÉDIO'] = ordens['PREÇO MÉDIO'].apply(to_float_safe)
+                ordens['VALOR'] = (ordens['QT. EXECUTADA'] * ordens['PREÇO MÉDIO']).round(2)
+                ordens['VALOR'] = ordens['VALOR'].apply(
+                    lambda x: f"R$ {x:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".")
+                    if pd.notnull(x) and x != '' else ''
+                )
 
         colunas_operacionais = ['CONTA', 'DESCRIÇÃO', 'OPERAÇÃO', 'SITUAÇÃO', 'SOLICITADA', 'VALOR']
 
-        # Se ordens vier vazio, cria um DataFrame vazio com as colunas corretas
         if ordens.empty:
             ordens = pd.DataFrame(columns=colunas_operacionais)
         else:
@@ -85,43 +81,31 @@ class Comercial:
                 if col not in ordens.columns:
                     ordens[col] = None
             ordens = ordens[colunas_operacionais]
-        
-        # Ajusta acompanhamento para as mesmas colunas
+
         for col in colunas_operacionais:
             if col not in acompanhamento.columns:
                 acompanhamento[col] = None
         acompanhamento = acompanhamento[colunas_operacionais]
-        
-    # Junta ordens + acompanhamento
-    movimentacoes = pd.concat([ordens, acompanhamento], ignore_index=True)
 
-    st.write("Tipos CONTA - Movimentações:", movimentacoes['CONTA'].map(type).unique())
-    st.write("Tipos CONTA - Controle:", controle['CONTA'].map(type).unique())
-    st.write("Exemplo contas movimentações:", list(movimentacoes['CONTA'].head(10)))
-    st.write("Exemplo contas controle:", list(controle['CONTA'].head(10)))
-    st.markdown("### DEBUG - ESTRUTURA")
-    st.write("Ordens colunas:", ordens.columns.tolist())
-    st.write("Acompanhamentos colunas:", acompanhamento.columns.tolist())
-    st.write("Controle colunas:", controle.columns.tolist())
-    st.write("Primeiras linhas ordens:")
-    st.dataframe(ordens.head())
-    st.write("Primeiras linhas acompanhamento:")
-    st.dataframe(acompanhamento.head())
-    st.write("Primeiras linhas controle:")
-    st.dataframe(controle.head())
-        
-        if 'CONTA' in movimentacoes.columns:
-            st.write("Contas movimentações:", list(movimentacoes['CONTA'].unique()))
-        else:
-            st.write("Movimentações sem coluna CONTA!")
-        
-        if 'CONTA' in controle.columns:
-            st.write("Contas controle:", list(controle['CONTA'].unique()))
-        else:
-            st.write("Controle sem coluna CONTA!")
-        
-        # Merge preservando apenas contas movimentadas
-        base = pd.merge(controle, movimentacoes, on='CONTA', how='left', suffixes=('', '_DUP'))
+        # Junta ordens + acompanhamento
+        movimentacoes = pd.concat([ordens, acompanhamento], ignore_index=True)
+
+        # --- DEBUG ---
+        st.markdown("### DEBUG - Contas e Tipos")
+        st.write("Tipos CONTA - Movimentações:", movimentacoes['CONTA'].map(type).unique())
+        st.write("Tipos CONTA - Controle:", controle['CONTA'].map(type).unique())
+        st.write("Exemplo contas movimentações:", list(movimentacoes['CONTA'].head(10)))
+        st.write("Exemplo contas controle:", list(controle['CONTA'].head(10)))
+        st.markdown("### DEBUG - Estrutura")
+        st.write("Ordens colunas:", ordens.columns.tolist())
+        st.write("Acompanhamentos colunas:", acompanhamento.columns.tolist())
+        st.write("Controle colunas:", controle.columns.tolist())
+        st.write("Primeiras linhas ordens:"); st.dataframe(ordens.head())
+        st.write("Primeiras linhas acompanhamento:"); st.dataframe(acompanhamento.head())
+        st.write("Primeiras linhas controle:"); st.dataframe(controle.head())
+
+        # Merge
+        base = pd.merge(movimentacoes, controle, on='CONTA', how='left', suffixes=('', '_DUP'))
 
         base = base.loc[:, ~base.columns.str.endswith('_DUP')]
         colunas_finais = ['CONTA', 'ASSESSOR', 'UF', 'OPERAÇÃO', 'DESCRIÇÃO', 'SITUAÇÃO', 'SOLICITADA', 'VALOR']
