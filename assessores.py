@@ -55,21 +55,20 @@ class Comercial:
         if 'VALOR FINANCEIRO' in ordens.columns:
             ordens['VALOR'] = ordens['VALOR FINANCEIRO']
         
-        st.write("Tipos CONTA - Movimentações:", movimentacoes['CONTA'].map(type).unique())
-        st.write("Tipos CONTA - Controle:", controle['CONTA'].map(type).unique())
-        st.write("Exemplo contas movimentações:", list(movimentacoes['CONTA'].head(10)))
-        st.write("Exemplo contas controle:", list(controle['CONTA'].head(10)))
-
-        st.markdown("### DEBUG - ESTRUTURA")
-        st.write("Ordens colunas:", ordens.columns.tolist())
-        st.write("Acompanhamentos colunas:", acompanhamento.columns.tolist())
-        st.write("Controle colunas:", controle.columns.tolist())
-        st.write("Primeiras linhas ordens:")
-        st.dataframe(ordens.head())
-        st.write("Primeiras linhas acompanhamento:")
-        st.dataframe(acompanhamento.head())
-        st.write("Primeiras linhas controle:")
-        st.dataframe(controle.head())
+    st.write("Tipos CONTA - Movimentações:", movimentacoes['CONTA'].map(type).unique())
+    st.write("Tipos CONTA - Controle:", controle['CONTA'].map(type).unique())
+    st.write("Exemplo contas movimentações:", list(movimentacoes['CONTA'].head(10)))
+    st.write("Exemplo contas controle:", list(controle['CONTA'].head(10)))
+    st.markdown("### DEBUG - ESTRUTURA")
+    st.write("Ordens colunas:", ordens.columns.tolist())
+    st.write("Acompanhamentos colunas:", acompanhamento.columns.tolist())
+    st.write("Controle colunas:", controle.columns.tolist())
+    st.write("Primeiras linhas ordens:")
+    st.dataframe(ordens.head())
+    st.write("Primeiras linhas acompanhamento:")
+    st.dataframe(acompanhamento.head())
+    st.write("Primeiras linhas controle:")
+    st.dataframe(controle.head())
   
     # Função que converte corretamente números no formato BR/US
     def to_float_safe(x):
