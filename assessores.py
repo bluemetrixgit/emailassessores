@@ -129,9 +129,6 @@ class Comercial:
         # Merge preservando apenas contas movimentadas
         base = pd.merge(controle, movimentacoes, on='CONTA', how='left', suffixes=('', '_DUP'))
 
-        # Merge preservando todas as contas do controle
-        base = pd.merge(movimentacoes, controle, on='CONTA', how='left', suffixes=('', '_DUP'))
-
         base = base.loc[:, ~base.columns.str.endswith('_DUP')]
         colunas_finais = ['CONTA', 'ASSESSOR', 'UF', 'OPERAÇÃO', 'DESCRIÇÃO', 'SITUAÇÃO', 'SOLICITADA', 'VALOR']
         return base[[col for col in colunas_finais if col in base.columns]]
