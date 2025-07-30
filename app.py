@@ -13,21 +13,35 @@ st.title("📈 Envio de Operações - Bluemetrix")
 comercial = Comercial()
 
 # Função de leitura segura
-def ler_csv_seguro(caminho):
+# Função de leitura segura
+def ler_csv_seguro(caminho, sep=","):
     try:
-        return pd.read_csv(caminho, encoding='utf-8')
+        return pd.read_csv(caminho, encoding='utf-8', sep=sep)
     except UnicodeDecodeError:
-        return pd.read_csv(caminho, encoding='latin1')
+        return pd.read_csv(caminho, encoding='latin1', sep=sep)
+
+# Garante que a pasta pdfs existe
+os.makedirs("pdfs", exist_ok=True)
+
+# Caminho base
+BASE_DIR = os.getcwd()
 
 # Carregar arquivos de entrada
 ordens = ler_csv_seguro(os.path.join(BASE_DIR, 'ordens.csv'))
 acompanhamentos = ler_csv_seguro(os.path.join(BASE_DIR, 'acompanhamento_de_operacoes.csv'))
+emails = ler_csv_seguro(os.path.join(BASE_DIR, 'emails.csv'))
 controle_excel = pd.ExcelFile(os.path.join(BASE_DIR, 'Controle de Contratos - Atualizado 2025.xlsx'))
+
 try:
     controle = controle_excel.parse('BTG', header=1)
 except:
     controle = controle_excel.parse(controle_excel.sheet_names[0], header=1)
+
 arquivo_final = comercial.tratando_dados(ordens, acompanhamentos, controle)
+
+ordens = pd.read_csv("ordens.csv", encoding="utf-8", sep=",")
+acompanhamentos = pd.read_csv("acompanhamento_de_operacoes.csv", encoding="utf-8", sep=",")
+emails = pd.read_csv("emails.csv", encoding="utf-8", sep=",")
 
 # Exibir prévia
 st.subheader("Prévia das Operações")
