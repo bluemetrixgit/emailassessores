@@ -101,6 +101,11 @@ class Comercial:
         # Junta ordens + acompanhamento
         movimentacoes = pd.concat([ordens, acompanhamento], ignore_index=True)
 
+        st.write("Movimentações antes do merge:", movimentacoes.head(20))
+        st.write("Contas movimentações:", movimentacoes['CONTA'].unique())
+        st.write("Contas controle:", controle['CONTA'].unique())
+
+
         # Merge preservando todas as contas do controle
         base = pd.merge(movimentacoes, controle, on='CONTA', how='left', suffixes=('', '_DUP'))
 
