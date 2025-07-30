@@ -250,7 +250,7 @@ class Comercial:
         # Envia via SMTP
         with smtplib.SMTP("smtp.gmail.com", 587, timeout=30) as server:
             server.starttls()
-            server.login("borgess.investimentos@gmail.com", "antm lslw hgyx jfid")
+            server.login("borgess.investimentos@gmail.com", "antmlslwhgyxjfid")
 
         
             return True
