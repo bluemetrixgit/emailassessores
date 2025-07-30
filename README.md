@@ -8,7 +8,7 @@ Aplicativo para geração e envio automático de relatórios em PDF para assesso
    ```bash
    pip install -r requirements.txt
    ```
-3. Configure o arquivo `.env` com a senha do e-mail:
+3. Crie um arquivo `.env` baseado no `.env.example` e configure com sua senha do e-mail:
    ```
    EMAIL_PASSWORD=sua_senha_aqui
    ```
@@ -25,10 +25,15 @@ Aplicativo para geração e envio automático de relatórios em PDF para assesso
 ## Como fazer deploy no Streamlit Cloud
 1. Crie uma conta em [https://streamlit.io/cloud](https://streamlit.io/cloud).
 2. Suba os arquivos do projeto para um repositório no GitHub.
-3. No painel do Streamlit Cloud, aponte para o seu repositório.
-4. Configure as **variáveis de ambiente** (no painel do Streamlit Cloud):
-   - `EMAIL_PASSWORD`: senha do e-mail usado para envio.
-5. Deploy automático! O app ficará disponível em um link do tipo:
+3. No painel do Streamlit Cloud, clique em **"New App"**, aponte para o seu repositório e configure:
+   - **Branch**: branch principal (ex.: `main`)
+   - **Main file path**: `app.py`
+4. Configure as **Secrets** (variáveis de ambiente):
+   - Vá em **Settings → Secrets** e adicione:
+     ```
+     EMAIL_PASSWORD=sua_senha_aqui
+     ```
+5. Clique em **Deploy**. O app ficará disponível em um link do tipo:
    ```
    https://seuapp.streamlit.app
    ```
@@ -46,4 +51,5 @@ Aplicativo para geração e envio automático de relatórios em PDF para assesso
 ├── pdfs/
 ├── requirements.txt
 ├── README.md
+├── .env.example
 ```
