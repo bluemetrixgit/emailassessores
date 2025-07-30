@@ -54,16 +54,6 @@ class Comercial:
             ordens['VALOR'] = ordens['VALOR FINANCEIRO']
 
         def to_float_safe(x):
-            try:
-                if pd.isnull(x):
-                    return 0.0
-                x = str(x).strip().replace(".", "").replace(",", ".")
-                return float(x)
-            except:
-                return 0.0
-
-        # Função que converte corretamente números no formato BR/US
-        def parse_numero(x):
             x = str(x).strip()
             if x == '' or x.lower() == 'nan':
                 return 0.0
