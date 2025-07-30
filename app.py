@@ -49,25 +49,27 @@ st.dataframe(arquivo_final)
 os.makedirs(os.path.join(BASE_DIR, 'pdfs'), exist_ok=True)
 
 # --- Botão único: Gera e envia PDFs ---
-for destinatario in assessores_unicos:
-    tabela = arquivo_final if destinatario in consolidados else arquivo_final[arquivo_final['ASSESSOR'] == destinatario]
-    if tabela.empty:
-        st.warning(f"Destinatário {destinatario} não possui dados. Pulando...")
-        continue
+if st.button("Gerar e Enviar Relatórios"):
+    assessores_unicos = arquivo_final['ASSESSOR'].dropna().unique()
+    for destinatario in assessores_unicos:
+        tabela = arquivo_final if destinatario in consolidados else arquivo_final[arquivo_final['ASSESSOR'] == destinatario]
+        if tabela.empty:
+            st.warning(f"Destinatário {destinatario} não possui dados. Pulando...")
+            continue
 
-    try:
-        st.write(f"➡️ Gerando PDF para {destinatario}...")
-        comercial.gerar_pdf(destinatario, data_hoje, tabela)
-        st.write("✅ PDF gerado com sucesso.")
+        try:
+            st.write(f"➡️ Gerando PDF para {destinatario}...")
+            comercial.gerar_pdf(destinatario, data_hoje, tabela)
+            st.write("✅ PDF gerado com sucesso.")
 
-        st.write(f"➡️ Conectando ao servidor SMTP para {destinatario}...")
-        with smtplib.SMTP("smtp.gmail.com", 587, timeout=30) as server:
-            st.write("➡️ Iniciando conexão segura...")
-            server.starttls()
-            st.write("➡️ Fazendo login...")
-            server.login(remetente, os.getenv("EMAIL_PASSWORD"))
-            st.write("➡️ Enviando e-mail...")
-            server.sendmail(remetente, destinatario, msg.as_string())
-            st.success(f"✅ E-mail enviado para {destinatario}.")
-    except Exception as e:
-        st.error(f"❌ Erro ao processar {destinatario}: {e}")
+            st.write(f"➡️ Conectando ao servidor SMTP para {destinatario}...")
+            with smtplib.SMTP("smtp.gmail.com", 587, timeout=30) as server:
+                st.write("➡️ Iniciando conexão segura...")
+                server.starttls()
+                st.write("➡️ Fazendo login...")
+                server.login(remetente, os.getenv("EMAIL_PASSWORD"))
+                st.write("➡️ Enviando e-mail...")
+                server.sendmail(remetente, destinatario, msg.as_string())
+                st.success(f"✅ E-mail enviado para {destinatario}.")
+        except Exception as e:
+            st.error(f"❌ Erro ao processar {destinatario}: {e}")
