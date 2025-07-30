@@ -216,7 +216,7 @@ class Comercial:
         # Cria a mensagem com encoding correto
         msg = MIMEMultipart()
         msg['From'] = formataddr((str(Header("Bluemetrix Operações", "utf-8")), remetente))
-        msg['To'] = destinatario
+        msg['To'] = formataddr((str(Header(destinatario, "utf-8")), destinatario))
         msg['Subject'] = Header(assunto, "utf-8")
     
         # Corpo HTML com assinatura
