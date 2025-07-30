@@ -51,12 +51,13 @@ os.makedirs(os.path.join(BASE_DIR, 'pdfs'), exist_ok=True)
 # --- Botão único: Gera e envia PDFs ---
 if st.button("Gerar e Enviar Relatórios"):
     assessores_unicos = arquivo_final['ASSESSOR'].dropna().unique()
+    consolidados = emails.loc[emails['CONSOLIDADO'] == 'SIM', 'ASSESSOR'].tolist()
+    
     for destinatario in assessores_unicos:
         tabela = arquivo_final if destinatario in consolidados else arquivo_final[arquivo_final['ASSESSOR'] == destinatario]
         if tabela.empty:
             st.warning(f"Destinatário {destinatario} não possui dados. Pulando...")
             continue
-
         try:
             st.write(f"➡️ Gerando PDF para {destinatario}...")
             comercial.gerar_pdf(destinatario, data_hoje, tabela)
