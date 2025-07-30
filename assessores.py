@@ -83,10 +83,21 @@ class Comercial:
 
         # Merge
         colunas_operacionais = ['CONTA', 'DESCRIÇÃO', 'OPERAÇÃO', 'SITUAÇÃO', 'SOLICITADA', 'VALOR']
-        ordens = ordens[[col for col in colunas_operacionais if col in ordens.columns]]
+
+        # Garante que ordens tenha colunas mesmo vazio
+        for col in colunas_operacionais:
+            if col not in ordens.columns:
+                ordens[col] = None
+        
+        ordens = ordens[colunas_operacionais]
         acompanhamento = acompanhamento[[col for col in colunas_operacionais if col in acompanhamento.columns]]
+        
+        # Junta ordens + acompanhamento
         movimentacoes = pd.concat([ordens, acompanhamento], ignore_index=True)
-        base = pd.merge(controle, movimentacoes, on='CONTA', how='inner', suffixes=('', '_DUP'))
+        
+        # Merge preservando todas as contas do controle
+        base = pd.merge(controle, movimentacoes, on='CONTA', how='left', suffixes=('', '_DUP'))
+
         base = base.loc[:, ~base.columns.str.endswith('_DUP')]
         colunas_finais = ['CONTA', 'ASSESSOR', 'UF', 'OPERAÇÃO', 'DESCRIÇÃO', 'SITUAÇÃO', 'SOLICITADA', 'VALOR']
         return base[[col for col in colunas_finais if col in base.columns]]
