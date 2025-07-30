@@ -47,24 +47,18 @@ class Comercial:
             ordens['VALOR'] = ordens['VALOR FINANCEIRO']
        
     # Função que converte corretamente números no formato BR/US
-        def parse_numero(x):
-            x = str(x).strip()
-            if x == '' or x.lower() == 'nan':
+    def to_float_safe(x):
+        try:
+            if pd.isnull(x): 
                 return 0.0
-            # Caso formato brasileiro (1.000,50)
-            if ',' in x and '.' in x and x.find(',') > x.find('.'):
-                x = x.replace('.', '').replace(',', '.')
-            # Caso brasileiro sem milhar (1000,50)
-            elif ',' in x:
-                x = x.replace(',', '.')
+            x = str(x).strip().replace(".", "").replace(",", ".")  # remove separador de milhar e ajusta decimal
             return float(x)
+        except:
+            return 0.0
         
-        # Normalizar as colunas antes do cálculo
-        ordens['QT. EXECUTADA'] = ordens['QT. EXECUTADA'].apply(parse_numero)
-        ordens['PREÇO MÉDIO'] = ordens['PREÇO MÉDIO'].apply(parse_numero)
-        
-        # Calcular o valor financeiro corretamente
-        ordens['VALOR'] = (ordens['QT. EXECUTADA'] * ordens['PREÇO MÉDIO']).round(2)
+    ordens['QT. EXECUTADA'] = ordens['QT. EXECUTADA'].apply(to_float_safe)
+    ordens['PREÇO MÉDIO'] = ordens['PREÇO MÉDIO'].apply(to_float_safe)
+    ordens['VALOR'] = (ordens['QT. EXECUTADA'] * ordens['PREÇO MÉDIO']).round(2)
         
         # Formatar como moeda
         ordens['VALOR'] = ordens['VALOR'].apply(
