@@ -49,26 +49,25 @@ st.dataframe(arquivo_final)
 os.makedirs(os.path.join(BASE_DIR, 'pdfs'), exist_ok=True)
 
 # --- Botão único: Gera e envia PDFs ---
-if st.button("📄 Gerar e Enviar Relatórios"):
-    df_emails = ler_csv_seguro(os.path.join(BASE_DIR, "emails.csv"))
-    consolidados = df_emails[df_emails["CONSOLIDADO"].str.upper() == "SIM"]["NOME"].str.strip().tolist()
-    assessores_unicos = arquivo_final['ASSESSOR'].dropna().unique()
-    destinatarios = list(assessores_unicos) + consolidados
+for destinatario in assessores_unicos:
+    tabela = arquivo_final if destinatario in consolidados else arquivo_final[arquivo_final['ASSESSOR'] == destinatario]
+    if tabela.empty:
+        st.warning(f"Destinatário {destinatario} não possui dados. Pulando...")
+        continue
 
-    for destinatario in destinatarios:
-        try:
-            tabela = arquivo_final if destinatario in consolidados else arquivo_final[arquivo_final['ASSESSOR'] == destinatario]
-            nome_pdf = comercial.gerar_pdf(destinatario, dia_e_hora.strftime('%d/%m/%Y'), tabela)
+    try:
+        st.write(f"➡️ Gerando PDF para {destinatario}...")
+        comercial.gerar_pdf(destinatario, data_hoje, tabela)
+        st.write("✅ PDF gerado com sucesso.")
 
-            if nome_pdf and os.path.exists(nome_pdf):
-                email_registro = df_emails[df_emails['NOME'].str.strip().str.upper() == destinatario.strip().upper()]['EMAIL']
-                if email_registro.empty:
-                    st.warning(f"Destinatário {destinatario} não possui e-mail na planilha. Pulando...")
-                    continue
-                email = email_registro.values[0]
-                comercial.enviar_email(destinatario, email, nome_pdf, dia_e_hora.strftime('%d/%m/%Y'))
-                st.success(f"Relatório de {destinatario} gerado e enviado!")
-            else:
-                st.warning(f"Não foi possível gerar o PDF para {destinatario}.")
-        except Exception as e:
-            st.error(f"Erro ao processar {destinatario}: {e}")
+        st.write(f"➡️ Conectando ao servidor SMTP para {destinatario}...")
+        with smtplib.SMTP("smtp.gmail.com", 587, timeout=30) as server:
+            st.write("➡️ Iniciando conexão segura...")
+            server.starttls()
+            st.write("➡️ Fazendo login...")
+            server.login(remetente, os.getenv("EMAIL_PASSWORD"))
+            st.write("➡️ Enviando e-mail...")
+            server.sendmail(remetente, destinatario, msg.as_string())
+            st.success(f"✅ E-mail enviado para {destinatario}.")
+    except Exception as e:
+        st.error(f"❌ Erro ao processar {destinatario}: {e}")
