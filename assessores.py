@@ -56,16 +56,7 @@ class Comercial:
             ordens['VALOR'] = ordens['VALOR FINANCEIRO']
 
 
-        st.markdown("### DEBUG - ESTRUTURA")
-        st.write("Ordens colunas:", ordens.columns.tolist())
-        st.write("Acompanhamentos colunas:", acompanhamento.columns.tolist())
-        st.write("Controle colunas:", controle.columns.tolist())
-        st.write("Primeiras linhas ordens:")
-        st.dataframe(ordens.head())
-        st.write("Primeiras linhas acompanhamento:")
-        st.dataframe(acompanhamento.head())
-        st.write("Primeiras linhas controle:")
-        st.dataframe(controle.head())
+        
 
        
     # Função que converte corretamente números no formato BR/US
@@ -109,11 +100,6 @@ class Comercial:
         # Junta ordens + acompanhamento
         movimentacoes = pd.concat([ordens, acompanhamento], ignore_index=True)
         
-        # --- DEBUG VISUAL ---
-        st.markdown("### DEBUG")
-        st.write("Movimentações antes do merge (primeiras 20 linhas):")
-        st.dataframe(movimentacoes.head(20))
-        
         if 'CONTA' in movimentacoes.columns:
             st.write("Contas movimentações:", list(movimentacoes['CONTA'].unique()))
         else:
@@ -123,6 +109,22 @@ class Comercial:
             st.write("Contas controle:", list(controle['CONTA'].unique()))
         else:
             st.write("Controle sem coluna CONTA!")
+
+        st.write("Tipos CONTA - Movimentações:", movimentacoes['CONTA'].map(type).unique())
+        st.write("Tipos CONTA - Controle:", controle['CONTA'].map(type).unique())
+        st.write("Exemplo contas movimentações:", list(movimentacoes['CONTA'].head(10)))
+        st.write("Exemplo contas controle:", list(controle['CONTA'].head(10)))
+
+        st.markdown("### DEBUG - ESTRUTURA")
+        st.write("Ordens colunas:", ordens.columns.tolist())
+        st.write("Acompanhamentos colunas:", acompanhamento.columns.tolist())
+        st.write("Controle colunas:", controle.columns.tolist())
+        st.write("Primeiras linhas ordens:")
+        st.dataframe(ordens.head())
+        st.write("Primeiras linhas acompanhamento:")
+        st.dataframe(acompanhamento.head())
+        st.write("Primeiras linhas controle:")
+        st.dataframe(controle.head())
         
         # Merge preservando apenas contas movimentadas
         base = pd.merge(controle, movimentacoes, on='CONTA', how='left', suffixes=('', '_DUP'))
