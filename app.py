@@ -27,11 +27,6 @@ def ler_csv_seguro(caminho, sep=","):
     except Exception:
         return pd.read_csv(caminho, encoding='latin1', sep=sep)
 
-# Garante que a pasta de PDFs existe
-os.makedirs("pdfs", exist_ok=True)
-
-BASE_DIR = os.getcwd()
-
 # Lendo arquivos
 ordens = ler_csv_seguro(os.path.join(BASE_DIR, 'ordens.csv'))
 acompanhamentos = ler_csv_seguro(os.path.join(BASE_DIR, 'acompanhamento_de_operacoes.csv'))
@@ -45,10 +40,6 @@ except:
     controle = controle_excel.parse(controle_excel.sheet_names[0], header=1)
 
 arquivo_final = comercial.tratando_dados(ordens, acompanhamentos, controle)
-
-ordens = pd.read_csv("ordens.csv", encoding="utf-8", sep=",")
-acompanhamentos = pd.read_csv("acompanhamento_de_operacoes.csv", encoding="utf-8", sep=",")
-emails = pd.read_csv("emails.csv", encoding="utf-8", sep=",")
 
 # Exibir prévia
 st.subheader("Prévia das Operações")
