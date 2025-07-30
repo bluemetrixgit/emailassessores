@@ -102,7 +102,7 @@ class Comercial:
         movimentacoes = pd.concat([ordens, acompanhamento], ignore_index=True)
 
         # Merge preservando todas as contas do controle
-        base = pd.merge(controle, movimentacoes, on='CONTA', how='left', suffixes=('', '_DUP'))
+        base = pd.merge(movimentacoes, controle, on='CONTA', how='left', suffixes=('', '_DUP'))
 
         base = base.loc[:, ~base.columns.str.endswith('_DUP')]
         colunas_finais = ['CONTA', 'ASSESSOR', 'UF', 'OPERAÇÃO', 'DESCRIÇÃO', 'SITUAÇÃO', 'SOLICITADA', 'VALOR']
