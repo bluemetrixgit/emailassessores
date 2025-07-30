@@ -81,20 +81,26 @@ class Comercial:
         )
 
 
-        # Merge
         colunas_operacionais = ['CONTA', 'DESCRIÇÃO', 'OPERAÇÃO', 'SITUAÇÃO', 'SOLICITADA', 'VALOR']
 
-        # Garante que ordens tenha colunas mesmo vazio
-        for col in colunas_operacionais:
-            if col not in ordens.columns:
-                ordens[col] = None
+        # Se ordens vier vazio, cria um DataFrame vazio com as colunas corretas
+        if ordens.empty:
+            ordens = pd.DataFrame(columns=colunas_operacionais)
+        else:
+            for col in colunas_operacionais:
+                if col not in ordens.columns:
+                    ordens[col] = None
+            ordens = ordens[colunas_operacionais]
         
-        ordens = ordens[colunas_operacionais]
-        acompanhamento = acompanhamento[[col for col in colunas_operacionais if col in acompanhamento.columns]]
+        # Ajusta acompanhamento para as mesmas colunas
+        for col in colunas_operacionais:
+            if col not in acompanhamento.columns:
+                acompanhamento[col] = None
+        acompanhamento = acompanhamento[colunas_operacionais]
         
         # Junta ordens + acompanhamento
         movimentacoes = pd.concat([ordens, acompanhamento], ignore_index=True)
-        
+
         # Merge preservando todas as contas do controle
         base = pd.merge(controle, movimentacoes, on='CONTA', how='left', suffixes=('', '_DUP'))
 
