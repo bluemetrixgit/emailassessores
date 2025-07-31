@@ -72,14 +72,11 @@ if st.button("Gerar e Enviar Relatórios"):
             continue
         try:
             st.write(f"➡️ Gerando PDF para {destinatario}...")
-            comercial.gerar_pdf(destinatario, dia_e_hora, tabela)
+            nome_pdf = comercial.gerar_pdf(destinatario, dia_e_hora, tabela)  # CAPTURA o caminho do PDF
             st.write("✅ PDF gerado com sucesso.")
-
-            st.write(f"➡️ Conectando ao servidor SMTP para {destinatario}...")
-            with smtplib.SMTP("smtp.gmail.com", 587, timeout=30) as server:
-                server.starttls()
-                server.login(os.getenv("EMAIL_USER"), os.getenv("EMAIL_PASSWORD"))
-                comercial.enviar_email(destinatario, email_destinatario, nome_pdf, data_dia)
-                st.success(f"✅ E-mail enviado para {destinatario}.")
+            
+            st.write(f"➡️ Enviando e-mail para {destinatario}...")
+            comercial.enviar_email(destinatario, email_destinatario, nome_pdf, dia_e_hora)  # PASSA nome_pdf e data
+            st.success(f"✅ E-mail enviado para {destinatario}.")
         except Exception as e:
             st.error(f"❌ Erro ao processar {destinatario}: {e}")
