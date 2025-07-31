@@ -58,12 +58,18 @@ if st.button("Gerar e Enviar Relatórios"):
     destinatarios = list(assessores_unicos) + consolidados
 
     for destinatario in destinatarios:
-        email_destinatario = (
-            emails.loc[emails['NOME'].str.strip().str.upper() == str(destinatario).strip().upper(), 'EMAIL']
-            .values
-        )
+       # Busca o e-mail correspondente ao nome
+        email_destinatario = emails.loc[
+            emails['NOME'].str.strip().str.upper() == str(destinatario).strip().upper(), 
+            'EMAIL'
+        ].values
+        
         if len(email_destinatario) == 0:
-            st.warning(f"Não foi encontrado e‑mail para {destinatario}. Pulando...")
+            st.warning(f"Não foi encontrado e-mail para {destinatario}. Pulando...")
+            continue
+        
+        email_destinatario = email_destinatario[0]
+        
             continue
         email_destinatario = email_destinatario[0]
         tabela = arquivo_final if destinatario in consolidados else arquivo_final[arquivo_final['ASSESSOR'] == destinatario]
@@ -76,7 +82,7 @@ if st.button("Gerar e Enviar Relatórios"):
             st.write("✅ PDF gerado com sucesso.")
             
             st.write(f"➡️ Enviando e-mail para {destinatario}...")
-            comercial.enviar_email(destinatario, email_destinatario, nome_pdf, dia_e_hora)  # PASSA nome_pdf e data
+            comercial.enviar_email(destinatario, email_destinatario, nome_pdf, dia_e_hora)
             st.success(f"✅ E-mail enviado para {destinatario}.")
         except Exception as e:
             st.error(f"❌ Erro ao processar {destinatario}: {e}")
