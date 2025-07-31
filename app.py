@@ -67,15 +67,13 @@ if st.button("Gerar e Enviar Relatórios"):
         if len(email_destinatario) == 0:
             st.warning(f"Não foi encontrado e-mail para {destinatario}. Pulando...")
             continue
-        
         email_destinatario = email_destinatario[0]
-        
-            continue
-        email_destinatario = email_destinatario[0]
+
         tabela = arquivo_final if destinatario in consolidados else arquivo_final[arquivo_final['ASSESSOR'] == destinatario]
         if tabela.empty:
             st.warning(f"Destinatário {destinatario} não possui dados. Pulando...")
             continue
+
         try:
             st.write(f"➡️ Gerando PDF para {destinatario}...")
             nome_pdf = comercial.gerar_pdf(destinatario, dia_e_hora, tabela)  # CAPTURA o caminho do PDF
