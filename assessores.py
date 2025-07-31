@@ -10,9 +10,11 @@ import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.mime.application import MIMEApplication
+from email.mime.image import MIMEImage
+from email.header import Header
+from email.utils import formataddr
 import os
 from dotenv import load_dotenv
-from email.mime.image import MIMEImage
 
 # Carregar .env do mesmo diretório
 dotenv_path = os.path.join(os.path.dirname(__file__), ".env")
@@ -57,10 +59,8 @@ class Comercial:
             x = str(x).strip()
             if x == '' or x.lower() == 'nan':
                 return 0.0
-            # Caso formato brasileiro (1.000,50)
             if ',' in x and '.' in x and x.find(',') > x.find('.'):
                 x = x.replace('.', '').replace(',', '.')
-            # Caso brasileiro sem milhar (1000,50)
             elif ',' in x:
                 x = x.replace(',', '.')
             return float(x)
@@ -76,40 +76,12 @@ class Comercial:
                 )
 
         colunas_operacionais = ['CONTA', 'DESCRIÇÃO', 'OPERAÇÃO', 'SITUAÇÃO', 'SOLICITADA', 'VALOR']
+        ordens = ordens[[col for col in colunas_operacionais if col in ordens.columns]]
+        acompanhamento = acompanhamento[[col for col in colunas_operacionais if col in acompanhamento.columns]]
 
-        if ordens.empty:
-            ordens = pd.DataFrame(columns=colunas_operacionais)
-        else:
-            for col in colunas_operacionais:
-                if col not in ordens.columns:
-                    ordens[col] = None
-            ordens = ordens[colunas_operacionais]
-
-        for col in colunas_operacionais:
-            if col not in acompanhamento.columns:
-                acompanhamento[col] = None
-        acompanhamento = acompanhamento[colunas_operacionais]
-
-        # Junta ordens + acompanhamento
         movimentacoes = pd.concat([ordens, acompanhamento], ignore_index=True)
 
-        # --- DEBUG ---
-        #st.markdown("### DEBUG - Contas e Tipos")
-        #st.write("Tipos CONTA - Movimentações:", movimentacoes['CONTA'].map(type).unique())
-        #st.write("Tipos CONTA - Controle:", controle['CONTA'].map(type).unique())
-        #st.write("Exemplo contas movimentações:", list(movimentacoes['CONTA'].head(10)))
-        #st.write("Exemplo contas controle:", list(controle['CONTA'].head(10)))
-        #st.markdown("### DEBUG - Estrutura")
-        #st.write("Ordens colunas:", ordens.columns.tolist())
-        #st.write("Acompanhamentos colunas:", acompanhamento.columns.tolist())
-        #st.write("Controle colunas:", controle.columns.tolist())
-        #st.write("Primeiras linhas ordens:"); st.dataframe(ordens.head())
-        #st.write("Primeiras linhas acompanhamento:"); st.dataframe(acompanhamento.head())
-        #st.write("Primeiras linhas controle:"); st.dataframe(controle.head())
-
-        # Merge
-        base = pd.merge(movimentacoes, controle, on='CONTA', how='left', suffixes=('', '_DUP'))
-
+        base = pd.merge(controle, movimentacoes, on='CONTA', how='inner', suffixes=('', '_DUP'))
         base = base.loc[:, ~base.columns.str.endswith('_DUP')]
         colunas_finais = ['CONTA', 'ASSESSOR', 'UF', 'OPERAÇÃO', 'DESCRIÇÃO', 'SITUAÇÃO', 'SOLICITADA', 'VALOR']
         return base[[col for col in colunas_finais if col in base.columns]]
@@ -133,10 +105,8 @@ class Comercial:
             doc.build(story)
             return None
 
-        # --- Espaço para não colar no cabeçalho ---
         story.append(Spacer(1, 5*inch))
 
-        # --- TABELA ---
         colunas = [col for col in tabela.columns if col in ["CONTA", "ASSESSOR", "UF", "OPERAÇÃO", "DESCRIÇÃO", "SITUAÇÃO", "SOLICITADA", "VALOR"]]
         dados = [colunas]
         for _, row in tabela.iterrows():
@@ -147,7 +117,7 @@ class Comercial:
                     val = ""
                 elif col == "VALOR":
                     try:
-                        val = float(str(val).replace("R$","").replace(".","").replace(",",".")) 
+                        val = float(str(val).replace("R$", "").replace(".", "").replace(",", ".")) 
                         val = f"R$ {val:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".")
                     except:
                         pass
@@ -161,7 +131,7 @@ class Comercial:
                 linha.append(val)
             dados.append(linha)
 
-        larguras = [50, 80, 40, 80, 250, 80, 70, 80]  # Descrição menor, valor maior
+        larguras = [50, 80, 40, 80, 250, 80, 70, 80]
         tabela_pdf = Table(dados, repeatRows=1, colWidths=larguras, hAlign='LEFT')
         tabela_pdf.setStyle([
             ('BACKGROUND', (0, 0), (-1, 0), colors.lightgrey),
@@ -174,15 +144,11 @@ class Comercial:
         ])
         story.append(KeepTogether(tabela_pdf))
 
-                # --- Cabeçalho com logo + infos ---
         def cabecalho(canvas, doc):
-            # Caminho absoluto da logo
             logo_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "logo.jpg")
             page_width, page_height = landscape(letter)
-
-            # Desenha a logo centralizada
             if os.path.exists(logo_path):
-                logo_width = 700  # tamanho da logo
+                logo_width = 700
                 logo_height = 300
                 x_position = (page_width - logo_width) / 2
                 y_position = page_height - 300
@@ -195,12 +161,8 @@ class Comercial:
                     preserveAspectRatio=True,
                     mask='auto'
                 )
-
-            # Título
             canvas.setFont("Helvetica-Bold", 14)
             canvas.drawCentredString(page_width / 2, y_position - 15, "Acompanhamento diário de operações")
-
-            # Assessor e Data
             canvas.setFont("Helvetica", 10)
             canvas.drawCentredString(page_width / 2, y_position - 35, f"Assessor: {assessor}")
             canvas.drawCentredString(page_width / 2, y_position - 50, f"Data: {data_dia}")
@@ -208,18 +170,15 @@ class Comercial:
         doc.build(story, onFirstPage=cabecalho)
         return nome_pdf
 
-
     def enviar_email(self, assessor, destinatario, nome_pdf, data_dia):
-        remetente = "david.alves@bluemetrix.com.br"
+        remetente = st.secrets["EMAIL_USER"]
         assunto = f"Acompanhamento diário de operações - {assessor} - {data_dia}"
-    
-        # Cria a mensagem com encoding correto
+
         msg = MIMEMultipart()
         msg['From'] = formataddr((str(Header("Bluemetrix Operações", "utf-8")), remetente))
-        msg['To'] = formataddr((str(Header(destinatario, "utf-8")), destinatario))
+        msg['To'] = destinatario
         msg['Subject'] = Header(assunto, "utf-8")
-    
-        # Corpo HTML com assinatura
+
         mensagem_html = f"""
         <html>
           <body style="font-family: Arial, sans-serif; color: #333;">
@@ -232,22 +191,19 @@ class Comercial:
         </html>
         """
         msg.attach(MIMEText(mensagem_html, 'html', 'utf-8'))
-    
-        # Adiciona a imagem da assinatura
+
         assinatura_path = os.path.join(os.path.dirname(__file__), "Assinatura David.jpg")
         with open(assinatura_path, 'rb') as f:
             img = MIMEImage(f.read(), _subtype='jpeg')
             img.add_header('Content-ID', '<assinatura>')
             img.add_header('Content-Disposition', 'inline', filename="Assinatura.jpg")
             msg.attach(img)
-            
-        # Anexa o PDF
+
         with open(nome_pdf, 'rb') as f:
             attach = MIMEApplication(f.read(), _subtype='pdf')
             attach.add_header('Content-Disposition', 'attachment', filename=os.path.basename(nome_pdf))
             msg.attach(attach)
-    
-               # Envia via SMTP
+
         with smtplib.SMTP("smtp.gmail.com", 587, timeout=30) as server:
             server.starttls()
             server.login(st.secrets["EMAIL_USER"], st.secrets["EMAIL_PASSWORD"])
