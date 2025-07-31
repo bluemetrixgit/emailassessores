@@ -58,6 +58,7 @@ if st.button("Gerar e Enviar Relatórios"):
     destinatarios = list(assessores_unicos) + consolidados
 
     for destinatario in destinatarios:
+        email_destinatario = emails.loc[emails['NOME'] == destinatario, 'EMAIL'].values[0]
         tabela = arquivo_final if destinatario in consolidados else arquivo_final[arquivo_final['ASSESSOR'] == destinatario]
         if tabela.empty:
             st.warning(f"Destinatário {destinatario} não possui dados. Pulando...")
@@ -71,7 +72,7 @@ if st.button("Gerar e Enviar Relatórios"):
             with smtplib.SMTP("smtp.gmail.com", 587, timeout=30) as server:
                 server.starttls()
                 server.login(os.getenv("EMAIL_USER"), os.getenv("EMAIL_PASSWORD"))
-                server.sendmail(os.getenv("EMAIL_USER"), destinatario, "Relatório enviado.")
+                server.sendmail(os.getenv("EMAIL_USER"), email_destinatario, "Relatório enviado.")
                 st.success(f"✅ E-mail enviado para {destinatario}.")
         except Exception as e:
             st.error(f"❌ Erro ao processar {destinatario}: {e}")
