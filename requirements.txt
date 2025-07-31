@@ -4,4 +4,3 @@ reportlab
 python-dotenv
 openpyxl
 chardet
-smtplib
