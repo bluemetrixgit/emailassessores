@@ -79,7 +79,7 @@ if st.button("Gerar e Enviar Relatórios"):
             with smtplib.SMTP("smtp.gmail.com", 587, timeout=30) as server:
                 server.starttls()
                 server.login(os.getenv("EMAIL_USER"), os.getenv("EMAIL_PASSWORD"))
-                server.sendmail(os.getenv("EMAIL_USER"), email_destinatario, msg.as_string())
+                comercial.enviar_email(destinatario, email_destinatario, nome_pdf, data_dia)
                 st.success(f"✅ E-mail enviado para {destinatario}.")
         except Exception as e:
             st.error(f"❌ Erro ao processar {destinatario}: {e}")
