@@ -176,7 +176,7 @@ class Comercial:
 
         msg = MIMEMultipart()
         msg['From'] = formataddr((str(Header("Bluemetrix Operações", "utf-8")), remetente))
-        msg['To'] = formataddr((str(Header(assessor, 'utf-8')), email_destinatario))
+        msg['To'] = formataddr((str(Header(assessor, 'utf-8')), destinatario))
         msg['Subject'] = Header(assunto, "utf-8")
 
         mensagem_html = f"""
