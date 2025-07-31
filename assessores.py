@@ -177,7 +177,7 @@ class Comercial:
 
 
         msg = MIMEMultipart()
-        msg['From'] = formataddr((str(Header("Bluemetrix Operações", "utf-8")), remetente))
+        msg['From'] = formataddr((str(Header("Middle Office Bluemetrix", "utf-8")), remetente))
         msg['To'] = formataddr((str(Header(assessor, 'utf-8')), destinatario))
         msg['Subject'] = Header(assunto, "utf-8")
 
@@ -206,7 +206,8 @@ class Comercial:
             attach.add_header('Content-Disposition', 'attachment', filename=os.path.basename(nome_pdf))
             msg.attach(attach)
 
-        with smtplib.SMTP_SSL("smtp.kinghost.net", 465, timeout=30) as server:
+        with smtplib.SMTP("smtp.gmail.com", 587, timeout=30) as server:
+            server.starttls()
             server.login(st.secrets["EMAIL_USER"], st.secrets["EMAIL_PASSWORD"])
             server.sendmail(remetente, destinatario, msg.as_string())
         return True
