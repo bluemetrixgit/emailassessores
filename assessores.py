@@ -204,7 +204,7 @@ class Comercial:
             attach.add_header('Content-Disposition', 'attachment', filename=os.path.basename(nome_pdf))
             msg.attach(attach)
 
-        with smtplib.SMTP("smtp.gmail.com", 587, timeout=30) as server:
+        with smtplib.SMTP("smtp.kinghost.net", 587, timeout=30) as server:
             server.starttls()
             server.login(st.secrets["EMAIL_USER"], st.secrets["EMAIL_PASSWORD"])
             server.sendmail(remetente, destinatario, msg.as_string())
