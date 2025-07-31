@@ -172,7 +172,9 @@ class Comercial:
 
     def enviar_email(self, assessor, destinatario, nome_pdf, data_dia):
         remetente = st.secrets["EMAIL_USER"]
-        assunto = f"Acompanhamento diário de operações - {assessor} - {data_dia}"
+        data_formatada = data_dia.strftime("%d/%m/%Y")
+        assunto = f"Acompanhamento diário de operações - {assessor} - {data_formatada}"
+
 
         msg = MIMEMultipart()
         msg['From'] = formataddr((str(Header("Bluemetrix Operações", "utf-8")), remetente))
@@ -183,7 +185,7 @@ class Comercial:
         <html>
           <body style="font-family: Arial, sans-serif; color: #333;">
             <p>Olá {assessor},</p>
-            <p>Segue em anexo o relatório de operações do dia {data_dia}.</p>
+            <p>Segue em anexo o relatório de operações do dia {data_formatada}.</p>
             <p>Qualquer dúvida, estamos à disposição.</p>
             <br>
             <img src="cid:assinatura" alt="Assinatura Bluemetrix" style="width:500px; height:auto;">
@@ -204,8 +206,7 @@ class Comercial:
             attach.add_header('Content-Disposition', 'attachment', filename=os.path.basename(nome_pdf))
             msg.attach(attach)
 
-        with smtplib.SMTP("smtp.kinghost.net", 587, timeout=30) as server:
-            server.starttls()
+        with smtplib.SMTP_SSL("smtp.kinghost.net", 465, timeout=30) as server:
             server.login(st.secrets["EMAIL_USER"], st.secrets["EMAIL_PASSWORD"])
             server.sendmail(remetente, destinatario, msg.as_string())
         return True
