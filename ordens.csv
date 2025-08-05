@@ -1,1 +1,3 @@
 Data/Hora,Conta,Cliente,Ativo,Status,Direção,Qt. Oferta,Qt. Executada,Qt. Restante,Preço Médio,Tipo,Preço Limite,Estratégia,Plataforma,Bolsa,Validade,Até a Data,Disparo Stop,Preço Stop,Disparo Start,Preço Start,Obs,ID,ID Bolsa,Login,Login Alteração,
+2025-08-04 12:31:15,4214460,Maria Das Gracas Da Silva Pires,ETHE11,Executada,Venda,300.0,300.0,,58.5692,Limitada,58.55,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,8817397799939,39e64e87770f498c8f17bc9e5c52b37a,6NA,4214460
+2025-08-04 12:31:10,4214460,Maria Das Gracas Da Silva Pires,QSOL11,Executada,Venda,181.0,181.0,,11.22,Limitada,11.22,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,8817397792807,5d0680f0a6c74e778b30b1ad931c4306,6NA,4214460
