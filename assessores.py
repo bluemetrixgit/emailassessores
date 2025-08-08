@@ -123,7 +123,7 @@ class Comercial:
                         pass
                 elif col == "SOLICITADA":
                     try:
-                        val = pd.to_datetime(val).strftime("%d/%m/%Y")
+                        val = pd.to_datetime(val, dayfirst=True).strftime("%d/%m/%Y")
                     except:
                         pass
                 if col == "DESCRIÇÃO":
@@ -165,7 +165,9 @@ class Comercial:
             canvas.drawCentredString(page_width / 2, y_position - 15, "Acompanhamento diário de operações")
             canvas.setFont("Helvetica", 10)
             canvas.drawCentredString(page_width / 2, y_position - 35, f"Assessor: {assessor}")
-            canvas.drawCentredString(page_width / 2, y_position - 50, f"Data: {data_dia}")
+            data_formatada = pd.to_datetime(data_dia).strftime("%d/%m/%Y")
+            canvas.drawCentredString(page_width / 2, y_position - 50, f"Data: {data_formatada}")
+
 
         doc.build(story, onFirstPage=cabecalho)
         return nome_pdf
@@ -211,3 +213,4 @@ class Comercial:
             server.login(st.secrets["EMAIL_USER"], st.secrets["EMAIL_PASSWORD"])
             server.sendmail(remetente, destinatario, msg.as_string())
         return True
+
