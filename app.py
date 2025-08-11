@@ -1,9 +1,11 @@
+
 import streamlit as st
 import pandas as pd
 import os
 import smtplib
-from assessores import Comercial, dia_e_hora
+from assessores import Comercial
 import chardet
+from datetime import date, timedelta
 
 # Diretório base
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -21,7 +23,7 @@ def detectar_encoding(caminho):
     return resultado['encoding']
 
 # Função segura para ler CSV
-def ler_csv_seguro(caminho, sep=","):
+def ler_csv_seguro(caminho, sep=','):
     try:
         encoding_detectado = detectar_encoding(caminho)
         return pd.read_csv(caminho, encoding=encoding_detectado, sep=sep)
@@ -43,44 +45,72 @@ except:
 # Tratar dados
 arquivo_final = comercial.tratando_dados(ordens, acompanhamentos, controle)
 
+# ---------- Seletor de período ----------
+def ultimo_dia_util(d: date) -> date:
+    while d.weekday() >= 5:  # 5=sábado, 6=domingo
+        d -= timedelta(days=1)
+    return d
+
+hoje = date.today()
+default_fim = ultimo_dia_util(hoje)
+
+data_ini, data_fim = st.date_input(
+    "Período do relatório (início e fim)",
+    value=(default_fim, default_fim),
+    format="DD/MM/YYYY"
+)
+
+if data_ini > data_fim:
+    data_ini, data_fim = data_fim, data_ini
+
+# Cria coluna auxiliar de data (apenas a data) a partir de SOLICITADA
+arquivo_final['_DATA'] = pd.to_datetime(
+    arquivo_final['SOLICITADA'], dayfirst=True, errors='coerce'
+).dt.date
+
+# Filtra pelo período selecionado
+arquivo_filtrado = arquivo_final.loc[
+    (arquivo_final['_DATA'] >= data_ini) & (arquivo_final['_DATA'] <= data_fim)
+].copy()
+
 # Prévia
 st.subheader("Prévia das Operações")
-st.dataframe(arquivo_final)
+st.dataframe(arquivo_filtrado.drop(columns=['_DATA'], errors='ignore'))
 
 # Criar pasta PDFs
 os.makedirs(os.path.join(BASE_DIR, 'pdfs'), exist_ok=True)
 
 # Botão para gerar e enviar relatórios
 if st.button("Gerar e Enviar Relatórios"):
-    # Restaurado para o fluxo original: usa NOME para consolidados
+    # Mantém fluxo original: consolidados por NOME
     consolidados = emails.loc[emails['CONSOLIDADO'].str.upper() == 'SIM', 'NOME'].str.strip().tolist()
-    assessores_unicos = arquivo_final['ASSESSOR'].dropna().unique()
+    assessores_unicos = arquivo_filtrado['ASSESSOR'].dropna().unique()
     destinatarios = list(assessores_unicos) + consolidados
 
     for destinatario in destinatarios:
-       # Busca o e-mail correspondente ao nome
+        # Busca o e-mail correspondente ao nome
         email_destinatario = emails.loc[
-            emails['NOME'].str.strip().str.upper() == str(destinatario).strip().upper(), 
+            emails['NOME'].str.strip().str.upper() == str(destinatario).strip().upper(),
             'EMAIL'
         ].values
-        
+
         if len(email_destinatario) == 0:
             st.warning(f"Não foi encontrado e-mail para {destinatario}. Pulando...")
             continue
         email_destinatario = email_destinatario[0]
 
-        tabela = arquivo_final if destinatario in consolidados else arquivo_final[arquivo_final['ASSESSOR'] == destinatario]
+        tabela = arquivo_filtrado if destinatario in consolidados else arquivo_filtrado[arquivo_filtrado['ASSESSOR'] == destinatario]
         if tabela.empty:
-            st.warning(f"Destinatário {destinatario} não possui dados. Pulando...")
+            st.warning(f"Destinatário {destinatario} não possui dados no período. Pulando...")
             continue
 
         try:
             st.write(f"➡️ Gerando PDF para {destinatario}...")
-            nome_pdf = comercial.gerar_pdf(destinatario, dia_e_hora, tabela)  # CAPTURA o caminho do PDF
+            nome_pdf = comercial.gerar_pdf(destinatario, data_ini, data_fim, tabela)  # agora com período
             st.write("✅ PDF gerado com sucesso.")
-            
+
             st.write(f"➡️ Enviando e-mail para {destinatario}...")
-            comercial.enviar_email(destinatario, email_destinatario, nome_pdf, dia_e_hora)
+            comercial.enviar_email(destinatario, email_destinatario, nome_pdf, data_ini, data_fim)
             st.success(f"✅ E-mail enviado para {destinatario}.")
         except Exception as e:
             st.error(f"❌ Erro ao processar {destinatario}: {e}")

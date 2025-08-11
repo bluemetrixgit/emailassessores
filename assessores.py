@@ -1,3 +1,4 @@
+
 import pandas as pd
 import streamlit as st
 import datetime
@@ -20,6 +21,7 @@ from dotenv import load_dotenv
 dotenv_path = os.path.join(os.path.dirname(__file__), ".env")
 load_dotenv(dotenv_path=dotenv_path)
 
+# Mantido para compatibilidade, mas não é mais utilizado diretamente
 dia_e_hora = datetime.datetime.now() - datetime.timedelta(days=1)
 
 class Comercial:
@@ -86,7 +88,7 @@ class Comercial:
         colunas_finais = ['CONTA', 'ASSESSOR', 'UF', 'OPERAÇÃO', 'DESCRIÇÃO', 'SITUAÇÃO', 'SOLICITADA', 'VALOR']
         return base[[col for col in colunas_finais if col in base.columns]]
 
-    def gerar_pdf(self, assessor, data_dia, tabela):
+    def gerar_pdf(self, assessor, data_ini, data_fim, tabela):
         pasta_pdfs = os.path.join(os.path.dirname(__file__), "pdfs")
         os.makedirs(pasta_pdfs, exist_ok=True)
         nome_pdf = os.path.join(pasta_pdfs, f"Relatorio_{assessor.replace(' ', '_')}.pdf")
@@ -117,7 +119,7 @@ class Comercial:
                     val = ""
                 elif col == "VALOR":
                     try:
-                        val = float(str(val).replace("R$", "").replace(".", "").replace(",", ".")) 
+                        val = float(str(val).replace("R$", "").replace(".", "").replace(",", "."))
                         val = f"R$ {val:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".")
                     except:
                         pass
@@ -144,7 +146,7 @@ class Comercial:
         ])
         story.append(KeepTogether(tabela_pdf))
 
-        def cabecalho(canvas, doc):
+        def cabecalho(canvas, doc, _data_ini=data_ini, _data_fim=data_fim):
             logo_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "logo.jpg")
             page_width, page_height = landscape(letter)
             if os.path.exists(logo_path):
@@ -161,22 +163,43 @@ class Comercial:
                     preserveAspectRatio=True,
                     mask='auto'
                 )
+            else:
+                y_position = page_height - 50
+
             canvas.setFont("Helvetica-Bold", 14)
-            canvas.drawCentredString(page_width / 2, y_position - 15, "Acompanhamento diário de operações")
+            canvas.drawCentredString(page_width / 2, y_position - 15, "Acompanhamento de operações")
             canvas.setFont("Helvetica", 10)
             canvas.drawCentredString(page_width / 2, y_position - 35, f"Assessor: {assessor}")
-            data_formatada = pd.to_datetime(data_dia).strftime("%d/%m/%Y")
-            canvas.drawCentredString(page_width / 2, y_position - 50, f"Data: {data_formatada}")
 
+            try:
+                di = pd.to_datetime(_data_ini).strftime("%d/%m/%Y")
+                df = pd.to_datetime(_data_fim).strftime("%d/%m/%Y")
+            except Exception:
+                di = str(_data_ini)
+                df = str(_data_fim)
+
+            linha_data = f"Data: {di}" if di == df else f"Período: {di} a {df}"
+            canvas.drawCentredString(page_width / 2, y_position - 50, linha_data)
 
         doc.build(story, onFirstPage=cabecalho)
         return nome_pdf
 
-    def enviar_email(self, assessor, destinatario, nome_pdf, data_dia):
+    def enviar_email(self, assessor, destinatario, nome_pdf, data_ini, data_fim):
         remetente = st.secrets["EMAIL_USER"]
-        data_formatada = data_dia.strftime("%d/%m/%Y")
-        assunto = f"Acompanhamento diário de operações - {assessor} - {data_formatada}"
 
+        try:
+            di = pd.to_datetime(data_ini).strftime("%d/%m/%Y")
+            df = pd.to_datetime(data_fim).strftime("%d/%m/%Y")
+        except Exception:
+            di = str(data_ini)
+            df = str(data_fim)
+
+        if di == df:
+            assunto = f"Acompanhamento diário de operações - {assessor} - {di}"
+            corpo_data = f"do dia {di}"
+        else:
+            assunto = f"Acompanhamento de operações - {assessor} - {di} a {df}"
+            corpo_data = f"do período {di} a {df}"
 
         msg = MIMEMultipart()
         msg['From'] = formataddr((str(Header("Middle Office Bluemetrix", "utf-8")), remetente))
@@ -187,7 +210,7 @@ class Comercial:
         <html>
           <body style="font-family: Arial, sans-serif; color: #333;">
             <p>Olá {assessor},</p>
-            <p>Segue em anexo o relatório de operações do dia {data_formatada}.</p>
+            <p>Segue em anexo o relatório de operações {corpo_data}.</p>
             <p>Qualquer dúvida, estamos à disposição.</p>
             <br>
             <img src="cid:assinatura" alt="Assinatura Bluemetrix" style="width:500px; height:auto;">
@@ -197,20 +220,21 @@ class Comercial:
         msg.attach(MIMEText(mensagem_html, 'html', 'utf-8'))
 
         assinatura_path = os.path.join(os.path.dirname(__file__), "Assinatura David.jpg")
-        with open(assinatura_path, 'rb') as f:
-            img = MIMEImage(f.read(), _subtype='jpeg')
-            img.add_header('Content-ID', '<assinatura>')
-            img.add_header('Content-Disposition', 'inline', filename="Assinatura.jpg")
-            msg.attach(img)
+        if os.path.exists(assinatura_path):
+            with open(assinatura_path, 'rb') as f:
+                img = MIMEImage(f.read(), _subtype='jpeg')
+                img.add_header('Content-ID', '<assinatura>')
+                img.add_header('Content-Disposition', 'inline', filename="Assinatura.jpg")
+                msg.attach(img)
 
-        with open(nome_pdf, 'rb') as f:
-            attach = MIMEApplication(f.read(), _subtype='pdf')
-            attach.add_header('Content-Disposition', 'attachment', filename=os.path.basename(nome_pdf))
-            msg.attach(attach)
+        if nome_pdf and os.path.exists(nome_pdf):
+            with open(nome_pdf, 'rb') as f:
+                attach = MIMEApplication(f.read(), _subtype='pdf')
+                attach.add_header('Content-Disposition', 'attachment', filename=os.path.basename(nome_pdf))
+                msg.attach(attach)
 
         with smtplib.SMTP("smtp.gmail.com", 587, timeout=30) as server:
             server.starttls()
             server.login(st.secrets["EMAIL_USER"], st.secrets["EMAIL_PASSWORD"])
             server.sendmail(remetente, destinatario, msg.as_string())
         return True
-
