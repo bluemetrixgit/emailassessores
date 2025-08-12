@@ -1,2 +1,6 @@
 Data/Hora,Conta,Cliente,Ativo,Status,Direção,Qt. Oferta,Qt. Executada,Qt. Restante,Preço Médio,Tipo,Preço Limite,Estratégia,Plataforma,Bolsa,Validade,Até a Data,Disparo Stop,Preço Stop,Disparo Start,Preço Start,Obs,ID,ID Bolsa,Login,Login Alteração,
-2025-08-08 10:11:36,5236613,GUILHERME SATYRO SALES,TSMC34,Rejeitada,Compra,14.0,,14.0,,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,[ER003 - Customer has not Home Broker enabled - account: 5236613],bGQmgvk2EC66LuyB,,5KP,5236613
+2025-08-11 14:49:33,4975924,Sergio Eduardo Canella,HGLG11,Executada,Compra,72.0,72.0,,151.07847222,Limitada,151.45,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,8414251345842,5af12afe5eaa4fbd814b4bdbf90d365e,CNI,4975924
+2025-08-11 14:47:19,4975924,Sergio Eduardo Canella,BTLG11,Executada,Compra,144.0,144.0,,98.45541667,Limitada,98.5,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,8414251352210,9e143b3c39324e469c194d60b8e9ab43,CNI,4975924
+2025-08-11 14:46:18,4975924,Sergio Eduardo Canella,PMLL11,Executada,Compra,95.0,95.0,,95.95842105,Limitada,96.0,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,8414251338228,e9f0333a7ef24a959c1750bfb6e7bc8f,CNI,4975924
+2025-08-11 14:45:09,4975924,Sergio Eduardo Canella,TRXF11,Executada,Compra,122.0,122.0,,97.8495082,Limitada,97.85,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,8414251331320,1337a48f7fb949afb5e03d3b92d8ed47,CNI,4975924
+2025-08-11 14:43:51,4975924,Sergio Eduardo Canella,GARE11,Executada,Compra,1947.0,1947.0,,9.06,Limitada,9.06,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,8414251348508,d16504dd30db4981a438b3e09118b196,CNI,4975924
