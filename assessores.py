@@ -96,6 +96,15 @@ class Comercial:
         colunas_finais = ['CONTA', 'ASSESSOR', 'UF', 'OPERAÇÃO', 'DESCRIÇÃO', 'SITUAÇÃO', 'SOLICITADA', 'VALOR']
         return base[[col for col in colunas_finais if col in base.columns]]
 
+        base = pd.merge(controle, movimentacoes, on='CONTA', how='inner', suffixes=('', '_DUP'))
+        st.write("Pós-merge shape:", base.shape)
+        st.dataframe(base.head(20))
+        contas_mov = set(movimentacoes['CONTA'].unique())
+        contas_ctrl = set(controle['CONTA'].unique())
+        nao_casaram = contas_mov - contas_ctrl
+        st.write("Contas em movimentacoes mas não no controle:", list(nao_casaram)[:20])
+        
+
     def gerar_pdf(self, assessor, data_ini, data_fim, tabela):
         pasta_pdfs = os.path.join(os.path.dirname(__file__), "pdfs")
         os.makedirs(pasta_pdfs, exist_ok=True)
