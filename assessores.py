@@ -35,12 +35,13 @@ class Comercial:
                 df['CONTA'] = (
                     df['CONTA']
                     .astype(str)
-                    .str.extract(r'(\d+)')[0]    # só dígitos
+                    .str.extract(r'(\d+)')[0]   # pega só os números
                     .fillna('')
                     .str.strip()
+                    .str.zfill(8)               # completa sempre com zeros à esquerda
                 )
-                # padroniza para 8 dígitos, mas se vier maior mantém os últimos 8
-                df['CONTA'] = df['CONTA'].apply(lambda x: x[-8:].zfill(8))
+            
+            df['CONTA'] = df['CONTA'].apply(lambda x: x.zfill(8)[-8:])
 
         if 'OPERACAO' in acompanhamento.columns:
             acompanhamento = acompanhamento.rename(columns={'OPERACAO': 'OPERAÇÃO'})
