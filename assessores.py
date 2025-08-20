@@ -83,32 +83,18 @@ class Comercial:
         ordens = ordens[[col for col in colunas_operacionais if col in ordens.columns]]
         acompanhamento = acompanhamento[[col for col in colunas_operacionais if col in acompanhamento.columns]]
 
+        for df in [ordens, acompanhamento]:
+            if 'SOLICITADA' in df.columns:
+                df['SOLICITADA'] = pd.to_datetime(df['SOLICITADA'], errors='coerce', dayfirst=True)
+
         movimentacoes = pd.concat([ordens, acompanhamento], ignore_index=True)
-
-        # 🔎 DEBUG - ver se acompanhamento entrou no concat
-        st.write("Pré-merge - ordens shape:", ordens.shape)
-        st.write("Pré-merge - acompanhamento shape:", acompanhamento.shape)
-        st.write("Pré-merge - movimentacoes shape:", movimentacoes.shape)
-        st.dataframe(movimentacoes.head(20))  # mostra algumas linhas
-
         base = pd.merge(controle, movimentacoes, on='CONTA', how='inner', suffixes=('', '_DUP'))
         base = base.loc[:, ~base.columns.str.endswith('_DUP')]
         base = pd.merge(controle, movimentacoes, on='CONTA', how='inner', suffixes=('', '_DUP'))
-        
-        st.write("Pós-merge shape:", base.shape)
-        st.dataframe(base.head(20))
-        contas_mov = set(movimentacoes['CONTA'].unique())
-        contas_ctrl = set(controle['CONTA'].unique())
-        nao_casaram = contas_mov - contas_ctrl
-        st.write("Contas em movimentacoes mas não no controle:", list(nao_casaram)[:20])
-
-        
         colunas_finais = ['CONTA', 'ASSESSOR', 'UF', 'OPERAÇÃO', 'DESCRIÇÃO', 'SITUAÇÃO', 'SOLICITADA', 'VALOR']
         return base[[col for col in colunas_finais if col in base.columns]]
 
-      
-        
-
+    
     def gerar_pdf(self, assessor, data_ini, data_fim, tabela):
         pasta_pdfs = os.path.join(os.path.dirname(__file__), "pdfs")
         os.makedirs(pasta_pdfs, exist_ok=True)
