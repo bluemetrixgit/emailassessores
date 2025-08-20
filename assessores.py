@@ -88,7 +88,7 @@ class Comercial:
                 # Converte para datetime garantindo dayfirst (Brasil)
                 df['SOLICITADA'] = pd.to_datetime(df['SOLICITADA'], errors='coerce', dayfirst=True)
                 # Converte de volta para string no formato brasileiro
-                df['SOLICITADA'] = df['SOLICITADA'].dt.strftime("%d/%m/%Y %H:%M:%S")
+                df['SOLICITADA'] = df['SOLICITADA'].dt.strftime("%d/%m/%Y")
 
 
         movimentacoes = pd.concat([ordens, acompanhamento], ignore_index=True)
