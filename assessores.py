@@ -85,6 +85,12 @@ class Comercial:
 
         movimentacoes = pd.concat([ordens, acompanhamento], ignore_index=True)
 
+        # 🔎 DEBUG - ver se acompanhamento entrou no concat
+        st.write("Pré-merge - ordens shape:", ordens.shape)
+        st.write("Pré-merge - acompanhamento shape:", acompanhamento.shape)
+        st.write("Pré-merge - movimentacoes shape:", movimentacoes.shape)
+        st.dataframe(movimentacoes.head(20))  # mostra algumas linhas
+
         base = pd.merge(controle, movimentacoes, on='CONTA', how='inner', suffixes=('', '_DUP'))
         base = base.loc[:, ~base.columns.str.endswith('_DUP')]
         colunas_finais = ['CONTA', 'ASSESSOR', 'UF', 'OPERAÇÃO', 'DESCRIÇÃO', 'SITUAÇÃO', 'SOLICITADA', 'VALOR']
