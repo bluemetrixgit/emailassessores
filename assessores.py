@@ -85,7 +85,11 @@ class Comercial:
 
         for df in [ordens, acompanhamento]:
             if 'SOLICITADA' in df.columns:
+                # Converte para datetime garantindo dayfirst (Brasil)
                 df['SOLICITADA'] = pd.to_datetime(df['SOLICITADA'], errors='coerce', dayfirst=True)
+                # Converte de volta para string no formato brasileiro
+                df['SOLICITADA'] = df['SOLICITADA'].dt.strftime("%d/%m/%Y %H:%M:%S")
+
 
         movimentacoes = pd.concat([ordens, acompanhamento], ignore_index=True)
         base = pd.merge(controle, movimentacoes, on='CONTA', how='inner', suffixes=('', '_DUP'))
