@@ -63,10 +63,6 @@ data_ini, data_fim = st.date_input(
 if data_ini > data_fim:
     data_ini, data_fim = data_fim, data_ini
 
-st.write("Ordens contas únicas:", ordens['CONTA'].unique()[:10])
-st.write("Acompanhamento contas únicas:", acompanhamentos['CONTA'].unique()[:10])
-st.write("Controle contas únicas:", controle['CONTA'].unique()[:10])
-
 # Cria coluna auxiliar de data (apenas a data) a partir de SOLICITADA
 arquivo_final['_DATA'] = pd.to_datetime(
     arquivo_final['SOLICITADA'], dayfirst=True, errors='coerce'
