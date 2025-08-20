@@ -38,10 +38,10 @@ class Comercial:
                     .str.extract(r'(\d+)')[0]   # pega só os números
                     .fillna('')
                     .str.strip()
-                    .str.zfill(8)               # completa sempre com zeros à esquerda
+                    .str.zfill(9)               # completa sempre com zeros à esquerda
                 )
             
-            df['CONTA'] = df['CONTA'].apply(lambda x: x.zfill(8)[-8:])
+            df['CONTA'] = df['CONTA'].apply(lambda x: x.zfill(9)[-9:])
 
         if 'OPERACAO' in acompanhamento.columns:
             acompanhamento = acompanhamento.rename(columns={'OPERACAO': 'OPERAÇÃO'})
