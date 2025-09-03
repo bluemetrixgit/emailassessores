@@ -96,9 +96,9 @@ class Comercial:
         colunas_finais = ['CONTA', 'ASSESSOR', 'UF', 'OPERAÇÃO', 'DESCRIÇÃO', 'SITUAÇÃO', 'SOLICITADA', 'VALOR']
         return base[[col for col in colunas_finais if col in base.columns]]
 
-        st.write("📊 DEBUG - Base final pós-merge")
-        st.write("Shape:", base.shape)
-        st.dataframe(base[['CONTA','SOLICITADA','OPERAÇÃO','SITUAÇÃO']].head(20))
+    st.write("📊 DEBUG - Base final pós-merge")
+    st.write("Shape:", base.shape)
+    st.dataframe(base[['CONTA','SOLICITADA','OPERAÇÃO','SITUAÇÃO']].head(20))
 
 
     
