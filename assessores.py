@@ -96,6 +96,11 @@ class Comercial:
         colunas_finais = ['CONTA', 'ASSESSOR', 'UF', 'OPERAÇÃO', 'DESCRIÇÃO', 'SITUAÇÃO', 'SOLICITADA', 'VALOR']
         return base[[col for col in colunas_finais if col in base.columns]]
 
+        st.write("📊 DEBUG - Base final pós-merge")
+        st.write("Shape:", base.shape)
+        st.dataframe(base[['CONTA','SOLICITADA','OPERAÇÃO','SITUAÇÃO']].head(20))
+
+
     
     def gerar_pdf(self, assessor, data_ini, data_fim, tabela):
         pasta_pdfs = os.path.join(os.path.dirname(__file__), "pdfs")
