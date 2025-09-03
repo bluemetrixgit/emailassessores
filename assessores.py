@@ -85,33 +85,31 @@ class Comercial:
 
         for df in [ordens, acompanhamento]:
             if 'SOLICITADA' in df.columns:
-                # Converte para datetime garantindo dayfirst (Brasil)
+                # Converte pra datetime respeitando formato BR
                 df['SOLICITADA'] = pd.to_datetime(df['SOLICITADA'], errors='coerce', dayfirst=True)
-               
+                # Mantém apenas a data no padrão brasileiro
+                df['SOLICITADA'] = df['SOLICITADA'].dt.strftime("%d/%m/%Y")
 
+               
         movimentacoes = pd.concat([ordens, acompanhamento], ignore_index=True)
 
-
-        st.write("📊 DEBUG - Movimentações pré-merge")
-        st.write("Ordens shape:", ordens.shape)
-        st.write("Acompanhamento shape:", acompanhamento.shape)
-        st.write("Movimentações shape:", movimentacoes.shape)
-        st.dataframe(movimentacoes[['CONTA','SOLICITADA','OPERAÇÃO','SITUAÇÃO']].head(20))
+        #DEBUGS PARA NECESSIDADES
+        #st.write("📊 DEBUG - Movimentações pré-merge")
+        #st.write("Ordens shape:", ordens.shape)
+        #st.write("Acompanhamento shape:", acompanhamento.shape)
+        #st.write("Movimentações shape:", movimentacoes.shape)
+        #st.dataframe(movimentacoes[['CONTA','SOLICITADA','OPERAÇÃO','SITUAÇÃO']].head(20))
 
         base = pd.merge(controle, movimentacoes, on='CONTA', how='inner', suffixes=('', '_DUP'))
         base = base.loc[:, ~base.columns.str.endswith('_DUP')]
         base = pd.merge(controle, movimentacoes, on='CONTA', how='inner', suffixes=('', '_DUP'))
         colunas_finais = ['CONTA', 'ASSESSOR', 'UF', 'OPERAÇÃO', 'DESCRIÇÃO', 'SITUAÇÃO', 'SOLICITADA', 'VALOR']
 
-        st.write("📊 DEBUG - Base final pós-merge")
-        st.write("Shape:", base.shape)
-        st.dataframe(base[['CONTA','SOLICITADA','OPERAÇÃO','SITUAÇÃO']].head(20))
+        #st.write("📊 DEBUG - Base final pós-merge")
+        #st.write("Shape:", base.shape)
+        #st.dataframe(base[['CONTA','SOLICITADA','OPERAÇÃO','SITUAÇÃO']].head(20))
        
-    
         return base[[col for col in colunas_finais if col in base.columns]]
-
-
-
 
     
     def gerar_pdf(self, assessor, data_ini, data_fim, tabela):
