@@ -83,7 +83,6 @@ class Comercial:
         ordens = ordens[[col for col in colunas_operacionais if col in ordens.columns]]
         acompanhamento = acompanhamento[[col for col in colunas_operacionais if col in acompanhamento.columns]]
 
-        for df in [ordens, acompanhamento]:
            # Ordens: ISO (YYYY-MM-DD HH:MM:SS)
             if 'SOLICITADA' in ordens.columns:
                 ordens['SOLICITADA'] = pd.to_datetime(
