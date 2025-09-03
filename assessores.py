@@ -87,7 +87,7 @@ class Comercial:
            # Ordens: ISO (YYYY-MM-DD HH:MM:SS)
             if 'SOLICITADA' in ordens.columns:
                 ordens['SOLICITADA'] = pd.to_datetime(
-                    ordens['SOLICITADA'], errors='coerce', infer_datetime_format=True
+                    ordens['SOLICITADA'], errors='coerce', format="%Y-%m-%d %H:%M:%S"
                 ).dt.strftime("%d/%m/%Y")
             
             # Acompanhamento: BR (DD/MM/YYYY)
