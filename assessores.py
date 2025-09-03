@@ -84,13 +84,19 @@ class Comercial:
         acompanhamento = acompanhamento[[col for col in colunas_operacionais if col in acompanhamento.columns]]
 
         for df in [ordens, acompanhamento]:
-            if 'SOLICITADA' in df.columns:
-                # Converte pra datetime respeitando formato BR
-                df['SOLICITADA'] = pd.to_datetime(df['SOLICITADA'], errors='coerce', dayfirst=True)
-                # Mantém apenas a data no padrão brasileiro
-                df['SOLICITADA'] = df['SOLICITADA'].dt.strftime("%d/%m/%Y")
+            # Ordens: formato americano (YYYY-MM-DD HH:MM:SS)
+            if 'SOLICITADA' in ordens.columns:
+                ordens['SOLICITADA'] = pd.to_datetime(
+                    ordens['SOLICITADA'], errors='coerce', format="%Y-%m-%d %H:%M:%S"
+                ).dt.strftime("%d/%m/%Y")
+            
+            # Acompanhamento: formato brasileiro (DD/MM/YYYY)
+            if 'SOLICITADA' in acompanhamento.columns:
+                acompanhamento['SOLICITADA'] = pd.to_datetime(
+                    acompanhamento['SOLICITADA'], errors='coerce', dayfirst=True
+                ).dt.strftime("%d/%m/%Y")
 
-               
+
         movimentacoes = pd.concat([ordens, acompanhamento], ignore_index=True)
 
         #DEBUGS PARA NECESSIDADES
