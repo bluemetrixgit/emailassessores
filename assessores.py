@@ -100,11 +100,11 @@ class Comercial:
         movimentacoes = pd.concat([ordens, acompanhamento], ignore_index=True)
 
         #DEBUGS PARA NECESSIDADES
-        #st.write("📊 DEBUG - Movimentações pré-merge")
-        #st.write("Ordens shape:", ordens.shape)
-        #st.write("Acompanhamento shape:", acompanhamento.shape)
-        #st.write("Movimentações shape:", movimentacoes.shape)
-        #st.dataframe(movimentacoes[['CONTA','SOLICITADA','OPERAÇÃO','SITUAÇÃO']].head(20))
+        st.write("📊 DEBUG - Movimentações pré-merge")
+        st.write("Ordens shape:", ordens.shape)
+        st.write("Acompanhamento shape:", acompanhamento.shape)
+        st.write("Movimentações shape:", movimentacoes.shape)
+        st.dataframe(movimentacoes[['CONTA','SOLICITADA','OPERAÇÃO','SITUAÇÃO']].head(20))
 
         base = pd.merge(controle, movimentacoes, on='CONTA', how='inner', suffixes=('', '_DUP'))
         base = base.loc[:, ~base.columns.str.endswith('_DUP')]
