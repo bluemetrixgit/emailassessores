@@ -65,7 +65,7 @@ if data_ini > data_fim:
 
 # Cria coluna auxiliar de data (apenas a data) a partir de SOLICITADA
 arquivo_final['_DATA'] = pd.to_datetime(
-    arquivo_final['SOLICITADA'], dayfirst=True, errors='coerce'
+    arquivo_final['SOLICITADA'], format="%d/%m/%Y", errors='coerce', dayfirst=True
 ).dt.date
 
 # Filtra pelo período selecionado
