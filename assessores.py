@@ -94,11 +94,15 @@ class Comercial:
         base = base.loc[:, ~base.columns.str.endswith('_DUP')]
         base = pd.merge(controle, movimentacoes, on='CONTA', how='inner', suffixes=('', '_DUP'))
         colunas_finais = ['CONTA', 'ASSESSOR', 'UF', 'OPERAÇÃO', 'DESCRIÇÃO', 'SITUAÇÃO', 'SOLICITADA', 'VALOR']
+
+        st.write("📊 DEBUG - Base final pós-merge")
+        st.write("Shape:", base.shape)
+        st.dataframe(base[['CONTA','SOLICITADA','OPERAÇÃO','SITUAÇÃO']].head(20))
+       
+    
         return base[[col for col in colunas_finais if col in base.columns]]
 
-    st.write("📊 DEBUG - Base final pós-merge")
-    st.write("Shape:", base.shape)
-    st.dataframe(base[['CONTA','SOLICITADA','OPERAÇÃO','SITUAÇÃO']].head(20))
+
 
 
     
