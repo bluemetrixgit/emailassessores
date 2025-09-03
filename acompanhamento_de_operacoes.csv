@@ -1,4 +1,5 @@
 ﻿Cliente,Conta,Requisitante,Operacao,Produto,Descricao,Situacao,Solicitada,Valor
+"FERNANDA DE REZENDE SALGADO BRAILE","000806386","Operacional BTG","TEF Mesma Titularidade","Conta Corrente","Destinatario: FERNANDA DE REZENDE SALGADO BRAILE | CPF/CNPJ: 80592791734 | Nome Banco: BANCO BTG PACTUAL S A | Numero Banco: 208 | Agencia: 0020 | Conta: 00080638 | Tipo Conta: Conta Corrente | DV: 6 | ","Realizada",03/09/2025,"R$ 44.364,21"
 "FERNANDA DE REZENDE SALGADO BRAILE","000806386","Operacional BTG","Resgate","Fundo de Investimento","BTG Tesouro Selic FIRF Ref DI","Realizada",03/09/2025,"R$ 38.000,00"
 "GLEUBER LUCAS ALVES","005314853","Operacional BTG","Aplicação","Renda Fixa","CDB IPCA + 9.87% a.a. c/ liquidez somente no vencimento - Emitido por Banco BTG Pactual","Solicitada",03/09/2025,"R$ 33.000,00"
 "GENESI RIBEIRO DE SOUZA BUENO","004866753","Operacional BTG","Aplicação","Renda Fixa","LCA 12.6% a.a. c/ liquidez somente no vencimento - Emitido por Banco ABC","Realizada",03/09/2025,"R$ 19.000,00"
