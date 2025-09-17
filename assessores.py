@@ -83,11 +83,17 @@ class Comercial:
         ordens = ordens[[col for col in colunas_operacionais if col in ordens.columns]]
         acompanhamento = acompanhamento[[col for col in colunas_operacionais if col in acompanhamento.columns]]
 
-           # Ordens: ISO (YYYY-MM-DD HH:MM:SS)
+         # Ordens: agora pode vir BR (DD/MM/AAAA [HH:MM]) ou ISO. Faz parse robusto.
         if 'SOLICITADA' in ordens.columns:
-            ordens['SOLICITADA'] = pd.to_datetime(
-                ordens['SOLICITADA'], errors='coerce', format="%Y-%m-%d %H:%M:%S"
-            ).dt.strftime("%d/%m/%Y")
+            s = ordens['SOLICITADA'].astype(str).str.strip()
+            # 1ª tentativa: BR (dayfirst), aceita com/sem hora
+            dt = pd.to_datetime(s, errors='coerce', dayfirst=True, infer_datetime_format=True)
+            # fallback: ISO completo (YYYY-MM-DD HH:MM:SS)
+            na = dt.isna()
+            if na.any():
+                dt.loc[na] = pd.to_datetime(s[na], errors='coerce', format="%Y-%m-%d")
+            ordens['SOLICITADA'] = dt.dt.strftime("%d/%m/%Y")
+
             
             # Acompanhamento: BR (DD/MM/YYYY)
         if 'SOLICITADA' in acompanhamento.columns:
