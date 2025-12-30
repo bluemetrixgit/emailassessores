@@ -1,12 +1,1 @@
 Data/Hora,Conta,Cliente,Ativo,Status,Direção,Qt. Oferta,Qt. Executada,Qt. Restante,Preço Médio,Tipo,Preço Limite,Estratégia,Plataforma,Bolsa,Validade,Até a Data,Disparo Stop,Preço Stop,Disparo Start,Preço Start,Obs,ID,ID Bolsa,Login,Login Alteração,
-2025-12-26 13:33:09,4482102,Natalia Falavigna Silva,MSCD34,Executada,Compra,62.0,62.0,,103.68919355,Limitada,105.0,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,8415123952416,ee23ed67a0cf4aa3b17e1fecd1b73b4e,5KP,4482102
-2025-12-26 13:33:04,4482102,Natalia Falavigna Silva,IVVB11,Executada,Venda,53.0,53.0,,431.44245283,Limitada,430.0,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,8819087376536,4a8a2479af54469987f2b3c45bbc1bb9,5KP,4482102
-2025-12-26 13:32:49,4482102,Natalia Falavigna Silva,GOGL34,Executada,Venda,26.0,26.0,,144.79,Mercado,,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,946728952464,ac5c91348cee4baea959ca1663f83b40,5KP,4482102
-2025-12-26 13:32:49,4482102,Natalia Falavigna Silva,HASH11,Executada,Venda,99.0,99.0,,65.43,Mercado,,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,8819087376537,88ed814c7e354b249a23eeff1d996f42,5KP,4482102
-2025-12-26 13:32:49,4482102,Natalia Falavigna Silva,BERK34,Executada,Venda,87.0,87.0,,138.19,Mercado,,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,946728952466,cc8adff182154184af25c8dec2f5c5f0,5KP,4482102
-2025-12-26 13:32:49,4482102,Natalia Falavigna Silva,COCA34,Executada,Compra,99.0,99.0,,64.51,Mercado,,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,946728952465,dacc6ad5b430455aa9649f1bda278c30,5KP,4482102
-2025-12-26 13:32:49,4482102,Natalia Falavigna Silva,DOLA11,Executada,Venda,1313.0,1313.0,,10.63,Mercado,,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,8819087376538,76453c17578f41719744386be64456dc,5KP,4482102
-2025-12-26 13:32:49,4482102,Natalia Falavigna Silva,JNJB34,Executada,Compra,84.0,84.0,,76.49,Mercado,,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,8415123952418,4934b8d4c2d24e3283ce30a8829f4c55,5KP,4482102
-2025-12-26 13:32:49,4482102,Natalia Falavigna Silva,M1TA34,Executada,Compra,48.0,48.0,,131.37,Mercado,,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,8415123952417,5172ba839fc84afe818ccade3adb9f06,5KP,4482102
-2025-12-26 13:32:49,4482102,Natalia Falavigna Silva,MSFT34,Executada,Compra,24.0,24.0,,112.49,Mercado,,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,8415123952415,c0c872827ec345b5bc7df9449d85b869,5KP,4482102
-2025-12-26 13:32:49,4482102,Natalia Falavigna Silva,NVDC34,Executada,Venda,177.0,177.0,,22.01,Mercado,,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,8415123952414,fb3146d92a514536b81e92e3b61bd845,5KP,4482102
