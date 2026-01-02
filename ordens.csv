@@ -1,1 +1,30 @@
 Data/Hora,Conta,Cliente,Ativo,Status,Direção,Qt. Oferta,Qt. Executada,Qt. Restante,Preço Médio,Tipo,Preço Limite,Estratégia,Plataforma,Bolsa,Validade,Até a Data,Disparo Stop,Preço Stop,Disparo Start,Preço Start,Obs,ID,ID Bolsa,Login,Login Alteração,
+2025-12-30 11:33:33,5967015,HEIDI FLAVIA BERALDO E SILVA DE FREITAS,BBSE3F,Executada,Venda,47.0,47.0,,36.28,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8613933114878,,CNI,5967015
+2025-12-30 11:33:13,5967015,HEIDI FLAVIA BERALDO E SILVA DE FREITAS,VIVT3,Executada,Compra,100.0,100.0,,33.08,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8613933114884,,CNI,5967015
+2025-12-30 11:33:13,5967015,HEIDI FLAVIA BERALDO E SILVA DE FREITAS,VIVT3F,Executada,Compra,91.0,91.0,,33.1,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8613933114885,,CNI,5967015
+2025-12-30 11:33:13,5967015,HEIDI FLAVIA BERALDO E SILVA DE FREITAS,SBSP3F,Executada,Compra,63.0,63.0,,133.16,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8613933114883,,CNI,5967015
+2025-12-30 11:33:13,5967015,HEIDI FLAVIA BERALDO E SILVA DE FREITAS,ITUB4F,Executada,Venda,77.0,77.0,,39.43,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,906605893393,,CNI,5967015
+2025-12-30 11:33:13,5967015,HEIDI FLAVIA BERALDO E SILVA DE FREITAS,BBDC4F,Executada,Compra,16.0,16.0,,18.42,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,906605893392,,CNI,5967015
+2025-12-30 11:33:13,5967015,HEIDI FLAVIA BERALDO E SILVA DE FREITAS,ISAE4F,Executada,Compra,89.0,89.0,,27.39,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8613933114882,,CNI,5967015
+2025-12-30 11:33:13,5967015,HEIDI FLAVIA BERALDO E SILVA DE FREITAS,PRIO3F,Executada,Venda,82.0,82.0,,41.05,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8211969626846,,CNI,5967015
+2025-12-30 11:33:13,5967015,HEIDI FLAVIA BERALDO E SILVA DE FREITAS,PRIO3,Executada,Venda,100.0,100.0,,41.06,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8211969626845,,CNI,5967015
+2025-12-30 11:33:13,5967015,HEIDI FLAVIA BERALDO E SILVA DE FREITAS,VALE3F,Executada,Compra,53.0,53.0,,72.47,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,808896191653,,CNI,5967015
+2025-12-30 11:33:13,5967015,HEIDI FLAVIA BERALDO E SILVA DE FREITAS,BBDC4,Executada,Compra,300.0,300.0,,18.41,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,906605893391,,CNI,5967015
+2025-12-30 11:33:13,5967015,HEIDI FLAVIA BERALDO E SILVA DE FREITAS,GGBR4F,Executada,Compra,35.0,35.0,,20.54,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,808896191652,,CNI,5967015
+2025-12-30 11:33:13,5967015,HEIDI FLAVIA BERALDO E SILVA DE FREITAS,FLRY3F,Executada,Compra,4.0,4.0,,14.98,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8613933114880,,CNI,5967015
+2025-12-30 11:33:13,5967015,HEIDI FLAVIA BERALDO E SILVA DE FREITAS,ISAE4,Executada,Compra,100.0,100.0,,27.37,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8613933114881,,CNI,5967015
+2025-12-30 11:33:13,5967015,HEIDI FLAVIA BERALDO E SILVA DE FREITAS,AXIA3F,Executada,Compra,14.0,14.0,,50.16,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8415136484063,,CNI,5967015
+2025-12-30 11:33:13,5967015,HEIDI FLAVIA BERALDO E SILVA DE FREITAS,FLRY3,Executada,Compra,400.0,400.0,,14.92,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8613933114879,,CNI,5967015
+2025-12-30 11:33:13,5967015,HEIDI FLAVIA BERALDO E SILVA DE FREITAS,GGBR4,Executada,Compra,100.0,100.0,,20.52,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,808896191651,,CNI,5967015
+2025-12-30 11:33:13,5967015,HEIDI FLAVIA BERALDO E SILVA DE FREITAS,BBSE3,Executada,Venda,600.0,600.0,,36.26,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8613933114877,,CNI,5967015
+2025-12-30 11:18:43,4584982,Bruno De Azevedo Oliveira,VIVT3F,Executada,Compra,7.0,7.0,,33.24,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8613932710987,,CNI,4584982
+2025-12-30 11:18:43,4584982,Bruno De Azevedo Oliveira,VALE3F,Executada,Venda,1.0,1.0,,72.47,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,808895912701,,CNI,4584982
+2025-12-30 11:18:43,4584982,Bruno De Azevedo Oliveira,SBSP3F,Executada,Compra,2.0,2.0,,133.88,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8613932710985,,CNI,4584982
+2025-12-30 11:18:43,4584982,Bruno De Azevedo Oliveira,PRIO3F,Executada,Compra,2.0,2.0,,41.08,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8211969252816,,CNI,4584982
+2025-12-30 11:18:43,4584982,Bruno De Azevedo Oliveira,ITUB4F,Executada,Compra,8.0,8.0,,39.52,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,906605744413,,CNI,4584982
+2025-12-30 11:18:43,4584982,Bruno De Azevedo Oliveira,ISAE4F,Executada,Compra,9.0,9.0,,27.41,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8613932710977,,CNI,4584982
+2025-12-30 11:18:43,4584982,Bruno De Azevedo Oliveira,GGBR4F,Executada,Compra,6.0,6.0,,20.58,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,808895912700,,CNI,4584982
+2025-12-30 11:18:43,4584982,Bruno De Azevedo Oliveira,FLRY3F,Executada,Compra,15.0,15.0,,14.98,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8613932710974,,CNI,4584982
+2025-12-30 11:18:43,4584982,Bruno De Azevedo Oliveira,BBSE3F,Executada,Compra,3.0,3.0,,36.37,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8613932710973,,CNI,4584982
+2025-12-30 11:18:43,4584982,Bruno De Azevedo Oliveira,BBDC4F,Executada,Compra,13.0,13.0,,18.45,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,906605744412,,CNI,4584982
+2025-12-30 11:18:43,4584982,Bruno De Azevedo Oliveira,AXIA3F,Executada,Compra,12.0,12.0,,50.35,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8415136197526,,CNI,4584982
