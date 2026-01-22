@@ -36,7 +36,7 @@ acompanhamentos = ler_csv_seguro(os.path.join(BASE_DIR, 'acompanhamento_de_opera
 emails = ler_csv_seguro(os.path.join(BASE_DIR, 'emails.csv'))
 
 # Ler Excel de controle
-controle_excel = pd.ExcelFile(os.path.join(BASE_DIR, 'Controle de Contratos - Atualizado 2025.xlsx'))
+controle_excel = pd.ExcelFile(os.path.join(BASE_DIR, 'Controle de Contratos - Atualizado 2026.xlsx'))
 try:
     controle = controle_excel.parse('BTG', header=1)
 except:
