@@ -1,21 +1,21 @@
 Data/Hora,Conta,Cliente,Ativo,Status,Direção,Qt. Oferta,Qt. Executada,Qt. Restante,Preço Médio,Tipo,Preço Limite,Estratégia,Plataforma,Bolsa,Validade,Até a Data,Disparo Stop,Preço Stop,Disparo Start,Preço Start,Obs,ID,ID Bolsa,Login,Login Alteração,
-2026-02-26 18:16:00,4017326,Diogo Luis Kurihara,SMAL11,Executada,Venda,100.0,100.0,,129.0,Limitada,123.75,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,8820216248056,e46af683556048b68c7f766435456c46,A0IW,4017326
-2026-02-26 14:17:46,21573506,LEANDRO GARCIA ALGARTE ASSUNCAO,PRIO3F,Executada,Compra,6.0,6.0,,53.23,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8212591197903,,5KP,21573506
-2026-02-26 14:17:45,21573506,LEANDRO GARCIA ALGARTE ASSUNCAO,VIVT3F,Executada,Compra,4.0,4.0,,42.55,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8614494843942,,5KP,21573506
-2026-02-26 14:17:45,21573506,LEANDRO GARCIA ALGARTE ASSUNCAO,VALE3F,Executada,Compra,4.0,4.0,,88.75,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,809427560092,,5KP,21573506
-2026-02-26 14:17:45,21573506,LEANDRO GARCIA ALGARTE ASSUNCAO,SBSP3F,Executada,Compra,1.0,1.0,,155.43,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8614494843941,,5KP,21573506
-2026-02-26 14:17:45,21573506,LEANDRO GARCIA ALGARTE ASSUNCAO,ITUB4F,Executada,Compra,8.0,8.0,,47.53,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,906851950248,,5KP,21573506
-2026-02-26 14:17:45,21573506,LEANDRO GARCIA ALGARTE ASSUNCAO,ISAE4F,Executada,Compra,6.0,6.0,,28.98,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8614494843939,,5KP,21573506
-2026-02-26 14:17:45,21573506,LEANDRO GARCIA ALGARTE ASSUNCAO,GGBR4F,Executada,Compra,13.0,13.0,,21.17,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,809427560091,,5KP,21573506
-2026-02-26 14:17:45,21573506,LEANDRO GARCIA ALGARTE ASSUNCAO,FLRY3F,Executada,Compra,11.0,11.0,,17.31,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8614494843925,,5KP,21573506
-2026-02-26 14:17:45,21573506,LEANDRO GARCIA ALGARTE ASSUNCAO,BOVA11,Executada,Compra,4.0,4.0,,186.5,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8820206372814,,5KP,21573506
-2026-02-26 14:17:45,21573506,LEANDRO GARCIA ALGARTE ASSUNCAO,BBSE3F,Executada,Compra,4.0,4.0,,35.07,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8614494843924,,5KP,21573506
-2026-02-26 14:17:45,21573506,LEANDRO GARCIA ALGARTE ASSUNCAO,BBDC4F,Executada,Compra,9.0,9.0,,20.81,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,906851950247,,5KP,21573506
-2026-02-26 14:17:45,21573506,LEANDRO GARCIA ALGARTE ASSUNCAO,AXIA3F,Executada,Compra,3.0,3.0,,63.0,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8415592713337,,5KP,21573506
-2026-02-26 10:45:42,4458624,Pedro Guilherme Ramos Goya,GRUL11,Executada,Compra,339.0,339.0,,8.89964602,Limitada,8.94,Posição,btg_desktop,BVSP,Dia,,,,,,,8415584454673,,E62,4458624
-2026-02-26 10:45:36,4458624,Pedro Guilherme Ramos Goya,PMLL11,Executada,Compra,57.0,57.0,,107.70175439,Limitada,107.73,Posição,btg_desktop,BVSP,Dia,,,,,,,8415584454700,,E62,4458624
-2026-02-26 10:45:17,4458624,Pedro Guilherme Ramos Goya,TRXF11,Executada,Compra,92.0,92.0,,93.01,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8415584454724,,E62,4458624
-2026-02-26 10:45:17,4458624,Pedro Guilherme Ramos Goya,PCIP11,Executada,Compra,108.0,108.0,,84.71,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8415584454685,,E62,4458624
-2026-02-26 10:45:17,4458624,Pedro Guilherme Ramos Goya,HGLG11,Executada,Compra,50.0,50.0,,157.72,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8415584454676,,E62,4458624
-2026-02-26 10:45:17,4458624,Pedro Guilherme Ramos Goya,GARE11,Executada,Compra,1287.0,1287.0,,8.54,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8415584454661,,E62,4458624
-2026-02-26 10:45:17,4458624,Pedro Guilherme Ramos Goya,BTLG11,Executada,Compra,89.0,89.0,,102.94,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8415584454660,,E62,4458624
+2026-02-27 14:42:27,4352384,Brasfort Empresa De Seguranca Ltda,ISAE4F,Executada,Compra,44.0,44.0,,28.35454545,Limitada,28.4,Posição,btg_desktop,BVSP,Dia,,,,,,,8614510669306,,CNI,4352384
+2026-02-27 14:42:14,4352384,Brasfort Empresa De Seguranca Ltda,VALE3F,Executada,Compra,37.0,37.0,,88.6,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,809437432582,,CNI,4352384
+2026-02-27 14:42:11,4352384,Brasfort Empresa De Seguranca Ltda,VIVT3F,Executada,Compra,70.0,70.0,,43.1,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8614510669367,,CNI,4352384
+2026-02-27 14:42:11,4352384,Brasfort Empresa De Seguranca Ltda,VIVT3,Executada,Compra,100.0,100.0,,43.07,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8614510669324,,CNI,4352384
+2026-02-27 14:42:11,4352384,Brasfort Empresa De Seguranca Ltda,VALE3,Executada,Compra,100.0,100.0,,88.61,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,809437432580,,CNI,4352384
+2026-02-27 14:42:11,4352384,Brasfort Empresa De Seguranca Ltda,SBSP3F,Executada,Compra,59.0,59.0,,153.88,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8614510669319,,CNI,4352384
+2026-02-27 14:42:11,4352384,Brasfort Empresa De Seguranca Ltda,PRIO3F,Executada,Compra,86.0,86.0,,52.6,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8212607780797,,CNI,4352384
+2026-02-27 14:42:10,4352384,Brasfort Empresa De Seguranca Ltda,PRIO3,Executada,Compra,100.0,100.0,,52.59,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8212607780796,,CNI,4352384
+2026-02-27 14:42:10,4352384,Brasfort Empresa De Seguranca Ltda,ITUB4F,Executada,Compra,60.0,60.0,,46.56,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,906859469501,,CNI,4352384
+2026-02-27 14:42:10,4352384,Brasfort Empresa De Seguranca Ltda,ITUB4,Executada,Compra,200.0,200.0,,46.55,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,906859469500,,CNI,4352384
+2026-02-27 14:42:10,4352384,Brasfort Empresa De Seguranca Ltda,ISAE4,Executada,Compra,300.0,300.0,,28.36,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8614510669297,,CNI,4352384
+2026-02-27 14:42:10,4352384,Brasfort Empresa De Seguranca Ltda,GGBR4F,Executada,Compra,69.0,69.0,,20.78,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,809437432508,,CNI,4352384
+2026-02-27 14:42:10,4352384,Brasfort Empresa De Seguranca Ltda,GGBR4,Executada,Compra,400.0,400.0,,20.78,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,809437432505,,CNI,4352384
+2026-02-27 14:42:10,4352384,Brasfort Empresa De Seguranca Ltda,FLRY3F,Executada,Compra,97.0,97.0,,17.11,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8614510669290,,CNI,4352384
+2026-02-27 14:42:10,4352384,Brasfort Empresa De Seguranca Ltda,FLRY3,Executada,Compra,400.0,400.0,,17.1,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8614510669272,,CNI,4352384
+2026-02-27 14:42:10,4352384,Brasfort Empresa De Seguranca Ltda,BOVA11,Executada,Compra,131.0,131.0,,185.58,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8820237934025,,CNI,4352384
+2026-02-27 14:42:10,4352384,Brasfort Empresa De Seguranca Ltda,BBDC4F,Executada,Compra,54.0,54.0,,21.42,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,906859469489,,CNI,4352384
+2026-02-27 14:42:10,4352384,Brasfort Empresa De Seguranca Ltda,BBDC4,Executada,Compra,400.0,400.0,,21.41,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,906859469488,,CNI,4352384
+2026-02-27 14:42:10,4352384,Brasfort Empresa De Seguranca Ltda,AXIA3F,Executada,Compra,40.0,40.0,,61.35,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8415607757783,,CNI,4352384
+2026-02-27 14:42:10,4352384,Brasfort Empresa De Seguranca Ltda,AXIA3,Executada,Compra,100.0,100.0,,61.28,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8415607757778,,CNI,4352384
