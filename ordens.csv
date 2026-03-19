@@ -1,10 +1,2 @@
 Data/Hora,Conta,Cliente,Ativo,Status,Direção,Qt. Oferta,Qt. Executada,Qt. Restante,Preço Médio,Tipo,Preço Limite,Estratégia,Plataforma,Bolsa,Validade,Até a Data,Disparo Stop,Preço Stop,Disparo Start,Preço Start,Obs,ID,ID Bolsa,Login,Login Alteração,
-2026-03-16 10:42:43,3489079,Bruno Henrique Borges Silva,WEGE3F,Executada,Compra,9.0,9.0,,46.55,Mercado,,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,8820597408560,6d8837a9e11944758bc52c81d54424af,CNI,3489079
-2026-03-16 10:42:43,3489079,Bruno Henrique Borges Silva,BPAC11F,Executada,Compra,8.0,8.0,,56.6,Mercado,,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,8212880216535,42d6d08f0fd0438696609d0827358402,CNI,3489079
-2026-03-16 10:42:43,3489079,Bruno Henrique Borges Silva,EGIE3F,Executada,Compra,15.0,15.0,,32.1,Mercado,,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,8415756133204,b1aef184570d4cb39c4d399da8631603,CNI,3489079
-2026-03-16 10:42:43,3489079,Bruno Henrique Borges Silva,SAPR11F,Executada,Compra,12.0,12.0,,40.66,Mercado,,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,8415756133203,21dba884b6ea421ebe7ebc381d90c66f,CNI,3489079
-2026-03-16 10:42:43,3489079,Bruno Henrique Borges Silva,VLID3F,Executada,Venda,20.0,20.0,,20.29,Mercado,,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,8415756133202,5aab80bf907e4739a0a022cf6e2565ad,CNI,3489079
-2026-03-16 10:42:43,3489079,Bruno Henrique Borges Silva,ITUB4F,Executada,Compra,12.0,12.0,,43.28,Mercado,,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,906945310125,6bf222f11aef4bf680929cf0cb8a0c80,CNI,3489079
-2026-03-16 10:42:43,3489079,Bruno Henrique Borges Silva,BRAP4F,Executada,Venda,22.0,22.0,,22.58,Mercado,,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,906945310124,5bf5b63f3b064865be6d9af0e48a8d5f,CNI,3489079
-2026-03-16 10:42:43,3489079,Bruno Henrique Borges Silva,CSUD3F,Executada,Venda,23.0,23.0,,18.55,Mercado,,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,8614686793732,c37f1816e1ab4b249e112cc683a13121,CNI,3489079
-2026-03-16 10:42:43,3489079,Bruno Henrique Borges Silva,CDII11,Executada,Compra,5.0,5.0,,103.29,Mercado,,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,8614686793733,ce3bab66921247f6b43488d52dc8f811,CNI,3489079
+2026-03-19 12:02:10,5268516,LUIS DANIEL BONFIM FERNANDES,LFTS11,Executada,Venda,52.0,52.0,,149.81,Mercado,,Posição,BTG_INVESTIMENTOS,BVSP,Dia,,,,,,,8415801240312,,5268516,5268516
