@@ -88,10 +88,7 @@ class Comercial:
             s = ordens['SOLICITADA'].astype(str).str.strip()
             # 1ª tentativa: BR (dayfirst), aceita com/sem hora
             dt = pd.to_datetime(s, errors='coerce', dayfirst=True)
-            # fallback: ISO completo (YYYY-MM-DD HH:MM:SS)
-            na = dt.isna()
-            if na.any():
-                dt.loc[na] = pd.to_datetime(s[na], errors='coerce', format="%Y-%m-%d")
+
             ordens['SOLICITADA'] = dt.dt.strftime("%d/%m/%Y")
 
             
