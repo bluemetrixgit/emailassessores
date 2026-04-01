@@ -40,7 +40,8 @@ class Comercial:
                     .str.zfill(9)               # completa sempre com zeros à esquerda
                 )
             
-            df['CONTA'] = df['CONTA'].apply(lambda x: x.zfill(9)[-9:])
+            if 'CONTA' in df.columns:
+                df['CONTA'] = df['CONTA'].apply(lambda x: str(x).zfill(9)[-9:])
 
         if 'OPERACAO' in acompanhamento.columns:
             acompanhamento = acompanhamento.rename(columns={'OPERACAO': 'OPERAÇÃO'})
@@ -86,7 +87,7 @@ class Comercial:
         if 'SOLICITADA' in ordens.columns:
             s = ordens['SOLICITADA'].astype(str).str.strip()
             # 1ª tentativa: BR (dayfirst), aceita com/sem hora
-            dt = pd.to_datetime(s, errors='coerce', dayfirst=True, infer_datetime_format=True)
+            dt = pd.to_datetime(s, errors='coerce', dayfirst=True)
             # fallback: ISO completo (YYYY-MM-DD HH:MM:SS)
             na = dt.isna()
             if na.any():
