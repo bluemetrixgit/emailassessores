@@ -89,6 +89,11 @@ class Comercial:
             # 1ª tentativa: BR (dayfirst), aceita com/sem hora
             dt = pd.to_datetime(s, errors='coerce', dayfirst=True)
 
+            # fallback seguro (SEM bug de escopo)
+            mask = dt.isna()
+            if mask.any():
+                dt.loc[mask] = pd.to_datetime(s[mask], errors='coerce')
+
             ordens['SOLICITADA'] = dt.dt.strftime("%d/%m/%Y")
 
             
