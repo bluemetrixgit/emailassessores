@@ -90,11 +90,11 @@ class Comercial:
 
             # Garante que é Series válida
             if not isinstance(s, pd.Series):
-            s = pd.Series(s)
+                s = pd.Series(s)
 
-            s = s.astype(str).str.strip()
+                s = s.astype(str).str.strip()
 
-            dt = pd.to_datetime(s, errors='coerce', dayfirst=True)
+                dt = pd.to_datetime(s, errors='coerce', dayfirst=True)
 
             # fallback ISO
             mask = dt.isna()
