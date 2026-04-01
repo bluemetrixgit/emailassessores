@@ -138,7 +138,7 @@ class Comercial:
 
         story.append(Spacer(1, 5 * inch))
 
-        colunas = [col for col in tabela.columns if col in colunas_finais]
+        colunas = [col for col in tabela.columns if col in ["CONTA", "ASSESSOR", "UF", "OPERAÇÃO", "DESCRIÇÃO", "SITUAÇÃO", "SOLICITADA", "VALOR"]]
         dados = [colunas]
 
         for _, row in tabela.iterrows():
