@@ -98,10 +98,10 @@ class Comercial:
 
             
             # Acompanhamento: BR (DD/MM/YYYY)
-        if 'SOLICITADA' in acompanhamento.columns:
-            acompanhamento['SOLICITADA'] = pd.to_datetime(
-                acompanhamento['SOLICITADA'], errors='coerce', dayfirst=True, infer_datetime_format=True
-            ).dt.strftime("%d/%m/%Y")
+            if 'SOLICITADA' in acompanhamento.columns:
+                s = acompanhamento['SOLICITADA'].astype(str).str.strip()
+                dt = pd.to_datetime(s, errors='coerce', dayfirst=True)
+                acompanhamento['SOLICITADA'] = dt.dt.strftime("%d/%m/%Y")
 
         movimentacoes = pd.concat([ordens, acompanhamento], ignore_index=True)
 
