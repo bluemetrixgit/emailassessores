@@ -17,11 +17,9 @@ from email.utils import formataddr
 import os
 from dotenv import load_dotenv
 
-# Carregar .env do mesmo diretório
 dotenv_path = os.path.join(os.path.dirname(__file__), ".env")
 load_dotenv(dotenv_path=dotenv_path)
 
-# Mantido para compatibilidade, mas não é mais utilizado diretamente
 dia_e_hora = datetime.datetime.now() - datetime.timedelta(days=1)
 
 class Comercial:
@@ -31,17 +29,17 @@ class Comercial:
     def tratando_dados(self, ordens, acompanhamento, controle):
         for df in [ordens, acompanhamento, controle]:
             df.columns = df.columns.str.upper()
+
             if 'CONTA' in df.columns:
                 df['CONTA'] = (
                     df['CONTA']
                     .astype(str)
-                    .str.extract(r'(\d+)')[0]   # pega só os números
+                    .str.extract(r'(\d+)')[0]
                     .fillna('')
                     .str.strip()
-                    .str.zfill(9)               # completa sempre com zeros à esquerda
+                    .str.zfill(9)
                 )
-            
-            if 'CONTA' in df.columns:
+
                 df['CONTA'] = df['CONTA'].apply(lambda x: str(x).zfill(9)[-9:])
 
         if 'OPERACAO' in acompanhamento.columns:
@@ -50,13 +48,17 @@ class Comercial:
             acompanhamento = acompanhamento.rename(columns={'DESCRICAO': 'DESCRIÇÃO'})
         if 'SITUACAO' in acompanhamento.columns:
             acompanhamento = acompanhamento.rename(columns={'SITUACAO': 'SITUAÇÃO'})
+
         ordens = ordens.rename(columns={
             'DIREÇÃO': 'OPERAÇÃO',
             'ATIVO': 'DESCRIÇÃO',
             'STATUS': 'SITUAÇÃO',
-            'DATA/HORA': 'SOLICITADA'})
+            'DATA/HORA': 'SOLICITADA'
+        })
+
         if 'SITUAÇÃO' in controle.columns:
             controle = controle.drop(columns=['SITUAÇÃO'])
+
         if 'VALOR FINANCEIRO' in ordens.columns:
             ordens['VALOR'] = ordens['VALOR FINANCEIRO']
 
@@ -84,52 +86,36 @@ class Comercial:
         ordens = ordens[[col for col in colunas_operacionais if col in ordens.columns]]
         acompanhamento = acompanhamento[[col for col in colunas_operacionais if col in acompanhamento.columns]]
 
-         # Ordens: agora pode vir BR (DD/MM/AAAA [HH:MM]) ou ISO. Faz parse robusto.
+        # --- CORREÇÃO PRINCIPAL (dt seguro) ---
         if 'SOLICITADA' in ordens.columns:
             s = ordens['SOLICITADA']
 
-            # Garante que é Series válida
             if not isinstance(s, pd.Series):
                 s = pd.Series(s)
 
-                s = s.astype(str).str.strip()
+            s = s.astype(str).str.strip()
 
-                dt = pd.to_datetime(s, errors='coerce', dayfirst=True)
+            dt = pd.to_datetime(s, errors='coerce', dayfirst=True)
 
-            # fallback ISO
             mask = dt.isna()
             if mask.any():
                 dt.loc[mask] = pd.to_datetime(s[mask], errors='coerce')
 
             ordens['SOLICITADA'] = dt.dt.strftime("%d/%m/%Y")
-            
-            # Acompanhamento: BR (DD/MM/YYYY)
+
         if 'SOLICITADA' in acompanhamento.columns:
             acompanhamento['SOLICITADA'] = pd.to_datetime(
-                acompanhamento['SOLICITADA'], errors='coerce', dayfirst=True, infer_datetime_format=True
+                acompanhamento['SOLICITADA'], errors='coerce', dayfirst=True
             ).dt.strftime("%d/%m/%Y")
 
         movimentacoes = pd.concat([ordens, acompanhamento], ignore_index=True)
 
-        #DEBUGS PARA NECESSIDADES
-        #st.write("📊 DEBUG - Movimentações pré-merge")
-        #st.write("Ordens shape:", ordens.shape)
-        #st.write("Acompanhamento shape:", acompanhamento.shape)
-        #st.write("Movimentações shape:", movimentacoes.shape)
-        #st.dataframe(movimentacoes[['CONTA','SOLICITADA','OPERAÇÃO','SITUAÇÃO']].head(20))
+        base = pd.merge(controle, movimentacoes, on='CONTA', how='inner')
 
-        base = pd.merge(controle, movimentacoes, on='CONTA', how='inner', suffixes=('', '_DUP'))
-        base = base.loc[:, ~base.columns.str.endswith('_DUP')]
-        base = pd.merge(controle, movimentacoes, on='CONTA', how='inner', suffixes=('', '_DUP'))
         colunas_finais = ['CONTA', 'ASSESSOR', 'UF', 'OPERAÇÃO', 'DESCRIÇÃO', 'SITUAÇÃO', 'SOLICITADA', 'VALOR']
 
-        #st.write("📊 DEBUG - Base final pós-merge")
-        #st.write("Shape:", base.shape)
-        #st.dataframe(base[['CONTA','SOLICITADA','OPERAÇÃO','SITUAÇÃO']].head(20))
-       
         return base[[col for col in colunas_finais if col in base.columns]]
 
-    
     def gerar_pdf(self, assessor, data_ini, data_fim, tabela):
         pasta_pdfs = os.path.join(os.path.dirname(__file__), "pdfs")
         os.makedirs(pasta_pdfs, exist_ok=True)
@@ -140,6 +126,7 @@ class Comercial:
             pagesize=landscape(letter),
             rightMargin=25, leftMargin=25, topMargin=25, bottomMargin=25
         )
+
         story = []
         styles = getSampleStyleSheet()
         wrap_style = ParagraphStyle('wrap', fontSize=5.5, leading=6)
@@ -149,10 +136,11 @@ class Comercial:
             doc.build(story)
             return None
 
-        story.append(Spacer(1, 5*inch))
+        story.append(Spacer(1, 5 * inch))
 
-        colunas = [col for col in tabela.columns if col in ["CONTA", "ASSESSOR", "UF", "OPERAÇÃO", "DESCRIÇÃO", "SITUAÇÃO", "SOLICITADA", "VALOR"]]
+        colunas = [col for col in tabela.columns if col in colunas_finais]
         dados = [colunas]
+
         for _, row in tabela.iterrows():
             linha = []
             for col in colunas:
@@ -175,105 +163,39 @@ class Comercial:
                 linha.append(val)
             dados.append(linha)
 
-        larguras = [50, 80, 40, 80, 250, 80, 70, 80]
-        tabela_pdf = Table(dados, repeatRows=1, colWidths=larguras, hAlign='LEFT')
+        tabela_pdf = Table(dados, repeatRows=1, hAlign='LEFT')
         tabela_pdf.setStyle([
             ('BACKGROUND', (0, 0), (-1, 0), colors.lightgrey),
             ('GRID', (0, 0), (-1, -1), 0.25, colors.grey),
-            ('VALIGN', (0, 0), (-1, -1), 'TOP'),
-            ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
-            ('FONTSIZE', (0, 0), (-1, -1), 6),
-            ('LEFTPADDING', (0, 0), (-1, -1), 2),
-            ('RIGHTPADDING', (0, 0), (-1, -1), 2),
         ])
+
         story.append(KeepTogether(tabela_pdf))
+        doc.build(story)
 
-        def cabecalho(canvas, doc, _data_ini=data_ini, _data_fim=data_fim):
-            logo_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "logo.jpg")
-            page_width, page_height = landscape(letter)
-            if os.path.exists(logo_path):
-                logo_width = 700
-                logo_height = 300
-                x_position = (page_width - logo_width) / 2
-                y_position = page_height - 300
-                canvas.drawImage(
-                    logo_path,
-                    x_position,
-                    y_position,
-                    width=logo_width,
-                    height=logo_height,
-                    preserveAspectRatio=True,
-                    mask='auto'
-                )
-            else:
-                y_position = page_height - 50
-
-            canvas.setFont("Helvetica-Bold", 14)
-            canvas.drawCentredString(page_width / 2, y_position - 15, "Acompanhamento de operações")
-            canvas.setFont("Helvetica", 10)
-            canvas.drawCentredString(page_width / 2, y_position - 35, f"Assessor: {assessor}")
-
-            try:
-                di = pd.to_datetime(_data_ini).strftime("%d/%m/%Y")
-                df = pd.to_datetime(_data_fim).strftime("%d/%m/%Y")
-            except Exception:
-                di = str(_data_ini)
-                df = str(_data_fim)
-
-            linha_data = f"Data: {di}" if di == df else f"Período: {di} a {df}"
-            canvas.drawCentredString(page_width / 2, y_position - 50, linha_data)
-
-        doc.build(story, onFirstPage=cabecalho)
         return nome_pdf
 
     def enviar_email(self, assessor, destinatario, nome_pdf, data_ini, data_fim):
         remetente = st.secrets["EMAIL_USER"]
 
-        try:
-            di = pd.to_datetime(data_ini).strftime("%d/%m/%Y")
-            df = pd.to_datetime(data_fim).strftime("%d/%m/%Y")
-        except Exception:
-            di = str(data_ini)
-            df = str(data_fim)
-
-        if di == df:
-            assunto = f"Acompanhamento diário de operações - {assessor} - {di}"
-            corpo_data = f"do dia {di}"
-        else:
-            assunto = f"Acompanhamento de operações - {assessor} - {di} a {df}"
-            corpo_data = f"do período {di} a {df}"
-
         msg = MIMEMultipart()
-        msg['From'] = formataddr((str(Header("Middle Office Bluemetrix", "utf-8")), remetente))
-        msg['To'] = formataddr((str(Header(assessor, 'utf-8')), destinatario))
-        msg['Subject'] = Header(assunto, "utf-8")
+        msg['From'] = remetente
+        msg['To'] = destinatario
+        msg['Subject'] = f"Relatório - {assessor}"
 
-        mensagem_html = f"""
-        <html>
-          <body style="font-family: Arial, sans-serif; color: #333;">
-            <p>Olá {assessor},</p>
-            <p>Segue em anexo o relatório de operações {corpo_data}.</p>
-            <p>Qualquer dúvida, estamos à disposição.</p>
-            <br>
-            <img src="cid:assinatura" alt="Assinatura Bluemetrix" style="width:500px; height:auto;">
-          </body>
-        </html>
-        """
-        msg.attach(MIMEText(mensagem_html, 'html', 'utf-8'))
-
-        assinatura_path = os.path.join(os.path.dirname(__file__), "Assinatura David.jpg")
-        if os.path.exists(assinatura_path):
-            with open(assinatura_path, 'rb') as f:
-                img = MIMEImage(f.read(), _subtype='jpeg')
-                img.add_header('Content-ID', '<assinatura>')
-                img.add_header('Content-Disposition', 'inline', filename="Assinatura.jpg")
-                msg.attach(img)
+        msg.attach(MIMEText("Segue relatório em anexo.", 'plain'))
 
         if nome_pdf and os.path.exists(nome_pdf):
             with open(nome_pdf, 'rb') as f:
                 attach = MIMEApplication(f.read(), _subtype='pdf')
                 attach.add_header('Content-Disposition', 'attachment', filename=os.path.basename(nome_pdf))
                 msg.attach(attach)
+
+        with smtplib.SMTP("smtp.gmail.com", 587) as server:
+            server.starttls()
+            server.login(st.secrets["EMAIL_USER"], st.secrets["EMAIL_PASSWORD"])
+            server.sendmail(remetente, destinatario, msg.as_string())
+
+        return True
 
         with smtplib.SMTP("smtp.gmail.com", 587, timeout=30) as server:
             server.starttls()
