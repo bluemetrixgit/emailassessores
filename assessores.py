@@ -41,7 +41,8 @@ class Comercial:
                     .str.zfill(9)               # completa sempre com zeros à esquerda
                 )
             
-            df['CONTA'] = df['CONTA'].apply(lambda x: x.zfill(9)[-9:])
+            if 'CONTA' in df.columns:
+                df['CONTA'] = df['CONTA'].apply(lambda x: str(x).zfill(9)[-9:])
 
         if 'OPERACAO' in acompanhamento.columns:
             acompanhamento = acompanhamento.rename(columns={'OPERACAO': 'OPERAÇÃO'})
@@ -85,15 +86,22 @@ class Comercial:
 
          # Ordens: agora pode vir BR (DD/MM/AAAA [HH:MM]) ou ISO. Faz parse robusto.
         if 'SOLICITADA' in ordens.columns:
-            s = ordens['SOLICITADA'].astype(str).str.strip()
-            # 1ª tentativa: BR (dayfirst), aceita com/sem hora
-            dt = pd.to_datetime(s, errors='coerce', dayfirst=True, infer_datetime_format=True)
-            # fallback: ISO completo (YYYY-MM-DD HH:MM:SS)
-            na = dt.isna()
-            if na.any():
-                dt.loc[na] = pd.to_datetime(s[na], errors='coerce', format="%Y-%m-%d")
-            ordens['SOLICITADA'] = dt.dt.strftime("%d/%m/%Y")
+            s = ordens['SOLICITADA']
 
+            # Garante que é Series válida
+            if not isinstance(s, pd.Series):
+            s = pd.Series(s)
+
+            s = s.astype(str).str.strip()
+
+            dt = pd.to_datetime(s, errors='coerce', dayfirst=True)
+
+            # fallback ISO
+            mask = dt.isna()
+            if mask.any():
+                dt.loc[mask] = pd.to_datetime(s[mask], errors='coerce')
+
+            ordens['SOLICITADA'] = dt.dt.strftime("%d/%m/%Y")
             
             # Acompanhamento: BR (DD/MM/YYYY)
         if 'SOLICITADA' in acompanhamento.columns:
