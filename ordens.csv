@@ -1,2 +1,5 @@
 Data/Hora,Conta,Cliente,Ativo,Status,Direção,Qt. Oferta,Qt. Executada,Qt. Restante,Preço Médio,Tipo,Preço Limite,Estratégia,Plataforma,Bolsa,Validade,Até a Data,Disparo Stop,Preço Stop,Disparo Start,Preço Start,Obs,ID,ID Bolsa,Login,Login Alteração,
-2026-05-26 11:31:46,4377713,DANIELI TERESINHA PIKULA,BTHF11,Executada,Venda,950.0,950.0,,9.23,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8416407811559,,6NA,4377713
+2026-05-27 11:58:29,8732520,Leandro Augusto De Araujo Cunha Teixeira Bueno,ITIT11,Executada,Venda,2.0,2.0,,76.36,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8416419327347,,5KP,8732520
+2026-05-27 11:58:29,8732520,Leandro Augusto De Araujo Cunha Teixeira Bueno,ITIP11,Executada,Venda,2.0,2.0,,67.8,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8416419327345,,5KP,8732520
+2026-05-27 11:58:29,8732520,Leandro Augusto De Araujo Cunha Teixeira Bueno,INRD11,Executada,Venda,2.0,2.0,,76.35,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8416419327338,,5KP,8732520
+2026-05-27 11:58:29,8732520,Leandro Augusto De Araujo Cunha Teixeira Bueno,INLG11,Executada,Venda,2.0,2.0,,67.73,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8416419327323,,5KP,8732520
