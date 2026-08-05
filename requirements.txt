@@ -4,3 +4,4 @@ reportlab
 python-dotenv
 openpyxl
 chardet
+starlette==0.47.3
