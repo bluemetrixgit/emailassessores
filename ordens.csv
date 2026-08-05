@@ -1,9 +1,25 @@
 Data/Hora,Conta,Cliente,Ativo,Status,Direção,Qt. Oferta,Qt. Executada,Qt. Restante,Preço Médio,Tipo,Preço Limite,Estratégia,Plataforma,Bolsa,Validade,Até a Data,Disparo Stop,Preço Stop,Disparo Start,Preço Start,Obs,ID,ID Bolsa,Login,Login Alteração,
-2026-08-03 11:18:03,8615111,MELISSA GEORGINA ALCANTARA CORREIRA,ISAE4F,Executada,Compra,56.0,56.0,,26.79,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616011801325,,CNI,8615111
-2026-08-03 11:18:03,8615111,MELISSA GEORGINA ALCANTARA CORREIRA,VIVT3F,Executada,Compra,30.0,30.0,,32.6,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616011801340,,CNI,8615111
-2026-08-03 11:18:03,8615111,MELISSA GEORGINA ALCANTARA CORREIRA,CPLE3F,Executada,Compra,35.0,35.0,,14.68,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8416885636733,,CNI,8615111
-2026-08-03 11:18:03,8615111,MELISSA GEORGINA ALCANTARA CORREIRA,TIMS3F,Executada,Compra,25.0,25.0,,19.24,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616011801335,,CNI,8615111
-2026-08-03 11:18:03,8615111,MELISSA GEORGINA ALCANTARA CORREIRA,ITUB4F,Executada,Compra,23.0,23.0,,43.08,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,907448080648,,CNI,8615111
-2026-08-03 11:18:03,8615111,MELISSA GEORGINA ALCANTARA CORREIRA,CPLE3,Executada,Compra,100.0,100.0,,14.68,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8416885636728,,CNI,8615111
-2026-08-03 11:18:03,8615111,MELISSA GEORGINA ALCANTARA CORREIRA,BBSE3F,Executada,Compra,36.0,36.0,,41.41,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616011801318,,CNI,8615111
-2026-08-03 11:18:03,8615111,MELISSA GEORGINA ALCANTARA CORREIRA,CMIN3F,Executada,Compra,88.0,88.0,,5.64,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616011801320,,CNI,8615111
+2026-08-05 10:50:05,4214460,Maria Das Gracas Da Silva Pires,BITH11,Executada,Compra,135.0,135.0,,73.82,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8821782682913,,CNI,4214460
+2026-08-04 15:58:08,2939792,Paulo Victor Mariano De Faria,VALE3F,Executada,Compra,37.0,37.0,,76.29081081,Limitada,76.31,Posição,btg_desktop,BVSP,Dia,,,,,,,8010348844696,,7QR,2939792
+2026-08-04 15:57:56,2939792,Paulo Victor Mariano De Faria,WEGE3F,Executada,Compra,24.0,24.0,,48.99,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8821780141093,,7QR,2939792
+2026-08-04 15:57:56,2939792,Paulo Victor Mariano De Faria,VIVT3F,Executada,Compra,56.0,56.0,,31.69,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616025913673,,7QR,2939792
+2026-08-04 15:57:56,2939792,Paulo Victor Mariano De Faria,SBSP3F,Executada,Compra,63.0,63.0,,27.99,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616025913672,,7QR,2939792
+2026-08-04 15:57:56,2939792,Paulo Victor Mariano De Faria,PSSA3F,Executada,Compra,22.0,22.0,,54.42,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616025913670,,7QR,2939792
+2026-08-04 15:57:56,2939792,Paulo Victor Mariano De Faria,PRIO3F,Executada,Compra,20.0,20.0,,58.15,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8214565107323,,7QR,2939792
+2026-08-04 15:57:56,2939792,Paulo Victor Mariano De Faria,ITUB4F,Executada,Compra,56.0,56.0,,42.34,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,907452948706,,7QR,2939792
+2026-08-04 15:57:56,2939792,Paulo Victor Mariano De Faria,ISAE4F,Executada,Compra,63.0,63.0,,26.69,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616025913658,,7QR,2939792
+2026-08-04 15:57:56,2939792,Paulo Victor Mariano De Faria,FLRY3F,Executada,Compra,68.0,68.0,,17.47,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616025913657,,7QR,2939792
+2026-08-04 15:57:56,2939792,Paulo Victor Mariano De Faria,CPFE3F,Executada,Compra,26.0,26.0,,46.46,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8416898419634,,7QR,2939792
+2026-08-04 15:57:56,2939792,Paulo Victor Mariano De Faria,AXIA3F,Executada,Compra,22.0,22.0,,53.83,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8416898419633,,7QR,2939792
+2026-08-04 15:57:56,2939792,Paulo Victor Mariano De Faria,BBDC4F,Executada,Compra,65.0,65.0,,18.26,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,907452948705,,7QR,2939792
+2026-08-04 15:57:56,2939792,Paulo Victor Mariano De Faria,EMBJ3F,Executada,Compra,13.0,13.0,,90.4,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616025913653,,7QR,2939792
+2026-08-04 15:33:39,4550415,Diogo Salomao Pontes,AXIA3F,Executada,Compra,85.0,85.0,,53.87,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8416898074128,,CNI,4550415
+2026-08-04 15:33:35,4550415,Diogo Salomao Pontes,WEGE3F,Executada,Compra,50.0,50.0,,48.85,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8821779767621,,CNI,4550415
+2026-08-04 15:33:35,4550415,Diogo Salomao Pontes,VIVT3F,Executada,Compra,90.0,90.0,,31.75,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616025527022,,CNI,4550415
+2026-08-04 15:33:35,4550415,Diogo Salomao Pontes,WEGE3,Executada,Compra,200.0,200.0,,48.83,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8821779767590,,CNI,4550415
+2026-08-04 15:33:35,4550415,Diogo Salomao Pontes,VALE3F,Executada,Compra,50.0,50.0,,76.28,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8010348667076,,CNI,4550415
+2026-08-04 15:33:35,4550415,Diogo Salomao Pontes,SBSP3,Executada,Compra,100.0,100.0,,27.98,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616025527015,,CNI,4550415
+2026-08-04 15:33:35,4550415,Diogo Salomao Pontes,ISAE4F,Executada,Compra,64.0,64.0,,26.68,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616025527014,,CNI,4550415
+2026-08-04 15:33:35,4550415,Diogo Salomao Pontes,ISAE4,Executada,Compra,100.0,100.0,,26.66,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616025527011,,CNI,4550415
+2026-08-04 15:33:35,4550415,Diogo Salomao Pontes,BBDC4F,Executada,Compra,40.0,40.0,,18.24,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,907452746290,,CNI,4550415
+2026-08-04 15:33:35,4550415,Diogo Salomao Pontes,BBDC4,Executada,Compra,100.0,100.0,,18.23,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,907452746288,,CNI,4550415
