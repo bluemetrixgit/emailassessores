@@ -1,25 +1,2 @@
 Data/Hora,Conta,Cliente,Ativo,Status,Direção,Qt. Oferta,Qt. Executada,Qt. Restante,Preço Médio,Tipo,Preço Limite,Estratégia,Plataforma,Bolsa,Validade,Até a Data,Disparo Stop,Preço Stop,Disparo Start,Preço Start,Obs,ID,ID Bolsa,Login,Login Alteração,
 2026-08-05 10:50:05,4214460,Maria Das Gracas Da Silva Pires,BITH11,Executada,Compra,135.0,135.0,,73.82,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8821782682913,,CNI,4214460
-2026-08-04 15:58:08,2939792,Paulo Victor Mariano De Faria,VALE3F,Executada,Compra,37.0,37.0,,76.29081081,Limitada,76.31,Posição,btg_desktop,BVSP,Dia,,,,,,,8010348844696,,7QR,2939792
-2026-08-04 15:57:56,2939792,Paulo Victor Mariano De Faria,WEGE3F,Executada,Compra,24.0,24.0,,48.99,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8821780141093,,7QR,2939792
-2026-08-04 15:57:56,2939792,Paulo Victor Mariano De Faria,VIVT3F,Executada,Compra,56.0,56.0,,31.69,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616025913673,,7QR,2939792
-2026-08-04 15:57:56,2939792,Paulo Victor Mariano De Faria,SBSP3F,Executada,Compra,63.0,63.0,,27.99,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616025913672,,7QR,2939792
-2026-08-04 15:57:56,2939792,Paulo Victor Mariano De Faria,PSSA3F,Executada,Compra,22.0,22.0,,54.42,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616025913670,,7QR,2939792
-2026-08-04 15:57:56,2939792,Paulo Victor Mariano De Faria,PRIO3F,Executada,Compra,20.0,20.0,,58.15,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8214565107323,,7QR,2939792
-2026-08-04 15:57:56,2939792,Paulo Victor Mariano De Faria,ITUB4F,Executada,Compra,56.0,56.0,,42.34,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,907452948706,,7QR,2939792
-2026-08-04 15:57:56,2939792,Paulo Victor Mariano De Faria,ISAE4F,Executada,Compra,63.0,63.0,,26.69,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616025913658,,7QR,2939792
-2026-08-04 15:57:56,2939792,Paulo Victor Mariano De Faria,FLRY3F,Executada,Compra,68.0,68.0,,17.47,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616025913657,,7QR,2939792
-2026-08-04 15:57:56,2939792,Paulo Victor Mariano De Faria,CPFE3F,Executada,Compra,26.0,26.0,,46.46,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8416898419634,,7QR,2939792
-2026-08-04 15:57:56,2939792,Paulo Victor Mariano De Faria,AXIA3F,Executada,Compra,22.0,22.0,,53.83,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8416898419633,,7QR,2939792
-2026-08-04 15:57:56,2939792,Paulo Victor Mariano De Faria,BBDC4F,Executada,Compra,65.0,65.0,,18.26,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,907452948705,,7QR,2939792
-2026-08-04 15:57:56,2939792,Paulo Victor Mariano De Faria,EMBJ3F,Executada,Compra,13.0,13.0,,90.4,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616025913653,,7QR,2939792
-2026-08-04 15:33:39,4550415,Diogo Salomao Pontes,AXIA3F,Executada,Compra,85.0,85.0,,53.87,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8416898074128,,CNI,4550415
-2026-08-04 15:33:35,4550415,Diogo Salomao Pontes,WEGE3F,Executada,Compra,50.0,50.0,,48.85,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8821779767621,,CNI,4550415
-2026-08-04 15:33:35,4550415,Diogo Salomao Pontes,VIVT3F,Executada,Compra,90.0,90.0,,31.75,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616025527022,,CNI,4550415
-2026-08-04 15:33:35,4550415,Diogo Salomao Pontes,WEGE3,Executada,Compra,200.0,200.0,,48.83,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8821779767590,,CNI,4550415
-2026-08-04 15:33:35,4550415,Diogo Salomao Pontes,VALE3F,Executada,Compra,50.0,50.0,,76.28,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8010348667076,,CNI,4550415
-2026-08-04 15:33:35,4550415,Diogo Salomao Pontes,SBSP3,Executada,Compra,100.0,100.0,,27.98,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616025527015,,CNI,4550415
-2026-08-04 15:33:35,4550415,Diogo Salomao Pontes,ISAE4F,Executada,Compra,64.0,64.0,,26.68,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616025527014,,CNI,4550415
-2026-08-04 15:33:35,4550415,Diogo Salomao Pontes,ISAE4,Executada,Compra,100.0,100.0,,26.66,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616025527011,,CNI,4550415
-2026-08-04 15:33:35,4550415,Diogo Salomao Pontes,BBDC4F,Executada,Compra,40.0,40.0,,18.24,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,907452746290,,CNI,4550415
-2026-08-04 15:33:35,4550415,Diogo Salomao Pontes,BBDC4,Executada,Compra,100.0,100.0,,18.23,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,907452746288,,CNI,4550415
