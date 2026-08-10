@@ -1,1 +1,17 @@
 Data/Hora,Conta,Cliente,Ativo,Status,Direção,Qt. Oferta,Qt. Executada,Qt. Restante,Preço Médio,Tipo,Preço Limite,Estratégia,Plataforma,Bolsa,Validade,Até a Data,Disparo Stop,Preço Stop,Disparo Start,Preço Start,Obs,ID,ID Bolsa,Login,Login Alteração,
+2026-08-10 11:25:10,8475532,ANA PAULA HERRERO,CPFE3F,Executada,Venda,77.0,77.0,,44.2161039,Limitada,44.19,Posição,btg_desktop,BVSP,Dia,,,,,,,8416930295711,,CNI,8475532
+2026-08-10 11:24:32,8475532,ANA PAULA HERRERO,WEGE3F,Executada,Venda,25.0,25.0,,47.8924,Limitada,47.8,Posição,btg_desktop,BVSP,Dia,,,,,,,8821807260214,,CNI,8475532
+2026-08-10 11:23:52,8475532,ANA PAULA HERRERO,AXIA3F,Executada,Venda,33.0,33.0,,51.69060606,Limitada,51.69,Posição,btg_desktop,BVSP,Dia,,,,,,,8416930295706,,CNI,8475532
+2026-08-10 11:23:23,8475532,ANA PAULA HERRERO,SBSP3F,Executada,Venda,96.0,96.0,,26.56,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616063326574,,CNI,8475532
+2026-08-10 11:23:11,8475532,ANA PAULA HERRERO,FLRY3F,Executada,Venda,12.0,12.0,,18.55,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616063326549,,CNI,8475532
+2026-08-10 11:22:33,8475532,ANA PAULA HERRERO,BBDC4F,Executada,Venda,96.0,96.0,,17.09,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,907465683651,,CNI,8475532
+2026-08-10 11:22:22,8475532,ANA PAULA HERRERO,ITUB4F,Executada,Venda,88.0,88.0,,40.51,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,907465683674,,CNI,8475532
+2026-08-10 11:22:19,8475532,ANA PAULA HERRERO,PRIO3F,Executada,Venda,37.0,37.0,,59.52,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8214608650955,,CNI,8475532
+2026-08-10 11:22:18,8475532,ANA PAULA HERRERO,VIVT3F,Executada,Venda,88.0,88.0,,30.36,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616063326591,,CNI,8475532
+2026-08-10 11:22:18,8475532,ANA PAULA HERRERO,VALE3F,Executada,Venda,59.0,59.0,,75.35,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8010364185844,,CNI,8475532
+2026-08-10 11:22:18,8475532,ANA PAULA HERRERO,PSSA3F,Executada,Venda,71.0,71.0,,49.8,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616063326567,,CNI,8475532
+2026-08-10 11:22:18,8475532,ANA PAULA HERRERO,ISAE4F,Executada,Venda,84.0,84.0,,25.85,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616063326556,,CNI,8475532
+2026-08-10 11:22:18,8475532,ANA PAULA HERRERO,ISAE3F,Executada,Venda,30.0,30.0,,31.0,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616063326555,,CNI,8475532
+2026-08-10 11:22:18,8475532,ANA PAULA HERRERO,FLRY3,Executada,Venda,100.0,100.0,,18.55,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616063326541,,CNI,8475532
+2026-08-10 11:22:18,8475532,ANA PAULA HERRERO,EMBJ3F,Executada,Venda,35.0,35.0,,98.35,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616063326535,,CNI,8475532
+2026-08-10 11:22:18,8475532,ANA PAULA HERRERO,AXIA7F,Executada,Venda,2.0,2.0,,51.41,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8416930295708,,CNI,8475532
