@@ -1,2 +1,32 @@
 Data/Hora,Conta,Cliente,Ativo,Status,Direção,Qt. Oferta,Qt. Executada,Qt. Restante,Preço Médio,Tipo,Preço Limite,Estratégia,Plataforma,Bolsa,Validade,Até a Data,Disparo Stop,Preço Stop,Disparo Start,Preço Start,Obs,ID,ID Bolsa,Login,Login Alteração,
-2026-08-12 15:30:08,4214460,Maria Das Gracas Da Silva Pires,BITH11,Executada,Compra,135.0,135.0,,73.54,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8821830246490,,7QR,4214460
+2026-08-17 11:49:58,26366492,Ercules gricolo miranda,PRIO3F,Executada,Compra,54.0,54.0,,59.74648148,Limitada,59.8,Posição,btg_desktop,BVSP,Dia,,,,,,,8214672696261,,E62,26366492
+2026-08-17 11:49:57,26366492,Ercules gricolo miranda,VALE3F,Executada,Compra,10.0,10.0,,70.9,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8010388981255,,E62,26366492
+2026-08-17 11:49:52,26366492,Ercules gricolo miranda,DOLA11,Executada,Compra,415.0,415.0,,10.41985542,Limitada,10.5,Posição,btg_desktop,BVSP,Dia,,,,,,,8821858021343,,E62,26366492
+2026-08-17 11:49:31,26366492,Ercules gricolo miranda,PSSA3F,Executada,Compra,95.0,95.0,,47.4,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616128037830,,E62,26366492
+2026-08-17 11:49:31,26366492,Ercules gricolo miranda,WEGE3F,Executada,Compra,7.0,7.0,,48.12,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8821858021342,,E62,26366492
+2026-08-17 11:49:31,26366492,Ercules gricolo miranda,WEGE3,Executada,Compra,100.0,100.0,,48.11,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8821858021323,,E62,26366492
+2026-08-17 11:49:31,26366492,Ercules gricolo miranda,VIVT3F,Executada,Compra,11.0,11.0,,29.69,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616128037869,,E62,26366492
+2026-08-17 11:49:31,26366492,Ercules gricolo miranda,VIVT3,Executada,Compra,100.0,100.0,,29.68,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616128037860,,E62,26366492
+2026-08-17 11:49:31,26366492,Ercules gricolo miranda,VALE3,Executada,Compra,100.0,100.0,,70.91,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8010388981147,,E62,26366492
+2026-08-17 11:49:31,26366492,Ercules gricolo miranda,SBSP3F,Executada,Compra,15.0,15.0,,23.82,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616128037856,,E62,26366492
+2026-08-17 11:49:31,26366492,Ercules gricolo miranda,SBSP3,Executada,Compra,100.0,100.0,,23.81,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616128037853,,E62,26366492
+2026-08-17 11:49:31,26366492,Ercules gricolo miranda,ITUB4F,Executada,Compra,13.0,13.0,,38.46,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,907487114101,,E62,26366492
+2026-08-17 11:49:31,26366492,Ercules gricolo miranda,ITUB4,Executada,Compra,100.0,100.0,,38.43,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,907487114097,,E62,26366492
+2026-08-17 11:49:31,26366492,Ercules gricolo miranda,ISAE4F,Executada,Compra,43.0,43.0,,25.63,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616128037818,,E62,26366492
+2026-08-17 11:49:31,26366492,Ercules gricolo miranda,CPFE3F,Executada,Compra,75.0,75.0,,41.04,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8416984502186,,E62,26366492
+2026-08-17 11:49:31,26366492,Ercules gricolo miranda,ISAE4,Executada,Compra,200.0,200.0,,25.62,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616128037816,,E62,26366492
+2026-08-17 11:49:31,26366492,Ercules gricolo miranda,FLRY3F,Executada,Compra,48.0,48.0,,18.24,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616128037814,,E62,26366492
+2026-08-17 11:49:31,26366492,Ercules gricolo miranda,FLRY3,Executada,Compra,100.0,100.0,,18.23,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616128037813,,E62,26366492
+2026-08-17 11:49:31,26366492,Ercules gricolo miranda,EMBJ3F,Executada,Venda,4.0,4.0,,99.61,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616128037812,,E62,26366492
+2026-08-17 11:49:31,26366492,Ercules gricolo miranda,BBDC4F,Executada,Compra,37.0,37.0,,16.36,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,907487114096,,E62,26366492
+2026-08-17 11:49:31,26366492,Ercules gricolo miranda,BBDC4,Executada,Compra,300.0,300.0,,16.35,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,907487114094,,E62,26366492
+2026-08-17 11:49:31,26366492,Ercules gricolo miranda,AXIA3F,Executada,Compra,61.0,61.0,,50.49,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8416984502152,,E62,26366492
+2026-08-14 17:05:53,4575139,Fidelcino De Souza Gomes,VALE3,Executada,Venda,2300.0,2300.0,,71.3,Mercado,,Posição,SOLUTIONS-DIGITAL,BVSP,MOC,,,,,,,8010386832372,91b8a5437a194c47bcbcda442720ea00,A0IW,4575139
+2026-08-14 17:03:00,4575139,Fidelcino De Souza Gomes,JBSS32,Executada,Venda,1900.0,1900.0,,70.88,Mercado,,Posição,SOLUTIONS-DIGITAL,BVSP,MOC,,,,,,,8616122825454,b8516b6bef3e4690bbe7b09a9905ec36,A0IW,4575139
+2026-08-14 12:07:11,4368628,Camila Amanda Barboza Taveira,DOLA11,Executada,Compra,1086.0,1086.0,,10.37,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8821846982753,,7QR,4368628
+2026-08-14 10:41:12,5608744,Douglas Arantes,FLRY3F,Executada,Venda,45.0,45.0,,18.21511111,Limitada,18.2,Posição,btg_desktop,BVSP,Dia,,,,,,,8616111551069,,CNI,5608744
+2026-08-14 10:40:07,5608744,Douglas Arantes,PRIO3F,Executada,Venda,44.0,44.0,,58.89,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8214658251484,,CNI,5608744
+2026-08-14 10:40:07,5608744,Douglas Arantes,WEGE3F,Executada,Venda,53.0,53.0,,46.98,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8821843368317,,CNI,5608744
+2026-08-14 10:40:07,5608744,Douglas Arantes,FLRY3,Executada,Venda,100.0,100.0,,18.23,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616111551041,,CNI,5608744
+2026-08-14 10:40:07,5608744,Douglas Arantes,EMBJ3F,Executada,Venda,28.0,28.0,,98.26,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616111550998,,CNI,5608744
+2026-08-14 10:40:07,5608744,Douglas Arantes,DOLA11,Executada,Venda,193.0,193.0,,10.31,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8821843368301,,CNI,5608744
