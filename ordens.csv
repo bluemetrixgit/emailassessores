@@ -1,25 +1,4 @@
 Data/Hora,Conta,Cliente,Ativo,Status,Direção,Qt. Oferta,Qt. Executada,Qt. Restante,Preço Médio,Tipo,Preço Limite,Estratégia,Plataforma,Bolsa,Validade,Até a Data,Disparo Stop,Preço Stop,Disparo Start,Preço Start,Obs,ID,ID Bolsa,Login,Login Alteração,
-2026-09-28 17:05:32,4589819,Boldrim Modas Ltda,PRIO3,Executada,Venda,1100.0,1100.0,,61.63,Mercado,,Posição,SOLUTIONS-DIGITAL,BVSP,MOC,,,,,,,8215104655913,8e5f5d65d6ad432d8e947fafba5f27bb,A0IW,4589819
-2026-09-28 15:43:49,13737887,Thomas Batista Neto,BTCBRL,Executada,Compra,0.0117768,0.0117768,,442201.59592909,Mercado,,Posição,BTG_INVESTIMENTOS,,Dia,,,,,,,d520e3be-0882-4f7b-8a3a-8f7d5ee31f6f,,13737887,13737887
-2026-09-28 15:34:56,4898299,Aquiles Do Nascimento Pires Junior,BEEFK415,Executada,Venda,100.0,100.0,,0.41,Limitada,0.41,Posição,BTG_TRADER,BVSP,Dia,,,,,,,8417338278080,,4898299,4898299
-2026-09-28 15:24:51,4898299,Aquiles Do Nascimento Pires Junior,CSNAV575,Executada,Venda,300.0,300.0,,0.26,Limitada,0.26,Posição,BTG_TRADER,BVSP,Dia,,,,,,,8417338192764,,4898299,4898299
-2026-09-28 15:23:37,4898299,Aquiles Do Nascimento Pires Junior,CSANK395,Executada,Compra,300.0,300.0,,0.34,Limitada,0.34,Posição,BTG_TRADER,BVSP,Dia,,,,,,,8215102698483,,4898299,4898299
-2026-09-28 15:22:39,4898299,Aquiles Do Nascimento Pires Junior,MGLUK740,Cancelada,Venda,100.0,,,,Limitada,0.8,Posição,BTG_TRADER,BVSP,Dia,,,,,,,947518206433,,4898299,4898299
-2026-09-28 15:20:08,4898299,Aquiles Do Nascimento Pires Junior,USIMV710,Executada,Venda,200.0,200.0,,0.4,Limitada,0.4,Posição,BTG_TRADER,BVSP,Dia,,,,,,,928545064405,,4898299,4898299
-2026-09-28 15:20:01,4898299,Aquiles Do Nascimento Pires Junior,MGLUK740,Executada,Venda,100.0,100.0,,0.76,Limitada,0.76,Posição,BTG_TRADER,BVSP,Dia,,,,,,,947518363146,,4898299,4898299
-2026-09-28 15:18:19,4898299,Aquiles Do Nascimento Pires Junior,USIMV710,Cancelada,Venda,200.0,,,,Limitada,0.43,Posição,BTG_TRADER,BVSP,Dia,,,,,,,928544455359,,4898299,4898299
-2026-09-28 15:18:09,4898299,Aquiles Do Nascimento Pires Junior,BEEFK415,Cancelada,Venda,100.0,,,,Limitada,0.42,Posição,BTG_TRADER,BVSP,Dia,,,,,,,8417337775857,,4898299,4898299
-2026-09-28 15:17:50,4898299,Aquiles Do Nascimento Pires Junior,CSNAV575,Cancelada,Venda,300.0,,,,Limitada,0.27,Posição,BTG_TRADER,BVSP,Dia,,,,,,,8417337811093,,4898299,4898299
-2026-09-28 15:03:28,4898299,Aquiles Do Nascimento Pires Junior,PETRJ546,Executada,Venda,100.0,100.0,,0.66,Limitada,0.66,Posição,BTG_TRADER,BVSP,Dia,,,,,,,8215102275648,,4898299,4898299
-2026-09-28 15:02:51,4898299,Aquiles Do Nascimento Pires Junior,CSANK395,Executada,Venda,300.0,300.0,,0.34,Limitada,0.34,Posição,BTG_TRADER,BVSP,Dia,,,,,,,8215102255508,,4898299,4898299
-2026-09-28 15:02:51,4898299,Aquiles Do Nascimento Pires Junior,CSANK395,Executada,Venda,300.0,300.0,,0.34,Limitada,0.34,Posição,BTG_TRADER,BVSP,Dia,,,,,,,8215102247090,,4898299,4898299
-2026-09-28 15:00:51,4898299,Aquiles Do Nascimento Pires Junior,BRAPW199,Executada,Venda,200.0,200.0,,0.57,Limitada,0.56,Posição,BTG_TRADER,BVSP,Dia,,,,,,,907636728978,,4898299,4898299
-2026-09-28 14:58:35,4898299,Aquiles Do Nascimento Pires Junior,BOVAV182,Executada,Venda,25.0,25.0,,5.25,Limitada,5.25,Posição,BTG_TRADER,BVSP,Dia,,,,,,,928544419684,,4898299,4898299
-2026-09-28 14:57:54,4898299,Aquiles Do Nascimento Pires Junior,COGNV230,Executada,Venda,700.0,700.0,,0.2,Limitada,0.19,Posição,BTG_TRADER,BVSP,Dia,,,,,,,8616518978196,,4898299,4898299
-2026-09-28 11:20:04,4898299,Aquiles Do Nascimento Pires Junior,WEGEW510,Executada,Venda,100.0,100.0,,1.98,Limitada,1.98,Posição,BTG_TRADER,BVSP,Dia,,,,,,,8822163026465,,4898299,4898299
-2026-09-28 11:19:17,4898299,Aquiles Do Nascimento Pires Junior,WEGEW510,Cancelada,Venda,100.0,,,,Limitada,2.04,Posição,BTG_TRADER,BVSP,Dia,,,,,,,8822162852864,,4898299,4898299
-2026-09-28 11:18:56,4898299,Aquiles Do Nascimento Pires Junior,WEGEW510,Rejeitada,Venda,100.0,,,,Limitada,1.99,Posição,BTG_TRADER,BVSP,Dia,,,,,,|BTG| Margem requerida [1476.06] é maior que o limite disponível [722.00].,BTG.ID.fa6ab214d40b42caaa9e73e04a6b3507,,4898299,4898299
-2026-09-28 10:30:32,4898299,Aquiles Do Nascimento Pires Junior,PETRV495,Executada,Venda,100.0,100.0,,1.24,Limitada,1.24,Posição,BTG_TRADER,BVSP,Dia,,,,,,,8215090421692,,4898299,4898299
-2026-09-28 10:27:33,4898299,Aquiles Do Nascimento Pires Junior,PRIOW615,Executada,Venda,100.0,100.0,,3.33,Limitada,3.15,Posição,BTG_TRADER,BVSP,Dia,,,,,,,8215090243675,,4898299,4898299
-2026-09-28 10:26:54,4898299,Aquiles Do Nascimento Pires Junior,MRVEV540,Executada,Venda,300.0,300.0,,0.46,Limitada,0.42,Posição,BTG_TRADER,BVSP,Dia,,,,,,,8822160113920,,4898299,4898299
-2026-09-28 10:24:25,4898299,Aquiles Do Nascimento Pires Junior,GGBRW255,Executada,Venda,100.0,100.0,,1.41,Limitada,1.27,Posição,BTG_TRADER,BVSP,Dia,,,,,,,8010568420645,,4898299,4898299
+2026-10-01 11:55:54,17682840,FABIO DOS SANTOS BINDES,AZZAK185,Executada,Compra,1100.0,1100.0,,2.49,Mercado,,Posição,BTG_TRADER,BVSP,Dia,,,,,,,8616562853023,,17682840,17682840
+2026-10-01 11:40:42,17682840,FABIO DOS SANTOS BINDES,AZZAK185,Executada,Compra,800.0,800.0,,2.66,Mercado,,Posição,BTG_TRADER,BVSP,Dia,,,,,,,8616561851418,,17682840,17682840
+2026-09-30 12:04:04,5608744,Douglas Arantes,BBDC10F,Executada,Venda,7.0,7.0,,18.11,Limitada,18.11,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,907647772638,487b058b7e674bf0bf7cfa0fc5fd7f29,E62,5608744
