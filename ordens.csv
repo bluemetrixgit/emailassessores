@@ -1,131 +1,54 @@
 Data/Hora,Conta,Cliente,Ativo,Status,Direção,Qt. Oferta,Qt. Executada,Qt. Restante,Preço Médio,Tipo,Preço Limite,Estratégia,Plataforma,Bolsa,Validade,Até a Data,Disparo Stop,Preço Stop,Disparo Start,Preço Start,Obs,ID,ID Bolsa,Login,Login Alteração,
-2026-10-14 15:27:45,3581689,Leonardo Agonilha Marquezine,BOVA11,Executada,Compra,33.0,33.0,,203.9,Limitada,203.9,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,928776494263,873f58b4d2ca471cb75415d048b01291,7QR,3581689
-2026-10-14 15:27:14,3581689,Leonardo Agonilha Marquezine,BOVA11,Rejeitada,Compra,33.0,,,,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,|BTG| Valor da ordem 6725.40 é maior que o limite disponível 1022.14.,BTG.ID.63838d79bbf947b9b751c3d5ff90b833,,7QR,3581689
-2026-10-14 13:55:42,17682840,FABIO DOS SANTOS BINDES,LWSAK590,Executada,Compra,12000.0,12000.0,,0.22,Limitada,0.22,Posição,BTG_TRADER,BVSP,VAC,,,,,,,8215249582633,,17682840,17682840
-2026-10-14 13:04:22,17682840,FABIO DOS SANTOS BINDES,ROXOJ12,Executada,Venda,2000.0,2000.0,,0.68,Limitada,0.68,Posição,BTG_TRADER,BVSP,Dia,,,,,,,8417498660212,,17682840,17682840
-2026-10-14 13:04:16,17682840,FABIO DOS SANTOS BINDES,MGLUK980,Executada,Compra,1000.0,1000.0,,2.0,Limitada,2.0,Posição,BTG_TRADER,BVSP,Dia,,,,,,,947580105616,,17682840,17682840
-2026-10-14 13:03:02,17682840,FABIO DOS SANTOS BINDES,ALPAK165,Cancelada,Compra,4000.0,,,,Limitada,1.05,Posição,BTG_TRADER,BVSP,VAC,,,,,,,8417457075921,,17682840,17682840
-2026-10-14 11:46:58,5121919,JORGE GOMES DE ARAUJO,EMBJ3F,Executada,Venda,1.0,1.0,,91.16,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616721632436,,7QR,5121919
-2026-10-14 11:46:58,5121919,JORGE GOMES DE ARAUJO,BOVA11,Executada,Venda,1.0,1.0,,201.87,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,928766320405,,7QR,5121919
-2026-10-14 11:35:01,18675611,Thiago Saba,ITUB4F,Executada,Venda,95.0,95.0,,48.46421053,Limitada,48.44,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,907727306190,3ce0ce552a844076ab31c7abedaeba7c,6NA,18675611
-2026-10-14 11:34:55,18675611,Thiago Saba,WEGE3F,Executada,Venda,16.0,16.0,,50.93,Mercado,,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,8822306909582,df2500b2d11548898e55ebca3134f07c,6NA,18675611
-2026-10-14 11:34:55,18675611,Thiago Saba,LREN3F,Executada,Venda,11.0,11.0,,13.57,Mercado,,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,947578892612,b0c5f127f6d741cab32d40c6486e84c2,6NA,18675611
-2026-10-14 11:34:49,18675611,Thiago Saba,AXIA3,Executada,Venda,100.0,100.0,,59.55,Mercado,,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,8417501129284,de9f675afa304a54ac60806a8e4688ff,6NA,18675611
-2026-10-14 11:34:49,18675611,Thiago Saba,AXIA3F,Executada,Venda,1.0,1.0,,59.55,Mercado,,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,8417501129283,88ea7d89110b4409af385f05d4b3a6ff,6NA,18675611
-2026-10-14 11:34:49,18675611,Thiago Saba,CPFE3,Executada,Venda,100.0,100.0,,49.87,Mercado,,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,8417501129281,8770343ff0be49378d4b00e1784f1601,6NA,18675611
-2026-10-14 11:34:49,18675611,Thiago Saba,CPFE3F,Executada,Venda,19.0,19.0,,49.86,Mercado,,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,8417501129280,9197fadb534945d191282f6767e1dd45,6NA,18675611
-2026-10-14 11:34:49,18675611,Thiago Saba,BOVA11,Executada,Venda,45.0,45.0,,201.44,Mercado,,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,928765485958,8c6a6461032b4725985fafc2fbac3ca1,6NA,18675611
-2026-10-14 11:34:49,18675611,Thiago Saba,PETR4,Executada,Venda,100.0,100.0,,57.54,Mercado,,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,8215292570510,2b5b4b7ec64d4ed9975fc443baae46a5,6NA,18675611
-2026-10-14 11:34:49,18675611,Thiago Saba,PETR4F,Executada,Venda,9.0,9.0,,57.52,Mercado,,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,8215292570509,ab0e98badf5f4945abc7ff427be70099,6NA,18675611
-2026-10-14 11:34:49,18675611,Thiago Saba,PRIO3F,Executada,Venda,66.0,66.0,,68.1,Mercado,,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,8215292570507,29ca7920a02a49cda3622e7f7b08074c,6NA,18675611
-2026-10-14 11:34:49,18675611,Thiago Saba,DIRR3,Executada,Venda,200.0,200.0,,11.55,Mercado,,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,8616720973697,efefc9727a2d4a57b140417618489bbc,6NA,18675611
-2026-10-14 11:34:49,18675611,Thiago Saba,DIRR3F,Executada,Venda,50.0,50.0,,11.53,Mercado,,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,8616720973694,fe44b95fcbdb41d48fd9cb66bb286f24,6NA,18675611
-2026-10-14 11:34:49,18675611,Thiago Saba,EMBJ3F,Executada,Venda,47.0,47.0,,90.99,Mercado,,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,8616720973693,ad241fe39b644a5e95313ccea4e64f5d,6NA,18675611
-2026-10-14 11:34:49,18675611,Thiago Saba,FLRY3,Executada,Venda,200.0,200.0,,26.91,Mercado,,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,8616720973688,ae76a128ec7d40d090b20a0f2e783a6a,6NA,18675611
-2026-10-14 11:34:49,18675611,Thiago Saba,FLRY3F,Executada,Venda,28.0,28.0,,26.88,Mercado,,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,8616720973687,8738487343c5461497b1214c71045b44,6NA,18675611
-2026-10-14 11:34:49,18675611,Thiago Saba,HYPE3,Executada,Venda,100.0,100.0,,25.37,Mercado,,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,8616720973686,e284eee459cf46f4a42abe68fe5e6710,6NA,18675611
-2026-10-14 11:34:49,18675611,Thiago Saba,HYPE3F,Executada,Venda,58.0,58.0,,25.37,Mercado,,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,8616720973685,44c33dd1f98246a0b4d6268ac5a39897,6NA,18675611
-2026-10-14 11:34:49,18675611,Thiago Saba,ISAE4,Executada,Venda,200.0,200.0,,28.77,Mercado,,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,8616720973682,b2d122e454bc46dead1046005a0f63e8,6NA,18675611
-2026-10-14 11:34:49,18675611,Thiago Saba,ISAE4F,Executada,Venda,80.0,80.0,,28.77,Mercado,,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,8616720973679,885140faf96440e0b9d44b16300adfb4,6NA,18675611
-2026-10-14 11:34:49,18675611,Thiago Saba,JHSF3,Executada,Venda,400.0,400.0,,13.2,Mercado,,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,8417501129278,d648dfdc3a4941b687d8eb9016f317f9,6NA,18675611
-2026-10-14 11:34:49,18675611,Thiago Saba,JHSF3F,Executada,Venda,6.0,6.0,,13.19,Mercado,,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,8417501129277,ad43e26f27d542938df3294bc7696f9e,6NA,18675611
-2026-10-14 11:34:49,18675611,Thiago Saba,ITUB4,Executada,Venda,100.0,100.0,,48.49,Mercado,,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,907727306191,c0d64b3aa7cf4d7fa2e48dec6bcbb40f,6NA,18675611
-2026-10-14 11:34:49,18675611,Thiago Saba,LREN3,Executada,Venda,300.0,300.0,,13.57,Mercado,,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,947578892613,c8e7db6886a445e2982daa0605f5e4c7,6NA,18675611
-2026-10-14 11:34:49,18675611,Thiago Saba,PSSA3,Executada,Venda,100.0,100.0,,52.62,Mercado,,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,8616720973671,88dbdb8392f84db9aea84bce0f0efaf2,6NA,18675611
-2026-10-14 11:34:49,18675611,Thiago Saba,PSSA3F,Executada,Venda,1.0,1.0,,52.62,Mercado,,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,8616720973670,90c1a4b0d7b045cebdb5534412eb8286,6NA,18675611
-2026-10-14 11:34:49,18675611,Thiago Saba,SBSP3,Executada,Venda,100.0,100.0,,32.01,Mercado,,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,8616720973669,bae8667069e64acc81a883da0543886e,6NA,18675611
-2026-10-14 11:34:49,18675611,Thiago Saba,SBSP3F,Executada,Venda,26.0,26.0,,32.01,Mercado,,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,8616720973668,dd21335477eb4601ba229af0d08e6410,6NA,18675611
-2026-10-14 11:34:49,18675611,Thiago Saba,RADL3,Executada,Venda,200.0,200.0,,20.59,Mercado,,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,8417501129273,8f097fdae075441282354f30bed332aa,6NA,18675611
-2026-10-14 11:34:49,18675611,Thiago Saba,RADL3F,Executada,Venda,2.0,2.0,,20.57,Mercado,,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,8417501129270,5da653ba68a34323b6bc9c12108b1541,6NA,18675611
-2026-10-14 11:34:49,18675611,Thiago Saba,UGPA3F,Executada,Venda,77.0,77.0,,38.67,Mercado,,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,907727306189,e9a36ed951e74ab58a9f5601452611ca,6NA,18675611
-2026-10-14 11:34:49,18675611,Thiago Saba,WEGE3,Executada,Venda,100.0,100.0,,50.93,Mercado,,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,8822306909585,3a20b53e523b414884dfff92aa5baed6,6NA,18675611
-2026-10-14 11:15:38,3581689,Leonardo Agonilha Marquezine,BOVA11,Rejeitada,Compra,33.0,,,,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,|BTG| Valor da ordem 6623.10 é maior que o limite disponível 0.00.,BTG.ID.9a2b3eb4a7b148a0974fd6d5139a040c,,A7BA,3581689
-2026-10-14 11:15:19,3581689,Leonardo Agonilha Marquezine,BOVA11,Rejeitada,Compra,33.0,,,,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,|BTG| Valor da ordem 6621.78 é maior que o limite disponível 0.00.,BTG.ID.8478ffe2e42347738e993a31e70d944f,,A7BA,3581689
-2026-10-14 10:37:04,17682840,FABIO DOS SANTOS BINDES,CSANJ600,Rejeitada,Venda,25000.0,,,,Mercado,,Posição,BTG_TRADER,BVSP,Dia,,,,,,Market price orders not supported by opposite limit,8215289291767,,17682840,17682840
-2026-10-14 10:09:30,17682840,FABIO DOS SANTOS BINDES,SBFGK122,Executada,Compra,4000.0,4000.0,,0.72,Limitada,0.72,Posição,BTG_TRADER,BVSP,VAC,,,,,,,8616700757289,,17682840,17682840
-2026-10-13 19:45:02,17682840,FABIO DOS SANTOS BINDES,CSANJ600,Expirada,Venda,25000.0,,,,Limitada,0.02,Posição,BTG_TRADER,BVSP,Dia,,,,,,,8215280112415,,17682840,17682840
-2026-10-13 16:43:47,17682840,FABIO DOS SANTOS BINDES,BEEFJ406,Executada,Venda,7000.0,7000.0,,0.34,Limitada,0.34,Posição,BTG_TRADER,BVSP,Dia,,,,,,,8417496146757,,17682840,17682840
-2026-10-13 16:39:42,8402868,Kelma Luana Abreu De Siqueira,ISAE4F,Executada,Venda,54.0,54.0,,29.22907407,Limitada,29.14,Posição,btg_desktop,BVSP,Dia,,,,,,,8616714450771,,5KP,8402868
-2026-10-13 16:39:37,8402868,Kelma Luana Abreu De Siqueira,CMIG4F,Executada,Venda,34.0,34.0,,11.88176471,Limitada,11.81,Posição,btg_desktop,BVSP,Dia,,,,,,,8417496085243,,5KP,8402868
-2026-10-13 16:39:30,8402868,Kelma Luana Abreu De Siqueira,BBAS3F,Executada,Venda,66.0,66.0,,24.24,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,928758995223,,5KP,8402868
-2026-10-13 16:39:23,8402868,Kelma Luana Abreu De Siqueira,DIRR3F,Executada,Venda,67.0,67.0,,11.88,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616714450769,,5KP,8402868
-2026-10-13 16:39:20,8402868,Kelma Luana Abreu De Siqueira,PETR4F,Executada,Venda,28.0,28.0,,56.51,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8215285978228,,5KP,8402868
-2026-10-13 16:39:20,8402868,Kelma Luana Abreu De Siqueira,TAEE11F,Executada,Venda,34.0,34.0,,46.17,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8417496085284,,5KP,8402868
-2026-10-13 16:39:20,8402868,Kelma Luana Abreu De Siqueira,DIVO11,Executada,Venda,16.0,16.0,,146.15,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8822303047870,,5KP,8402868
-2026-10-13 16:39:20,8402868,Kelma Luana Abreu De Siqueira,CPLE3F,Executada,Venda,91.0,91.0,,17.5,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8417496085253,,5KP,8402868
-2026-10-13 16:39:20,8402868,Kelma Luana Abreu De Siqueira,CMIN3F,Executada,Venda,20.0,20.0,,4.99,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616714450761,,5KP,8402868
-2026-10-13 16:39:20,8402868,Kelma Luana Abreu De Siqueira,CMIN3,Executada,Venda,300.0,300.0,,4.99,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616714450757,,5KP,8402868
-2026-10-13 16:39:20,8402868,Kelma Luana Abreu De Siqueira,CMIG4,Executada,Venda,100.0,100.0,,11.88,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8417496085241,,5KP,8402868
-2026-10-13 16:39:20,8402868,Kelma Luana Abreu De Siqueira,BBSE3F,Executada,Venda,38.0,38.0,,41.21,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616714450751,,5KP,8402868
-2026-10-13 16:14:14,8402868,Kelma Luana Abreu De Siqueira,CMIG4F,Executada,Compra,77.0,77.0,,11.89,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8417495440623,,7QR,8402868
-2026-10-13 16:14:12,8402868,Kelma Luana Abreu De Siqueira,PETR4F,Executada,Compra,79.0,79.0,,56.49506329,Limitada,56.51,Posição,btg_desktop,BVSP,Dia,,,,,,,8215285354318,,7QR,8402868
-2026-10-13 16:14:05,8402868,Kelma Luana Abreu De Siqueira,BBSE3F,Executada,Compra,78.0,78.0,,41.19769231,Limitada,41.23,Posição,btg_desktop,BVSP,Dia,,,,,,,8616713679532,,7QR,8402868
-2026-10-13 16:13:53,8402868,Kelma Luana Abreu De Siqueira,TAEE11F,Executada,Compra,97.0,97.0,,46.23,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8417495440637,,7QR,8402868
-2026-10-13 16:13:52,8402868,Kelma Luana Abreu De Siqueira,ISAE4F,Executada,Compra,15.0,15.0,,29.29,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616713679559,,7QR,8402868
-2026-10-13 16:13:52,8402868,Kelma Luana Abreu De Siqueira,ISAE4,Executada,Compra,100.0,100.0,,29.28,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616713679554,,7QR,8402868
-2026-10-13 16:13:52,8402868,Kelma Luana Abreu De Siqueira,DIVO11,Executada,Compra,46.0,46.0,,146.13,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8822302660100,,7QR,8402868
-2026-10-13 16:13:52,8402868,Kelma Luana Abreu De Siqueira,DIRR3F,Executada,Compra,89.0,89.0,,11.87,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616713679548,,7QR,8402868
-2026-10-13 16:13:52,8402868,Kelma Luana Abreu De Siqueira,DIRR3,Executada,Compra,100.0,100.0,,11.87,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616713679547,,7QR,8402868
-2026-10-13 16:13:52,8402868,Kelma Luana Abreu De Siqueira,CPLE3F,Executada,Compra,19.0,19.0,,17.51,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8417495440630,,7QR,8402868
-2026-10-13 16:13:52,8402868,Kelma Luana Abreu De Siqueira,CPLE3,Executada,Compra,100.0,100.0,,17.5,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8417495440627,,7QR,8402868
-2026-10-13 16:13:52,8402868,Kelma Luana Abreu De Siqueira,CMIN3F,Executada,Compra,16.0,16.0,,5.0,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616713679546,,7QR,8402868
-2026-10-13 16:13:52,8402868,Kelma Luana Abreu De Siqueira,CMIN3,Executada,Compra,800.0,800.0,,5.0,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616713679545,,7QR,8402868
-2026-10-13 16:13:52,8402868,Kelma Luana Abreu De Siqueira,CMIG4,Executada,Compra,300.0,300.0,,11.89,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8417495440621,,7QR,8402868
-2026-10-13 16:13:52,8402868,Kelma Luana Abreu De Siqueira,BBAS3F,Executada,Compra,85.0,85.0,,24.27,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,928758349505,,7QR,8402868
-2026-10-13 16:13:52,8402868,Kelma Luana Abreu De Siqueira,BBAS3,Executada,Compra,100.0,100.0,,24.26,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,928758349503,,7QR,8402868
-2026-10-13 15:52:41,8402868,Kelma Luana Abreu De Siqueira,BOVA11,Executada,Venda,6.0,6.0,,203.57,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,928757787632,,5KP,8402868
-2026-10-13 15:52:41,8402868,Kelma Luana Abreu De Siqueira,VIVT3F,Executada,Venda,13.0,13.0,,30.77,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616713051469,,5KP,8402868
-2026-10-13 15:52:41,8402868,Kelma Luana Abreu De Siqueira,ITUB4F,Executada,Venda,8.0,8.0,,49.88,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,907724274654,,5KP,8402868
-2026-10-13 14:29:59,4368468,Ahmad Taha Comercio De Moveis Ltda,PVBI11,Executada,Venda,331.0,331.0,,72.74697885,Limitada,72.72,Posição,btg_desktop,BVSP,Dia,,,,,,,8417492993317,,7QR,4368468
-2026-10-13 14:29:54,4368468,Ahmad Taha Comercio De Moveis Ltda,A1ZN34,Executada,Venda,117.0,117.0,,130.74213675,Limitada,130.74,Posição,btg_desktop,BVSP,Dia,,,,,,,947575525967,,7QR,4368468
-2026-10-13 14:29:43,4368468,Ahmad Taha Comercio De Moveis Ltda,SAPR11,Executada,Venda,400.0,400.0,,41.5825,Limitada,41.55,Posição,btg_desktop,BVSP,Dia,,,,,,,8417492993447,,7QR,4368468
-2026-10-13 14:29:38,4368468,Ahmad Taha Comercio De Moveis Ltda,PMLL11,Executada,Venda,275.0,275.0,,109.56487273,Limitada,109.56,Posição,btg_desktop,BVSP,Dia,,,,,,,8417492993315,,7QR,4368468
-2026-10-13 14:29:33,4368468,Ahmad Taha Comercio De Moveis Ltda,BTLG11,Executada,Venda,270.0,270.0,,103.98788889,Limitada,103.98,Posição,btg_desktop,BVSP,Dia,,,,,,,8417492993270,,7QR,4368468
-2026-10-13 14:29:14,4368468,Ahmad Taha Comercio De Moveis Ltda,VALE3F,Executada,Venda,21.0,21.0,,66.99,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8010639993510,,7QR,4368468
-2026-10-13 14:29:12,4368468,Ahmad Taha Comercio De Moveis Ltda,XPML11,Executada,Venda,251.0,251.0,,106.42,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8417492993342,,7QR,4368468
-2026-10-13 14:29:11,4368468,Ahmad Taha Comercio De Moveis Ltda,XPLG11,Executada,Venda,270.0,270.0,,100.88,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8417492993328,,7QR,4368468
-2026-10-13 14:29:11,4368468,Ahmad Taha Comercio De Moveis Ltda,VALE3,Executada,Venda,200.0,200.0,,66.95,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8010639993509,,7QR,4368468
-2026-10-13 14:29:11,4368468,Ahmad Taha Comercio De Moveis Ltda,VIVT3F,Executada,Venda,51.0,51.0,,30.64,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616710559553,,7QR,4368468
-2026-10-13 14:29:11,4368468,Ahmad Taha Comercio De Moveis Ltda,VIVT3,Executada,Venda,200.0,200.0,,30.64,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616710559550,,7QR,4368468
-2026-10-13 14:29:11,4368468,Ahmad Taha Comercio De Moveis Ltda,SAPR11F,Executada,Venda,8.0,8.0,,41.61,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8417492993456,,7QR,4368468
-2026-10-13 14:29:11,4368468,Ahmad Taha Comercio De Moveis Ltda,PGCO34,Executada,Venda,270.0,270.0,,54.76,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8417492993442,,7QR,4368468
-2026-10-13 14:29:11,4368468,Ahmad Taha Comercio De Moveis Ltda,TSLA34,Executada,Venda,134.0,134.0,,58.7,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8417492993464,,7QR,4368468
-2026-10-13 14:29:11,4368468,Ahmad Taha Comercio De Moveis Ltda,JNJB34,Executada,Venda,270.0,270.0,,82.66,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8417492993427,,7QR,4368468
-2026-10-13 14:29:11,4368468,Ahmad Taha Comercio De Moveis Ltda,PRIO3F,Executada,Venda,20.0,20.0,,66.65,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8215282262339,,7QR,4368468
-2026-10-13 14:29:11,4368468,Ahmad Taha Comercio De Moveis Ltda,PRIO3,Executada,Venda,200.0,200.0,,66.69,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8215282262338,,7QR,4368468
-2026-10-13 14:29:11,4368468,Ahmad Taha Comercio De Moveis Ltda,MSFT34,Executada,Venda,149.0,149.0,,113.69,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8417492993432,,7QR,4368468
-2026-10-13 14:29:11,4368468,Ahmad Taha Comercio De Moveis Ltda,KEPL3F,Executada,Venda,50.0,50.0,,7.48,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616710559537,,7QR,4368468
-2026-10-13 14:29:11,4368468,Ahmad Taha Comercio De Moveis Ltda,KEPL3,Executada,Venda,1200.0,1200.0,,7.49,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616710559528,,7QR,4368468
-2026-10-13 14:29:11,4368468,Ahmad Taha Comercio De Moveis Ltda,GOLD11,Executada,Venda,1040.0,1040.0,,21.61,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8822301026038,,7QR,4368468
-2026-10-13 14:29:11,4368468,Ahmad Taha Comercio De Moveis Ltda,EXXO34,Executada,Venda,243.0,243.0,,108.84,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,947575525971,,7QR,4368468
-2026-10-13 14:29:11,4368468,Ahmad Taha Comercio De Moveis Ltda,CHVX34,Executada,Venda,216.0,216.0,,108.79,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,947575525969,,7QR,4368468
-2026-10-13 14:29:11,4368468,Ahmad Taha Comercio De Moveis Ltda,A1MD34,Executada,Venda,216.0,216.0,,372.85,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,947575525965,,7QR,4368468
-2026-10-13 14:29:11,4368468,Ahmad Taha Comercio De Moveis Ltda,HGRE11,Executada,Venda,251.0,251.0,,122.31,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8417492993301,,7QR,4368468
-2026-10-13 14:29:11,4368468,Ahmad Taha Comercio De Moveis Ltda,HGLG11,Executada,Venda,167.0,167.0,,156.0,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8417492993275,,7QR,4368468
-2026-10-13 14:29:11,4368468,Ahmad Taha Comercio De Moveis Ltda,GGRC11,Executada,Venda,4826.0,4826.0,,9.32,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8417492993273,,7QR,4368468
-2026-10-13 13:41:04,17682840,FABIO DOS SANTOS BINDES,COGNK332,Executada,Compra,10000.0,10000.0,,0.25,Limitada,0.25,Posição,BTG_TRADER,BVSP,Dia,,,,,,,8616708636010,,17682840,17682840
-2026-10-13 13:40:06,17682840,FABIO DOS SANTOS BINDES,ANIMK540,Executada,Compra,3000.0,3000.0,,0.64,Limitada,0.65,Posição,BTG_TRADER,BVSP,Dia,,,,,,,8616708457005,,17682840,17682840
-2026-10-13 13:22:37,17682840,FABIO DOS SANTOS BINDES,BBASK274,Executada,Compra,1200.0,1200.0,,0.6,Limitada,0.6,Posição,BTG_TRADER,BVSP,Dia,,,,,,,928753033827,,17682840,17682840
-2026-10-13 13:20:11,17682840,FABIO DOS SANTOS BINDES,MGLUJ15,Executada,Venda,20000.0,20000.0,,0.09,Limitada,0.09,Posição,BTG_TRADER,BVSP,Dia,,,,,,,947574832916,,17682840,17682840
-2026-10-13 13:14:34,17682840,FABIO DOS SANTOS BINDES,COGNJ320,Executada,Venda,20000.0,20000.0,,0.06,Limitada,0.06,Posição,BTG_TRADER,BVSP,Dia,,,,,,,8616708525240,,17682840,17682840
-2026-10-13 13:05:20,17682840,FABIO DOS SANTOS BINDES,MRVEK760,Executada,Compra,4000.0,4000.0,,1.3,Limitada,1.3,Posição,BTG_TRADER,BVSP,Dia,,,,,,,8822299722931,,17682840,17682840
-2026-10-13 11:56:07,17682840,FABIO DOS SANTOS BINDES,MGLUJ15,Executada,Compra,20000.0,20000.0,,0.1,Limitada,0.1,Posição,BTG_TRADER,BVSP,VAC,,,,,,,947570746631,,17682840,17682840
-2026-10-13 10:16:54,17682840,FABIO DOS SANTOS BINDES,BHIA3,Executada,Compra,1000.0,1000.0,,1.5,Limitada,1.5,Posição,BTG_TRADER,BVSP,VAC,,,,,,,8616697542901,,17682840,17682840
-2026-10-13 10:15:21,8837107,Claudio Joao Ziller,ISAE4,Executada,Venda,400.0,400.0,,28.76,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616700578240,,5KP,8837107
-2026-10-13 10:15:19,8837107,Claudio Joao Ziller,VALE3,Executada,Venda,200.0,200.0,,67.13,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8010636566496,,5KP,8837107
-2026-10-13 10:15:19,8837107,Claudio Joao Ziller,WEGE3F,Executada,Venda,27.0,27.0,,51.41,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8822294326932,,5KP,8837107
-2026-10-13 10:15:19,8837107,Claudio Joao Ziller,WEGE3,Executada,Venda,200.0,200.0,,51.46,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8822294326920,,5KP,8837107
-2026-10-13 10:15:19,8837107,Claudio Joao Ziller,VIVT3F,Executada,Venda,72.0,72.0,,30.9,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616700578380,,5KP,8837107
-2026-10-13 10:15:19,8837107,Claudio Joao Ziller,VIVT3,Executada,Venda,300.0,300.0,,30.91,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616700578364,,5KP,8837107
-2026-10-13 10:15:19,8837107,Claudio Joao Ziller,SBSP3,Executada,Venda,500.0,500.0,,33.02,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616700578323,,5KP,8837107
-2026-10-13 10:15:19,8837107,Claudio Joao Ziller,PRIO3F,Executada,Venda,85.0,85.0,,64.91,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8215270748975,,5KP,8837107
-2026-10-13 10:15:19,8837107,Claudio Joao Ziller,PRIO3,Executada,Venda,100.0,100.0,,64.96,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8215270748952,,5KP,8837107
-2026-10-13 10:15:19,8837107,Claudio Joao Ziller,ITUB4F,Executada,Venda,50.0,50.0,,49.46,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,907719112773,,5KP,8837107
-2026-10-13 10:15:19,8837107,Claudio Joao Ziller,ITUB4,Executada,Venda,200.0,200.0,,49.48,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,907719112737,,5KP,8837107
-2026-10-13 10:15:19,8837107,Claudio Joao Ziller,FLRY3,Executada,Venda,800.0,800.0,,27.51,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616700578214,,5KP,8837107
-2026-10-13 10:15:19,8837107,Claudio Joao Ziller,EMBJ3,Executada,Venda,100.0,100.0,,89.97,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616700578180,,5KP,8837107
-2026-10-13 10:15:19,8837107,Claudio Joao Ziller,CPFE3F,Executada,Venda,80.0,80.0,,51.1,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8417484786551,,5KP,8837107
-2026-10-13 10:15:19,8837107,Claudio Joao Ziller,CPFE3,Executada,Venda,200.0,200.0,,51.12,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8417484786498,,5KP,8837107
-2026-10-13 10:15:19,8837107,Claudio Joao Ziller,BBDC4,Executada,Venda,800.0,800.0,,21.14,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,907719112713,,5KP,8837107
-2026-10-13 10:15:19,8837107,Claudio Joao Ziller,AXIA3F,Executada,Venda,30.0,30.0,,59.13,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8417484786455,,5KP,8837107
-2026-10-13 10:15:19,8837107,Claudio Joao Ziller,AXIA3,Executada,Venda,200.0,200.0,,59.16,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8417484786449,,5KP,8837107
+2026-10-19 17:07:58,4808000,Paulo Cesar De Abreu Leite,IMXBRL,Executada,Venda,938.24,938.24,,0.758745,Mercado,,Posição,BTG_INVESTIMENTOS,,Dia,,,,,,,613f8f40-8365-4819-9803-233686c8df84,,4808000,4808000
+2026-10-19 16:46:56,17682840,FABIO DOS SANTOS BINDES,CEABK140,Executada,Compra,2000.0,2000.0,,1.53,Limitada,1.53,Posição,BTG_TRADER,BVSP,VAC,,,,,,,8616777567046,,17682840,17682840
+2026-10-19 16:38:25,17682840,FABIO DOS SANTOS BINDES,RADLK232,Executada,Compra,3000.0,3000.0,,0.96,Limitada,0.96,Posição,BTG_TRADER,BVSP,VAC,,,,,,,8417548004136,,17682840,17682840
+2026-10-19 16:21:06,17682840,FABIO DOS SANTOS BINDES,LWSAK590,Nova,Compra,7000.0,,7000.0,,Limitada,0.39,Posição,BTG_TRADER,BVSP,VAC,,,,,,,8215346488334,,17682840,17682840
+2026-10-19 16:20:13,17682840,FABIO DOS SANTOS BINDES,MRVEL900,Executada,Compra,2500.0,2500.0,,1.05,Limitada,1.05,Posição,BTG_TRADER,BVSP,VAC,,,,,,,8822342546860,,17682840,17682840
+2026-10-19 14:47:09,8620188,Monica Torres Silva,IMXBRL,Nova,Venda,0.0,,551.84,,Mercado,,Posição,BTG_INVESTIMENTOS,,Dia,,,,,,,d83f875d-e729-44a9-b10f-98e851cb2f1e,,8620188,8620188
+2026-10-19 13:41:27,8402868,Kelma Luana Abreu De Siqueira,ISAE4F,Executada,Compra,9.0,9.0,,28.31,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616773272576,,E62,8402868
+2026-10-19 13:41:27,8402868,Kelma Luana Abreu De Siqueira,ISAE4,Executada,Compra,100.0,100.0,,28.29,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616773272555,,E62,8402868
+2026-10-19 11:38:49,4813134,Monica Torres Silva,CPFE3F,Executada,Compra,4.0,4.0,,49.44,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8417541994146,,CNI,4813134
+2026-10-19 11:38:03,4813134,Monica Torres Silva,HYPE3F,Executada,Venda,18.0,18.0,,26.31,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616768964491,,CNI,4813134
+2026-10-19 11:37:54,4813134,Monica Torres Silva,EMBJ3F,Executada,Venda,4.0,4.0,,92.53,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616768964499,,CNI,4813134
+2026-10-19 11:37:53,4813134,Monica Torres Silva,RADL3F,Executada,Venda,19.0,19.0,,21.29,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8417541994139,,CNI,4813134
+2026-10-19 11:37:53,4813134,Monica Torres Silva,AXIA3F,Executada,Compra,2.0,2.0,,59.0,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8417541994149,,CNI,4813134
+2026-10-19 11:37:53,4813134,Monica Torres Silva,DIRR3F,Executada,Compra,71.0,71.0,,10.55,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616768964500,,CNI,4813134
+2026-10-19 11:37:53,4813134,Monica Torres Silva,FLRY3F,Executada,Venda,21.0,21.0,,27.68,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616768964498,,CNI,4813134
+2026-10-19 11:37:53,4813134,Monica Torres Silva,ITUB4F,Executada,Compra,8.0,8.0,,48.22,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,907745942068,,CNI,4813134
+2026-10-19 11:37:53,4813134,Monica Torres Silva,JHSF3F,Executada,Venda,5.0,5.0,,13.39,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8417541994143,,CNI,4813134
+2026-10-19 11:37:53,4813134,Monica Torres Silva,LREN3F,Executada,Venda,36.0,36.0,,13.96,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,947596138714,,CNI,4813134
+2026-10-19 11:37:53,4813134,Monica Torres Silva,PETR4F,Executada,Venda,3.0,3.0,,58.41,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8215339488027,,CNI,4813134
+2026-10-19 11:37:53,4813134,Monica Torres Silva,PRIO3F,Executada,Venda,4.0,4.0,,70.25,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8215339488026,,CNI,4813134
+2026-10-19 11:37:53,4813134,Monica Torres Silva,PSSA3F,Executada,Compra,7.0,7.0,,51.8,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616768964472,,CNI,4813134
+2026-10-19 11:37:53,4813134,Monica Torres Silva,UGPA3F,Executada,Compra,2.0,2.0,,38.93,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,907745942060,,CNI,4813134
+2026-10-19 11:37:53,4813134,Monica Torres Silva,SBSP3F,Executada,Venda,3.0,3.0,,32.23,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616768964469,,CNI,4813134
+2026-10-19 11:37:53,4813134,Monica Torres Silva,VIVT3F,Executada,Compra,23.0,23.0,,31.63,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8616768964425,,CNI,4813134
+2026-10-19 11:37:53,4813134,Monica Torres Silva,WEGE3F,Executada,Compra,23.0,23.0,,47.86,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8822338656014,,CNI,4813134
+2026-10-16 18:15:12,4575139,Fidelcino De Souza Gomes,BBASJ225E,Executada,Compra,6100.0,6100.0,,22.04,Limitada,22.04,Posição,EPUMA,,Dia,,,,,,,9654489432,9654489432,4575139,4575139
+2026-10-16 15:06:55,5079311,JOVINO LOCATELLI,MSCD34,Executada,Compra,25.0,25.0,,100.7348,Limitada,100.75,Posição,btg_desktop,BVSP,Dia,,,,,,,8417535401307,,7QR,5079311
+2026-10-16 15:06:20,5079311,JOVINO LOCATELLI,NVDC34,Executada,Compra,87.0,87.0,,22.72,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8417535401310,,7QR,5079311
+2026-10-16 15:06:20,5079311,JOVINO LOCATELLI,MSFT34,Executada,Compra,38.0,38.0,,111.31,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8417535401308,,7QR,5079311
+2026-10-16 15:06:20,5079311,JOVINO LOCATELLI,M1TA34,Executada,Compra,19.0,19.0,,128.3,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8417535401305,,7QR,5079311
+2026-10-16 15:06:20,5079311,JOVINO LOCATELLI,JNJB34,Executada,Compra,24.0,24.0,,86.37,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8417535401297,,7QR,5079311
+2026-10-16 15:06:20,5079311,JOVINO LOCATELLI,GOGL34,Executada,Compra,24.0,24.0,,144.4,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,947593143939,,7QR,5079311
+2026-10-16 15:06:20,5079311,JOVINO LOCATELLI,BERK34,Executada,Compra,33.0,33.0,,134.42,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,947593143935,,7QR,5079311
+2026-10-16 15:06:20,5079311,JOVINO LOCATELLI,COCA34,Executada,Venda,71.0,71.0,,78.6,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,947593143936,,7QR,5079311
+2026-10-16 11:08:50,22511372,ALESSANDRO PASQUALINOTTI,RADL3F,Executada,Compra,96.0,96.0,,20.8,Mercado,,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,8417529140854,7070d4e0a29449af8064fcd678855de3,7QR,22511372
+2026-10-16 11:08:50,22511372,ALESSANDRO PASQUALINOTTI,VALE3F,Executada,Compra,30.0,30.0,,66.81,Mercado,,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,8010653302000,8fad839aa77d4d558dc82b1184598d93,7QR,22511372
+2026-10-16 11:08:50,22511372,ALESSANDRO PASQUALINOTTI,DIRR3,Executada,Compra,100.0,100.0,,10.69,Mercado,,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,8616753803355,a8ffb6b2f319473097727ada4f817928,7QR,22511372
+2026-10-16 11:08:50,22511372,ALESSANDRO PASQUALINOTTI,DIRR3F,Executada,Compra,83.0,83.0,,10.72,Mercado,,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,8616753803354,2a0c32c5241f44cd8186b951575b97f5,7QR,22511372
+2026-10-16 11:08:50,22511372,ALESSANDRO PASQUALINOTTI,HYPE3F,Executada,Compra,78.0,78.0,,25.44,Mercado,,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,8616753803353,e84d2d407a3b446facdee17ca97f4817,7QR,22511372
+2026-10-16 11:08:50,22511372,ALESSANDRO PASQUALINOTTI,VIVT3F,Executada,Compra,63.0,63.0,,31.46,Mercado,,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,8616753803352,410bd9973c8741cb91451cb099551b83,7QR,22511372
+2026-10-16 11:08:50,22511372,ALESSANDRO PASQUALINOTTI,WEGE3F,Executada,Compra,40.0,40.0,,48.73,Mercado,,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,8822329788886,1dc54165ab754786b108eaee448f6c8b,7QR,22511372
+2026-10-16 11:08:50,22511372,ALESSANDRO PASQUALINOTTI,LREN3,Executada,Compra,100.0,100.0,,13.58,Mercado,,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,947590288492,982d08184ca44b029bff5d84d7a47a91,7QR,22511372
+2026-10-16 11:08:50,22511372,ALESSANDRO PASQUALINOTTI,LREN3F,Executada,Compra,44.0,44.0,,13.62,Mercado,,Posição,SOLUTIONS-DIGITAL,BVSP,Dia,,,,,,,947590288491,65d6f6aaf0ad4c229c0ff75e944c147d,7QR,22511372
+2026-10-16 11:08:09,22511372,ALESSANDRO PASQUALINOTTI,WEGE3F,Rejeitada,Compra,40.0,,,,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,Ordem em desacordo com o perfil do suitability. CONSERVADOR-CS,BTG.ID.f8d5854e4cd74d9281c612a5c30556ba,,7QR,22511372
+2026-10-16 11:08:09,22511372,ALESSANDRO PASQUALINOTTI,VIVT3F,Rejeitada,Compra,63.0,,,,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,Ordem em desacordo com o perfil do suitability. CONSERVADOR-CS,BTG.ID.010549a5d95e4e4aa4eea499a282be0d,,7QR,22511372
+2026-10-16 11:08:09,22511372,ALESSANDRO PASQUALINOTTI,VALE3F,Rejeitada,Compra,30.0,,,,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,Ordem em desacordo com o perfil do suitability. CONSERVADOR-CS,BTG.ID.a5a686e7cada43c09675237af1d7e403,,7QR,22511372
+2026-10-16 11:08:09,22511372,ALESSANDRO PASQUALINOTTI,RADL3F,Rejeitada,Compra,96.0,,,,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,Ordem em desacordo com o perfil do suitability. CONSERVADOR-CS,BTG.ID.dba842fe3e6a4efcb181b2a7d838b514,,7QR,22511372
+2026-10-16 11:08:09,22511372,ALESSANDRO PASQUALINOTTI,LREN3F,Rejeitada,Compra,44.0,,,,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,Ordem em desacordo com o perfil do suitability. CONSERVADOR-CS,BTG.ID.9cd07afdeafe4a8e94c3c893f90617d1,,7QR,22511372
+2026-10-16 11:08:09,22511372,ALESSANDRO PASQUALINOTTI,LREN3,Rejeitada,Compra,100.0,,,,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,Ordem em desacordo com o perfil do suitability. CONSERVADOR-CS,BTG.ID.fb62e81dda8e4534bfdd5d2c82560c07,,7QR,22511372
+2026-10-16 11:08:09,22511372,ALESSANDRO PASQUALINOTTI,HYPE3F,Rejeitada,Compra,78.0,,,,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,Ordem em desacordo com o perfil do suitability. CONSERVADOR-CS,BTG.ID.b5b4e25e7e9945f2a37b0b5b6b53e887,,7QR,22511372
+2026-10-16 11:08:09,22511372,ALESSANDRO PASQUALINOTTI,DIRR3F,Rejeitada,Compra,83.0,,,,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,Ordem em desacordo com o perfil do suitability. CONSERVADOR-CS,BTG.ID.efc1421ac7bf4582b4545f985f07147f,,7QR,22511372
+2026-10-16 11:08:09,22511372,ALESSANDRO PASQUALINOTTI,DIRR3,Rejeitada,Compra,100.0,,,,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,Ordem em desacordo com o perfil do suitability. CONSERVADOR-CS,BTG.ID.66911248c08b4c909c5ad1f845cb4557,,7QR,22511372
+2026-10-16 10:43:11,17682840,FABIO DOS SANTOS BINDES,CSANJ600,Rejeitada,Venda,25000.0,,,,Mercado,,Posição,BTG_TRADER,,Dia,,,,,,Market price orders not supported by opposite limit,8215323216727,,17682840,17682840
