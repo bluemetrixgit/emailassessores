@@ -1,40 +1,4 @@
 Data/Hora,Conta,Cliente,Ativo,Status,Direção,Qt. Oferta,Qt. Executada,Qt. Restante,Preço Médio,Tipo,Preço Limite,Estratégia,Plataforma,Bolsa,Validade,Até a Data,Disparo Stop,Preço Stop,Disparo Start,Preço Start,Obs,ID,ID Bolsa,Login,Login Alteração,
-2026-11-11 14:57:18,28693505,ROBERTO DULTRA PUGLIESI,WEGE3,Executada,Venda,100.0,100.0,,52.0,Limitada,52.0,Posição,btg_desktop,BVSP,VAC,,,,,,,8822547315999,,04638925502,28693505
-2026-11-11 10:10:30,17682840,FABIO DOS SANTOS BINDES,MYPKK110,Executada,Venda,4000.0,4000.0,,0.04,Limitada,0.04,Posição,BTG_TRADER,BVSP,VAC,,,,,,,8417775383031,,17682840,17682840
-2026-11-10 16:33:42,17682840,FABIO DOS SANTOS BINDES,MGLUL605,Executada,Compra,5000.0,5000.0,,0.89,Limitada,0.89,Posição,BTG_TRADER,BVSP,VAC,,,,,,,947712678567,,17682840,17682840
-2026-11-10 15:15:23,17682840,FABIO DOS SANTOS BINDES,CXSEL234,Executada,Compra,2000.0,2000.0,,1.38,Limitada,1.38,Posição,BTG_TRADER,BVSP,VAC,,,,,,,8617069172763,,17682840,17682840
-2026-11-10 12:07:57,17682840,FABIO DOS SANTOS BINDES,EMBJL106,Executada,Venda,500.0,500.0,,11.76,Limitada,11.76,Posição,BTG_TRADER,BVSP,VAC,,,,,,,8617063248795,,17682840,17682840
-2026-11-10 10:58:54,5135281,Rafael Guerzoni,BBAS3F,Executada,Compra,58.0,58.0,,17.1,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,929125076138,,CNI,5135281
-2026-11-10 10:58:54,5135281,Rafael Guerzoni,BBSE3F,Executada,Compra,25.0,25.0,,38.99,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8617059683896,,CNI,5135281
-2026-11-10 10:58:54,5135281,Rafael Guerzoni,CMIG4F,Executada,Compra,92.0,92.0,,10.74,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8417776666205,,CNI,5135281
-2026-11-10 10:58:54,5135281,Rafael Guerzoni,CMIN3F,Executada,Compra,89.0,89.0,,5.29,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8617059683890,,CNI,5135281
-2026-11-10 10:58:54,5135281,Rafael Guerzoni,CMIN3,Executada,Compra,100.0,100.0,,5.28,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8617059683886,,CNI,5135281
-2026-11-10 10:58:54,5135281,Rafael Guerzoni,CPLE3F,Executada,Compra,65.0,65.0,,15.19,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8417776666179,,CNI,5135281
-2026-11-10 10:58:54,5135281,Rafael Guerzoni,DIRR3F,Executada,Compra,53.0,53.0,,9.27,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8617059683866,,CNI,5135281
-2026-11-10 10:58:54,5135281,Rafael Guerzoni,DIVO11,Executada,Compra,12.0,12.0,,123.29,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8822552577751,,CNI,5135281
-2026-11-10 10:58:54,5135281,Rafael Guerzoni,ISAE4F,Executada,Compra,37.0,37.0,,26.56,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8617059683856,,CNI,5135281
-2026-11-10 10:58:54,5135281,Rafael Guerzoni,TAEE11F,Executada,Compra,24.0,24.0,,41.0,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8417776665862,,CNI,5135281
-2026-11-10 10:58:54,5135281,Rafael Guerzoni,PETR4F,Executada,Compra,22.0,22.0,,44.61,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8215653620947,,CNI,5135281
-2026-11-10 10:54:13,4452597,Lara Falavigna Guilherme Nacruth,AXIA7F,Executada,Venda,5.0,5.0,,49.45,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8417776536133,,06757145162,4452597
-2026-11-10 10:54:13,4452597,Lara Falavigna Guilherme Nacruth,WEGE3F,Executada,Compra,17.0,17.0,,51.62,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8822552439387,,06757145162,4452597
-2026-11-10 10:54:13,4452597,Lara Falavigna Guilherme Nacruth,WEGE3,Executada,Compra,100.0,100.0,,51.62,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8822552439382,,06757145162,4452597
-2026-11-10 10:54:13,4452597,Lara Falavigna Guilherme Nacruth,VIVT3F,Executada,Compra,63.0,63.0,,32.53,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8617059486456,,06757145162,4452597
-2026-11-10 10:54:13,4452597,Lara Falavigna Guilherme Nacruth,UGPA3F,Executada,Compra,98.0,98.0,,30.61,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,907867715836,,06757145162,4452597
-2026-11-10 10:54:13,4452597,Lara Falavigna Guilherme Nacruth,RADL3F,Executada,Compra,84.0,84.0,,14.84,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8417776536122,,06757145162,4452597
-2026-11-10 10:54:13,4452597,Lara Falavigna Guilherme Nacruth,RADL3,Executada,Compra,200.0,200.0,,14.82,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8417776536113,,06757145162,4452597
-2026-11-10 10:54:13,4452597,Lara Falavigna Guilherme Nacruth,PRIO3F,Executada,Venda,2.0,2.0,,58.91,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8215653450990,,06757145162,4452597
-2026-11-10 10:54:13,4452597,Lara Falavigna Guilherme Nacruth,PETR4F,Executada,Compra,34.0,34.0,,44.69,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8215653450989,,06757145162,4452597
-2026-11-10 10:54:13,4452597,Lara Falavigna Guilherme Nacruth,PETR4,Executada,Compra,100.0,100.0,,44.65,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8215653450988,,06757145162,4452597
-2026-11-10 10:54:13,4452597,Lara Falavigna Guilherme Nacruth,JHSF3F,Executada,Compra,47.0,47.0,,9.85,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8417776536106,,06757145162,4452597
-2026-11-10 10:54:13,4452597,Lara Falavigna Guilherme Nacruth,JHSF3,Executada,Compra,500.0,500.0,,9.84,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8417776536090,,06757145162,4452597
-2026-11-10 10:54:13,4452597,Lara Falavigna Guilherme Nacruth,ITUB4F,Executada,Compra,22.0,22.0,,41.84,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,907867715835,,06757145162,4452597
-2026-11-10 10:54:13,4452597,Lara Falavigna Guilherme Nacruth,HYPE3F,Executada,Compra,87.0,87.0,,22.47,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8617059486419,,06757145162,4452597
-2026-11-10 10:54:13,4452597,Lara Falavigna Guilherme Nacruth,HYPE3,Executada,Compra,100.0,100.0,,22.45,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8617059486417,,06757145162,4452597
-2026-11-10 10:54:13,4452597,Lara Falavigna Guilherme Nacruth,FLRY3F,Executada,Venda,59.0,59.0,,20.99,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8617059486416,,06757145162,4452597
-2026-11-10 10:54:13,4452597,Lara Falavigna Guilherme Nacruth,FLRY3,Executada,Venda,100.0,100.0,,21.01,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8617059486410,,06757145162,4452597
-2026-11-10 10:54:13,4452597,Lara Falavigna Guilherme Nacruth,EMBJ3F,Executada,Venda,57.0,57.0,,112.81,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8617059486407,,06757145162,4452597
-2026-11-10 10:54:13,4452597,Lara Falavigna Guilherme Nacruth,CPFE3F,Executada,Venda,14.0,14.0,,45.01,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8417776536078,,06757145162,4452597
-2026-11-10 10:54:13,4452597,Lara Falavigna Guilherme Nacruth,AXIA3F,Executada,Compra,1.0,1.0,,49.33,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8417776536076,,06757145162,4452597
-2026-11-10 10:30:01,17682840,FABIO DOS SANTOS BINDES,BBDCL153,Executada,Venda,10400.0,10400.0,,0.71,Limitada,0.71,Posição,BTG_TRADER,BVSP,VAC,,,,,,,907867001408,,17682840,17682840
-2026-11-10 10:28:50,17682840,FABIO DOS SANTOS BINDES,GGBRL263,Executada,Compra,2000.0,2000.0,,1.25,Limitada,1.25,Posição,BTG_TRADER,BVSP,Dia,,,,,,,8010767660326,,17682840,17682840
-2026-11-10 10:11:00,17682840,FABIO DOS SANTOS BINDES,BEEFL287,Executada,Compra,8000.0,8000.0,,0.29,Limitada,0.29,Posição,BTG_TRADER,BVSP,VAC,,,,,,,8417772396924,,17682840,17682840
+2026-11-16 10:38:10,5608744,Douglas Arantes,VIVT3,Executada,Venda,100.0,100.0,,34.78,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8617114003633,,04638925502,5608744
+2026-11-16 10:37:54,5608744,Douglas Arantes,VIVT3,Cancelada,Venda,100.0,,,,Limitada,34.91,Posição,btg_desktop,BVSP,Dia,,,,,,,8617113900260,,04638925502,5608744
+2026-11-16 10:36:07,5608744,Douglas Arantes,VIVT3F,Executada,Venda,10.0,10.0,,34.77,Mercado,,Posição,btg_desktop,BVSP,Dia,,,,,,,8617113920028,,04638925502,5608744
